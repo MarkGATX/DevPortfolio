@@ -16,6 +16,10 @@
   --onSecondaryContainer:#2c160c;
   --darkshadow:rgba(0,0,0,.5);
 
+  --headerHeight:170px;
+  --projectsTitleHeight:100px;
+  --projectsContainerOffset:200px;
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -50,7 +54,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --background: #201a18;
+    --background: oklch(22.41% 0.01 39.3);
     --outline: #a08d85;
     --onBackground: #ede0db;
     --primary: #ffb695;
@@ -120,6 +124,11 @@ header {
   padding:1em;
   background-image: linear-gradient(transparent 0%, transparent 39%, var(--headerPrimary) 40% );
 
+}
+
+main {
+  padding:3em 1em;
+  height:calc(100dvh - var(--headerHeight));
 }
 
 nav ul {

@@ -1,0 +1,148 @@
+.projectCardTitle {
+    font-weight: normal;
+    padding: 1em 1em 1em .5em;
+    background-color: var(--primaryContainer);
+    color: var(--onPrimaryContainer);
+}
+
+.projectCardClip {
+    width:100%;
+    height:400px;
+    overflow:hidden;
+}
+
+.projectCardBackground {
+    width: 100%;
+    height: 400px;
+    background-blend-mode: luminosity, multiply;
+    background-position: 50% 50%, 0 0, 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover, 100% 300%, cover;
+    border-radius: 0 0 9px 9px;
+    transition:all .3s;
+}
+
+.projectCardContainer:hover {
+
+    & .projectCardBackground {
+        border-color: var(--accent);
+        background-position: center, 0% 100%, center;
+        border-color: var(--accent);
+        box-shadow: 0 0 4px 2px var(--darkshadow);
+        transform: scale3d(1.05,1.05,1.05);
+    }
+}
+
+.projectCardLink {
+    width:80%;
+}
+
+.projectFeat:hover {
+    border-color: var(--accent);
+    background-position: center, 0% 100%, center;
+    border-color: var(--accent);
+    box-shadow: 0 0 4px 2px var(--darkshadow);
+    scale: 102%;
+}
+
+.projectCardContainer {
+    margin-bottom: 3em;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid var(--secondaryContainer);
+    border-radius: 10px;
+    // overflow:hidden;
+}
+
+/* classes for project background */
+
+.CARY {
+    background-image: url(../../../public/images/CARY_thumb.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/CARY_thumb.webp);
+
+}
+
+.codeQuiz {
+    background-image: url(../../../public/images/Coding_Quiz_Question_example.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/Coding_Quiz_Question_example.webp);
+
+}
+
+.CELL {
+    background-image: url(../../../public/images/CELL_hqdefault.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/CELL_hqdefault.webp);
+}
+
+.softlife {
+    background-image: url(../../../public/images/softlife_home.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/softlife_home.webp);
+
+}
+
+
+.csssnips {
+    background-image: url(../../../public/images/css_snippet_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/css_snippet_bg.webp);
+}
+
+
+.constell {
+    background-image: url(../../../public/images/constellation_background.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/constellation_background.webp);
+}
+
+.git {
+    background-image: url(../../../public/images/tech_background_image.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/tech_background_image.webp);
+
+}
+
+.migrate {
+    background-image: url(../../../public/images/migrate-screenschot.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/migrate-screenschot.webp);
+
+}
+
+.tds {
+    background-image: url(../../../public/images/foodie_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/foodie_bg.webp);
+
+}
+
+.musing {
+    background-image: url(../../../public/images/musing_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/musing_bg.webp);
+
+}
+
+.hoa {
+    background-image: url(../../../public/images/hoa_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/hoa_bg.webp);
+
+}
+
+.luxe {
+    background-image: url(../../../public/images/luxecavallo_home.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/luxecavallo_home.webp);
+
+}
+
+.playdate {
+    background-image: url(../../../public/images/Play_Date_porfolio_shot_v1.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/Play_Date_porfolio_shot_v1.webp);
+}
+
+.garden2 {
+    background-image: url(../../../public/images/garden2_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/garden2_bg.webp);
+
+}
+
+.scribl {
+    background-image: url(../../../public/images/scrible_notes_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/scrible_notes_bg.webp);
+
+}
+
+.weatherDash {
+    background-image: url(../../../public/images/weather_dash_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/weather_dash_bg.webp);
+}
+
+.wg {
+    background-image: url(../../../public/images/weird_girls_thumb.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/weird_girls_thumb.webp);
+}
+
+.wheezy {
+    background-image: url(../../../public/images/wheezy_main.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/wheezy_main.webp);
+}
+
+.wordguess {
+    background-image: url(../../../public/images/word_guess_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/word_guess_bg.webp);
+}

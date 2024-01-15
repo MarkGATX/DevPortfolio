@@ -41,11 +41,13 @@ export default function Header() {
 
     const handleHamburgerClick = () => {
         if (!menuOpen) {
-            gsap.to(menuDrawerRef.current, { duration: 1, x: -200 });
+            gsap.to(menuDrawerRef.current, { duration: .5, x: -200 });
             setMenuOpen(prev => !prev)
             console.log(menuOpen)
         } else {
-            gsap.to(menuDrawerRef.current, { duration: 1, x: 0 })
+            let tl = gsap.timeline();
+            tl.to(menuDrawerRef.current, { duration: .3, x: -206 })
+                .to(menuDrawerRef.current, { duration: .5, x: 0 })
             setMenuOpen(prev => !prev)
             console.log(menuOpen)
         }
@@ -55,10 +57,12 @@ export default function Header() {
     return (
         <>
             <header ref={headerRef}>
-                <div className={styles.headerNames}>
-                    <Image src='/images/mark_with_coffee.jpg' width={100} height={100} className={styles.headerAvatar} alt="Mark Gardner drinking too much coffee"></Image>
-                    <h2>Mark Gardner</h2>
-                </div>
+                <a href='/'>
+                    <div className={styles.headerNames}>
+                        <Image src='/images/mark_with_coffee.jpg' width={100} height={100} className={styles.headerAvatar} alt="Mark Gardner drinking too much coffee"></Image>
+                        <h2>Mark Gardner</h2>
+                    </div>
+                </a>
                 {isSmallScreen ?
                     <>
                         <Image src='/images/menu_icon.svg' ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
