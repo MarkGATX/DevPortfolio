@@ -12,7 +12,7 @@ export default function ProjectsContainer() {
     // const projectsTitleHeight =  projectTitleRef.current.offsetHeight;
     // document.documentElement.style.setProperty("--projectsTitleHeight", projectsTitleHeight + "px");
     const projectsContainerOffset =  projectTitleRef.current.getBoundingClientRect();
-    document.documentElement.style.setProperty("--projectsContainerOffset", projectsContainerOffset.top + "px");
+    document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top +100) + "px");
     
     }
     )

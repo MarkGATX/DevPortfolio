@@ -16,6 +16,16 @@
 .hamburgerMenu {
     position:relative;
     filter: invert(1);
+    
+}
+
+.hamburgerMenu:hover {
+    cursor:pointer;
+}
+
+.hamburgerMenuContainer {
+    display:flex;
+    flex-direction:column;
 }
 
 .menuDrawer {

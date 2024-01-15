@@ -7,18 +7,17 @@
 
 .projectCardClip {
     width:100%;
-    height:400px;
+    height:200px;
     overflow:hidden;
 }
 
 .projectCardBackground {
     width: 100%;
-    height: 400px;
+    height: 200px;
     background-blend-mode: luminosity, multiply;
     background-position: 50% 50%, 0 0, 50% 50%;
     background-repeat: no-repeat;
     background-size: cover, 100% 300%, cover;
-    border-radius: 0 0 9px 9px;
     transition:all .3s;
 }
 
@@ -51,9 +50,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px solid var(--secondaryContainer);
+    border: 4px solid var(--secondaryContainer);
     border-radius: 10px;
-    // overflow:hidden;
+    overflow:hidden;
 }
 
 /* classes for project background */

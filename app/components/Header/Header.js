@@ -65,7 +65,10 @@ export default function Header() {
                 </a>
                 {isSmallScreen ?
                     <>
+                        <div className={styles.hamburgerMenuContainer}>
+                           
                         <Image src='/images/menu_icon.svg' ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
+                        </div>
                         <nav className={styles.menuDrawer} ref={menuDrawerRef}>
                             <ul>
                                 <li>Portfolio</li>

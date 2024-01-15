@@ -123,6 +123,7 @@ header {
   align-items: baseline;
   padding:1em;
   background-image: linear-gradient(transparent 0%, transparent 39%, var(--headerPrimary) 40% );
+  color:var(--onHeaderPrimary);
 
 }
 
