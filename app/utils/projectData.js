@@ -56,7 +56,7 @@ export const projectData = [
             "html5",            
             "vscode",         
         ],
-        "link": "softlife"
+        "link": "Softlife"
     },
     {
         "title": "Luxe Cavallo",
