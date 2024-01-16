@@ -36,6 +36,7 @@ export const projectData = [
         "longDesc": "This is a full-stack social media wish-list application developed with Next.js. I developed for my clients. Users can create their own accounts to make and populate wish-lists. They can follow other users as well as create private Families.  Users and visitors can contribute financially to wishes with a PayPal integration. The look and feel of the site went through many iterations and revisions after my initial pitch. We worked together extensively to move the application from an initial pitch of a 'soft-grunge' design into their final decision to lean into a minimalist site with an almost mid-century modern feel.",
         "role": "Sole Full-Stack Developer",
         "imgs": [
+            '/images/softlife_home.webp',
             softlifePitch,
             softlifeProfileList,
             softlifeProfileDash

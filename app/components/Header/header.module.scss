@@ -36,31 +36,32 @@
     background-color: var(--headerPrimary);
     color:var(--onHeaderPrimary);
     padding: 0 0 0 1em;
-
-}
-
-.menuDrawer::before {
-    content:'';
-    display:inline-block;
-    background-image:linear-gradient(-90deg, var(--background) 0%, var(--background) 70%,transparent 100%);
-    // background-color:var(--background);
-    border-radius:0 10px 0 0;
-    width:25px;
-    height:170px;
-    left:-10px;
-    position:absolute;
-}
-
-.menuDrawer::after {
-    content: "";
-    background-color: var(--headerPrimary);
     border-radius: 0 0 0 10px;
-    height: 15px;
-    position: absolute;
-    display: block;
-    width: 135px;
-    right: 0;
-} 
+
+}
+
+// .menuDrawer::before {
+//     content:'';
+//     display:inline-block;
+//     background-image:linear-gradient(-90deg, var(--background) 0%, var(--background) 70%,transparent 100%);
+//     // background-color:var(--background);
+//     border-radius:0 10px 0 0;
+//     width:25px;
+//     height:170px;
+//     left:-10px;
+//     position:absolute;
+// }
+
+// .menuDrawer::after {
+//     content: "";
+//     background-color: var(--headerPrimary);
+//     border-radius: 0 0 0 10px;
+//     height: 15px;
+//     position: absolute;
+//     display: block;
+//     width: 135px;
+//     right: 0;
+// } 
 
 .menuDrawer ul {
     display:flex;

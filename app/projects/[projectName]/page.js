@@ -2,6 +2,8 @@ import styles from '../projects.module.scss'
 import { projectData } from '../../utils/projectData'
 import TechStack from '@/app/components/techStack/TechStack'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import Image from 'next/image'
 
 export async function generateMetadata({ params }) {
 
@@ -12,6 +14,9 @@ export async function generateMetadata({ params }) {
 
 export default function Softlife({ params }) {
     const project = projectData.find(project => project.link === params.projectName)
+    if (!project) {
+        notFound();
+    }
 
     return (
         <main>
@@ -38,6 +43,24 @@ export default function Softlife({ params }) {
                     null
                 }
             </div>
+            <section className={styles.projectDetails} >
+                <div className={styles.heroImage}>
+                    <Image src={project.imgs[0]} fill={true} style={{ objectFit: 'cover', borderRadius:'10px' }} alt={`${project.title} hero image`} />
+                </div>
+                <div className={styles.projectDescription}>
+                    {project.longDesc}
+                </div>
+                <section className={styles.projectImages}>
+                    {project.imgs.map((img) => {
+                    console.log(img)
+                     return   (
+                     <div className={styles.imageContainers}>
+                            <Image src={img} fill={true} style={{ objectFit: 'contain' }} alt={`${project.title} screenshots`} ></Image>
+                        </div>
+                     )
+                     })}
+                </section>
+            </section>
         </main>
     )
 }
