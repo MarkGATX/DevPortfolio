@@ -2,6 +2,8 @@ import { inter, outfit } from './ui/fonts'
 import './globals.css'
 import Header from './components/Header/Header'
 
+
+
 export const metadata = {
   title: {
     template: '%s | Mark Gardner',

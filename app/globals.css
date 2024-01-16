@@ -143,6 +143,13 @@ nav ul li{
   font-size:.8rem;
 }
 
+sub {
+  font-style: italic;
+  font-size:.6em;
+  line-height: 1em;
+  display:inline;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

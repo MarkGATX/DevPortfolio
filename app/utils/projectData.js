@@ -46,14 +46,14 @@ export const projectData = [
             "firebase",
             "vercel",
             "graphQL",
-            "SASS",
-            "Javascript",
-            "MongoDB",
+            "sass",
+            "javascript",
+            "mongoDB",
             "paypal",
-            "NodeJS",                     
+            "nodeJS",                     
             "css3",
-            "Google Fonts",
-            "HTML5",            
+            "googleFonts",
+            "html5",            
             "vscode",         
         ],
         "link": "softlife"
@@ -65,7 +65,7 @@ export const projectData = [
         "livePath": "https://luxecavallo.vercel.app/",
         "gitPath": "https://github.com/markgatx/luxecavallo",
         "desc": "MERN stack project for fictional luxury boutique",
-        "longDesc": "This project started with me wanting to develope an animated vertical navbar on a desktop application. From there it evolved into a Full-stack project that pushed my knowledge and understanding of app development using a MERN stack and GraphQL. The layouts between mobile and desktop versions are drastically different, which presented several unique challenges. I've learned a lot about the structure of code and making sure unique layouts stay responsive at various screen resolutions and not just screen width. I'm happy with the overall look and feel and overtime I'll flesh out more of the functionality.",
+        "longDesc": "This project started with me wanting to develope an animated vertical navbar on a desktop application. From there it evolved into a Full-stack project that pushed my knowledge and understanding of app development using a MERN stack and graphL. The layouts between mobile and desktop versions are drastically different, which presented several unique challenges. I've learned a lot about the structure of code and making sure unique layouts stay responsive at various screen resolutions and not just screen width. I'm happy with the overall look and feel and overtime I'll flesh out more of the functionality.",
         "role": "Sole Full-stack developer",
         "imgs": [
             luxeHome,
@@ -74,15 +74,15 @@ export const projectData = [
         "tech": [
             "react",
             "graphQL",
-            "Javascript",
-            "NodeJS",
+            "javascript",
+            "nodeJS",
             "express",           
-            "MongoDB",
-            "Greensock",
+            "mongoDB",
+            "GSAP",
             "css3",
-            "Adobe Fonts",
-            "Heroku",
-            "HTML5",            
+            "adobeFonts",
+            "heroku",
+            "html5",            
             "vscode",         
         ],
         "link": "luxecavallo"
@@ -94,7 +94,7 @@ export const projectData = [
         "livePath": "https://migrate-abroad.herokuapp.com/",
         "gitPath": "https://github.com/richardjhong/migrate",
         "desc": "An app to help potential expats make decisions on their future.",
-        "longDesc": " The world is a big place and with the growing acceptance of remote work and the desire to experience different parts of the world, finding good information on what life could be like can be hard. Migrate takes data from the Social Progress Imperative and displays it in a format that's easy to understand.This was a final group project in the UT-Austin Full-Stack Development Bootcamp. We were given a one-week deadline to develop a MERN stack applicaton. We also use Greensock, SASS, and Victory Charts to make a solid and smooth user experience.",
+        "longDesc": " The world is a big place and with the growing acceptance of remote work and the desire to experience different parts of the world, finding good information on what life could be like can be hard. Migrate takes data from the Social Progress Imperative and displays it in a format that's easy to understand.This was a final group project in the UT-Austin Full-Stack Development Bootcamp. We were given a one-week deadline to develop a MERN stack applicaton. We also use GSAP, SASS, and Victory Charts to make a solid and smooth user experience.",
         "role": "Front-End and Full-Stack Development",
         "imgs": [
             migrateSplash,
@@ -105,16 +105,16 @@ export const projectData = [
             "css3",
             "express",
             "graphQL",
-            "Heroku",
-            "HTML5",
-            "SASS",
-            "MongoDB",
-            "Adobe Fonts",
+            "heroku",
+            "html5",
+            "sass",
+            "mongoDB",
+            "adobeFonts",
             "vscode",
-            "Javascript",
-            "NodeJS",
-            "Greensock",
-            "victory charts",
+            "javascript",
+            "nodeJS",
+            "GSAP",
+            "victoryCharts",
             
         ],
         "link": "migrate"
@@ -136,11 +136,11 @@ export const projectData = [
             "react",
             "MaterialUI",
             "css3",
-            "HTML5",
+            "html5",
             "vscode",
-            "Javascript",
-            "NodeJS",
-            "Google Fonts"
+            "javascript",
+            "nodeJS",
+            "googleFonts"
         ],
         "link": "wheezywaiter"
     },
@@ -165,12 +165,12 @@ export const projectData = [
             "Bootstrap",
             "Handlebars",
             "Heroku",
-            "HTML5",
+            "html5",
             "JQuery",
             "MySQL",
             "vscode",
-            "Javascript",
-            "NodeJS",
+            "javascript",
+            "nodeJS",
            
         ],
         "link": "garden2"
@@ -191,9 +191,9 @@ export const projectData = [
             "Bootstrap",
             "JQuery",
             "CSS3",
-            "HTML5",
+            "html5",
             "vscode",
-            "Javascript",
+            "javascript",
         ],
         "link": "weatherDash"
     },
@@ -216,10 +216,10 @@ export const projectData = [
             "Sequelize",
             "mySQL",
             "Heroku",
-            "HTML5",
+            "html5",
             "vscode",
-            "Javascript",
-            "NodeJS",
+            "javascript",
+            "nodeJS",
             "Handlebars",
             "Bootstrap",
         ],
@@ -240,9 +240,9 @@ export const projectData = [
         ],
         "tech": [
             "css3",
-            "HTML5",
+            "html5",
             "vscode",
-            "Javascript",
+            "javascript",
             "Bootstrap",
         ],
         "link": "wordguessgame"
@@ -262,9 +262,9 @@ export const projectData = [
         ],
         "tech": [
             "css3",
-            "HTML5",
+            "html5",
             "vscode",
-            "Javascript",
+            "javascript",
         ],
         "link": "codingquiz"
     },
@@ -283,10 +283,10 @@ export const projectData = [
         "tech": [
             "materialize",
             "css3",
-            "HTML5",
+            "html5",
             "JQuery",
             "vscode",
-            "Javascript",
+            "javascript",
         ],
         "link": "playdate"
     },
@@ -303,9 +303,9 @@ export const projectData = [
             CARYStill2
         ],
         "tech": [
-            "Photoshop",
-            "PremierePro",
-            "AfterEffects",
+            "adobePhotoshop",
+            "adobePremiere",
+            "adobeAfterEffects",
         ],
         "link": "voicesinthehallway"
     },
@@ -324,9 +324,9 @@ export const projectData = [
         ],
         "tech": [
             "Blender",
-            "Photoshop",
-            "PremierePro",
-            "AfterEffects",
+            "adobePhotoshop",
+            "adobePremiere",
+            "adobeAfterEffects",
         ],
         "link": "constellation"
     },
@@ -344,8 +344,8 @@ export const projectData = [
         ],
         "tech": [
             "Wordpress",
-            "Photoshop",
-            "PremierePro",
+            "adobePhotoshop",
+            "adobePremiere",
         ],
         "link": "tds"
     },
@@ -359,9 +359,9 @@ export const projectData = [
         "role": "Creator, Producer, Player",
         "imgs": [],
         "tech": [
-            "Photoshop",
-            "PremierePro",
-            "AfterEffects",
+            "adobePhotoshop",
+            "adobePremiere",
+            "adobeAfterEffects",
         ],
         "link": "heroesofawesome"
     },
@@ -375,9 +375,9 @@ export const projectData = [
         "role": "Writer, Director, Editor",
         "imgs": [],
         "tech": [
-            "Photoshop",
-            "PremierePro",
-            "AfterEffects",
+            "adobePhotoshop",
+            "adobePremiere",
+            "adobeAfterEffects",
         ],
         "link": "weirdgirls"
     },
@@ -395,7 +395,7 @@ export const projectData = [
         ],
         "tech": [
             "css3",
-            "HTML5",
+            "html5",
             "vscode",
         ],
         "link": "csssnippets"
@@ -410,8 +410,8 @@ export const projectData = [
         "role": "Writer, Director, Producer",
         "imgs": [],
         "tech": [
-            "Photoshop",
-            "AfterEffects",
+            "adobePhotoshop",
+            "adobeAfterEffects",
         ],
         "link": "CELL"
     },
