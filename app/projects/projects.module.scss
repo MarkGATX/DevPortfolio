@@ -1,3 +1,7 @@
+.alignLeft {
+justify-content: flex-start !important;
+}
+
 .heroImage {
     width:80%;
     height:40dvh;
@@ -13,6 +17,13 @@
     height:200px;
     position:relative;
     transition: all .3s;
+}
+
+.imgClip {
+    height:100px;
+    width:100px;
+    overflow:hidden;
+    position:relative;
 }
 
 .projectDescription {
@@ -40,6 +51,52 @@
 
 .projectTech {
     margin: 2em 0;
+    display:flex;
+    flex-direction:column;
+}
+
+.smallProjectCard {
+    position:relative;
+    width:30%;
+    height:100px;
+    width:100px;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
+    border:2px solid var(--secondaryContainer);
+    border-radius:10px;
+    overflow:hidden;
+    transition: all .3s;
+
+}
+
+.smallProjectCard:hover {
+    transform:scale(1.1);
+}
+
+.smallProjectCardTitle {
+    padding:.5em
+}
+
+.smallProjectContainer {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin:3em 0;
+    gap:2em;
+    flex-wrap: wrap;
+    position:relative;
+}
+
+.techStack {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+    width:100%;
+    border-radius:10px;
 }
 
 @media screen and (min-width:768px) {

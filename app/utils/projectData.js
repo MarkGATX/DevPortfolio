@@ -23,6 +23,11 @@ import playdateWithEvent from '@/public/images/Playdate_Screenshot_with_active_e
 import CARYStill1 from '@/public/images/CARY_still_1.webp'
 import CARYStill2 from '@/public/images/CARY_still_2.webp'
 import MazuA from '@/public/images/MAZU-A.webp'
+import negroni from '@/public/images/negroni_thumb.webp'
+import whiskey from  '@/public/images/whiskey_thumb.webp'
+import hoa from '@/public/images/hoa_bg.webp'
+import wgbg from '@/public/images/weird_girls_thumb.webp'
+import cellbg from '@/public/images/CELL_hqdefault.webp'
 
 
 
@@ -156,7 +161,6 @@ export const projectData = [
         "longDesc": "This was a mid-class group project in the Full-Stack Development Bootcamp. We were given one week to develop an app to help gardeners of all experience levels to start and maintain a garden.  Users can select where they live and be presented with a list of crops that grow well in that area. Then they can use that information to develop a plan for a square foot garden by dragging and dropping plants in their virtual garden. It's a simple to use but powerful app that can help home gardeners everywhere.",
         "role": "Front-End and Full-Stack Developer",
         "imgs": [
-            "https://github.com/MarkGATX/Garden2/raw/main/Assets/screenPlay.gif",
             garden2Splash,
             garden2Vege
         ],
@@ -340,8 +344,8 @@ export const projectData = [
         "longDesc": "This is another of my video production projects that turned into an even more exciting live-stream. It started as a simple food blog, and then after the members of our fan community asked for it, it turned into a cocktail stream. I invited bartenders, restauranteurs, food bloggers, and even a few YouTube celebrities on to a talk-show format where we also created brand new cocktails from scratch. Some were great. Some were... not. But it was always a good time. ",
         "role": "Creator, Producer, Host",
         "imgs": [
-            "https://i.ytimg.com/vi/ddmUUBZ1wWs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBs3zEsvfkVSh6_SvHJWARkRTsuIw",
-            "https://i.ytimg.com/vi/6y4HTNJ4g6o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1-WAppycL4JN8WjnhFWQUiqEr2A"
+            negroni, 
+                whiskey
         ],
         "tech": [
             "wordpress",
@@ -358,7 +362,9 @@ export const projectData = [
         "vidlink": "https://www.youtube.com/playlist?list=PLtk51oTcFVK9U1QfOj18dAWu80QXEN9sG",
         "longDesc": "This was the show that started a campaign that lasted for years. I created and produced the episodes that consisted of a group of new players learning how to play Dungeons and Dragons. It's still one of my most popular shows and even predates some of the more well-known role-playing groups online. I still have people recognize myself and some of the other players from our games and it's still one of my best memories as a video creator.",
         "role": "Creator, Producer, Player",
-        "imgs": [],
+        "imgs": [
+            hoa
+        ],
         "tech": [
             "adobePhotoshop",
             "adobePremiere",
@@ -374,7 +380,9 @@ export const projectData = [
         "vidlink": "https://youtu.be/MRzQGe8m_4A",
         "longDesc": "This is a feature-length, series project that I wrote several years ago. At one point an online network wanted to see a proof of concept to make decisions about moving ahead with projects. So I wrote a quick proof of concept pilot to introduce the world and characters and shot it over one weekend. I then edited the final footage and applied all the effects, except our limited creature effects that were done by an animation studio in Austin. In the end I love that we were able to accomplish what we did in such a short time. There are still some things that make me cringe that I wish I had time to reshoot, but all things considered I'm very proud of what we did. The network did pass on the full season, so if anyone wants to fund a great series, have I got a deal for you.",
         "role": "Writer, Director, Editor",
-        "imgs": [],
+        "imgs": [
+            wgbg
+        ],
         "tech": [
             "adobePhotoshop",
             "adobePremiere",
@@ -409,7 +417,9 @@ export const projectData = [
         "vidlink": "https://www.youtube.com/playlist?list=PLC88580FE5AC3A473",
         "longDesc": "This is a 13-episode web series with a running time well over 2 hours that debuted on the now defunct channel KoldcastTV. This was my first ever writing on this scale as well as my first effort Producing and Directing for film. It was very successful on Koldcast with millions of views and garnered well over 25 award nominations, including Best Drama, Best Writing, and Best Cinematography. I learned a lot on this project and even with its evident flaws 10 years after the fact, I'm still immensely proud of what our team accomplished together.",
         "role": "Writer, Director, Producer",
-        "imgs": [],
+        "imgs": [
+            cellbg
+        ],
         "tech": [
             "adobePhotoshop",
             "adobeAfterEffects",

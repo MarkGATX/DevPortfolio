@@ -25,18 +25,21 @@ export default function Softlife({ params }) {
                 <p>{project.desc}</p>
             </div>
             <div className={styles.projectTech}>
+                <p>Techstack</p>
+                <div className={`${styles.techStack} ${styles.alignLeft}`}>
                 <TechStack tech={project.tech} />
+                </div>
             </div>
             <div className={styles.linkButtons}>
                 {project?.livePath ?
-                    <Link href={project?.livePath}>
+                    <Link href={project?.livePath}  target='_blank'>
                         <button>Live Site</button>
                     </Link>
                     :
                     null
                 }
                 {project?.gitPath ?
-                    <Link href={project?.gitPath}>
+                    <Link href={project?.gitPath}  target='_blank'>
                         <button>Github Repo</button>
                     </Link>
                     :
@@ -45,7 +48,7 @@ export default function Softlife({ params }) {
             </div>
             <section className={styles.projectDetails} >
                 <div className={styles.heroImage}>
-                    <Image src={project.imgs[0]} fill={true} style={{ objectFit: 'cover', borderRadius:'10px' }} alt={`${project.title} hero image`} />
+                    <Image src={project.imgs[0]} fill={true} style={{ objectFit: 'cover', borderRadius:'10px' }} alt={`${project.title} hero image`}/>
                 </div>
                 <div className={styles.projectDescription}>
                     {project.longDesc}
