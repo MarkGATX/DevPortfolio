@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import styles from './projectCard.module.scss'
 import Image from 'next/image';
+import { forwardRef } from 'react';
 
 
-export default function ProjectCard({ projectData }) {
-
+// export default function ProjectCard({ projectData }) {
+const ProjectCard = forwardRef(({projectData}, ref) => {
 
     const { title, displayClass, type, livePath, gitPath, desc, longDesc, role, imgs, tech, link } = projectData
-    console.log(tech)
     return (
-        <Link href={link} className={styles.projectCardLink}>
+        <Link href={link} className={styles.projectCardLink} ref={ref}>
             <div className={styles.projectCardContainer}>
                 <div className={styles.projectCardTitle}>
                     <h2>{title}</h2>
@@ -22,8 +22,7 @@ export default function ProjectCard({ projectData }) {
             </div>
             <div className={styles.projectCardTech}>
                 {tech?.map((techVal, index) => {
-                    console.log(techVal)
-                    return <Image src={`/images/tech/${techVal}.webp`} width={24} height={24} key={index} className={styles.techImage}></Image>
+                    return <Image src={`/images/tech/${techVal}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${techVal} icon`} title={techVal}></Image>
                 }
                 )}
             </div>
@@ -31,3 +30,6 @@ export default function ProjectCard({ projectData }) {
 
     )
 }
+)
+
+export default ProjectCard

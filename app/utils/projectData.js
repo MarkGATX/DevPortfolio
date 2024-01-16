@@ -323,7 +323,7 @@ export const projectData = [
             constellationPlay
         ],
         "tech": [
-            "Blender",
+            "blender",
             "adobePhotoshop",
             "adobePremiere",
             "adobeAfterEffects",
@@ -343,7 +343,7 @@ export const projectData = [
             "https://i.ytimg.com/vi/6y4HTNJ4g6o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1-WAppycL4JN8WjnhFWQUiqEr2A"
         ],
         "tech": [
-            "Wordpress",
+            "wordpress",
             "adobePhotoshop",
             "adobePremiere",
         ],

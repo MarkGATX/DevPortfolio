@@ -1,13 +1,76 @@
+.projectCardBackground {
+    width: 100%;
+    height: 200px;
+    background-blend-mode: luminosity, multiply;
+    background-position: 50% 50%, 0 0, 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover, 100% 300%, cover;
+    transition:all .5s;
+}
+
+.projectCardContainer:hover {
+
+    & .projectCardBackground {
+        border-color: var(--accent);
+        background-position: center, 0% 100%, center;
+        border-color: var(--accent);
+        box-shadow: 0 0 4px 2px var(--darkshadow);
+        transform: scale3d(1.05,1.05,1.05);
+        animation:bounce .5s ease-in-out;
+    }
+
+    & .projectCardTitle::after {
+        // display:block;
+        opacity:.8;
+    }
+}
+
+.projectCardTitle::after {
+    content:'Click for more information';
+    background-color: var(--surface);
+    transform:skew(-3deg, -3deg) translateX(-20px) translateY(20px);
+    opacity:0;
+    transition:all .5s;
+    height:20px;
+    width:50%;
+    position:absolute;
+    right:0;
+    color:var(--onSurface);
+    z-index:10;
+   
+    // display:none;
+}
+
+.projectCardLink {
+    width:80%;
+}
+
+.projectCardContainer {
+    // margin-bottom:.5em;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 4px solid var(--secondaryContainer);
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+.projectCardSuspense {
+    background-color:var(--outline);
+    animation: skeleton 2s infinite;
+}
+
 .projectCardTech {
     display:flex;
     justify-content: center;
     align-items:center;
     flex-wrap:wrap;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     width:100%;
-    background-color:var(--secondaryContainer);
     border-radius:10px;
 }
+
 
 .projectCardTitle {
     font-weight: normal;
@@ -29,49 +92,7 @@
     overflow:hidden;
 }
 
-.projectCardBackground {
-    width: 100%;
-    height: 200px;
-    background-blend-mode: luminosity, multiply;
-    background-position: 50% 50%, 0 0, 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover, 100% 300%, cover;
-    transition:all .3s;
-}
 
-.projectCardContainer:hover {
-
-    & .projectCardBackground {
-        border-color: var(--accent);
-        background-position: center, 0% 100%, center;
-        border-color: var(--accent);
-        box-shadow: 0 0 4px 2px var(--darkshadow);
-        transform: scale3d(1.05,1.05,1.05);
-    }
-}
-
-.projectCardLink {
-    width:80%;
-}
-
-.projectFeat:hover {
-    border-color: var(--accent);
-    background-position: center, 0% 100%, center;
-    border-color: var(--accent);
-    box-shadow: 0 0 4px 2px var(--darkshadow);
-    scale: 102%;
-}
-
-.projectCardContainer {
-    // margin-bottom:.5em;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 4px solid var(--secondaryContainer);
-    border-radius: 10px;
-    overflow:hidden;
-}
 
 .techImage {
     margin:.3em;
@@ -167,3 +188,30 @@
 .wordguess {
     background-image: url(../../../public/images/word_guess_bg.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/word_guess_bg.webp);
 }
+
+@keyframes skeleton {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes bounce {
+    0%{
+      transform: scale3d(1, 1, 1);
+ 
+    }
+    60% {
+      transform: scale3d(1.08,1.08,1.08);
+
+    }
+    100% {
+      transform: scale3d(1.05,1.05,1.05);
+
+    }
+  }
