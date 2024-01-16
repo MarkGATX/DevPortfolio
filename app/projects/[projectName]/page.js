@@ -1,18 +1,18 @@
 import styles from '../projects.module.scss'
-import {projectData} from '../../utils/projectData'
+import { projectData } from '../../utils/projectData'
 import TechStack from '@/app/components/techStack/TechStack'
 import Link from 'next/link'
 
-export async function generateMetadata({ params}) {
+export async function generateMetadata({ params }) {
 
     return {
-      title: `${params.projectName} Project`,
+        title: `${params.projectName} Project`,
     }
-  }
+}
 
-export default function Softlife ({params}) {
+export default function Softlife({ params }) {
     const project = projectData.find(project => project.link === params.projectName)
-    
+
     return (
         <main>
             <div className={styles.projectTitle}>
@@ -24,16 +24,20 @@ export default function Softlife ({params}) {
             </div>
             <div className={styles.linkButtons}>
                 {project?.livePath ?
-                <Link href={project?.livePath}><button>Live Site</button></Link>
-                :
-                null
+                    <Link href={project?.livePath}>
+                        <button>Live Site</button>
+                    </Link>
+                    :
+                    null
                 }
                 {project?.gitPath ?
-                <Link href={project?.gitPath}><button>Github Repo</button></Link>
-                :
-                null
+                    <Link href={project?.gitPath}>
+                        <button>Github Repo</button>
+                    </Link>
+                    :
+                    null
                 }
-            </div>           
+            </div>
         </main>
     )
 }
