@@ -1,13 +1,26 @@
+.experienceList {
+    list-style-type: none;
+    margin:0 0 1em 0;
+    & li {
+        margin:.5em 0 0 2em;
+        font-size:.8rem;
+    }
+}
+
 .projectSection {
     margin:1em 0;
     &Title {
         margin: 0 0 .5em 0;
+       
     }
     &Links {
         font-style:italic;
         span {
         font-weight:bold;
         }
+    }
+    &Desc {
+        margin:1em 0;
     }
 }
 
