@@ -4,6 +4,7 @@
   --headerPrimary: #99461a;
   --onHeaderPrimary: #ffffff;
   --background: #fffbff;
+  --backgroundOffset:#d1cdd1;
   --outline: #85736c;
   --onBackground: #201a18;
   --primary: #99461a;
@@ -16,6 +17,7 @@
   --onSecondaryContainer:#2c160c;
   --surface:#fffbff;
   --onSurface:#201a18;
+  --shadow:oklch(22.41% 0.01 39.3 / .5);
 
   --headerHeight:170px;
   --projectsTitleHeight:100px;
@@ -56,6 +58,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
     --background: oklch(22.41% 0.01 39.3);
+    --backgroundOffset: oklch(37.56% 0.01 39.3);
     --outline: #a08d85;
     --onBackground: #ede0db;
     --primary: #ffb695;
@@ -148,14 +151,16 @@ header {
   position:fixed;
   z-index:5;
   width:100%;
+  box-shadow: var(--shadow) 0 5px 3px;
 
 }
 
 main {
-  padding:3em 1em;
+  padding:2em 1em 1em 1em;
   min-height:calc(100dvh - var(--headerHeight));
   top:var(--headerHeight);
   position:relative;
+ 
 }
 
 nav ul {

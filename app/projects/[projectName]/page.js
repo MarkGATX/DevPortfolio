@@ -4,6 +4,8 @@ import TechStack from '@/app/components/techStack/TechStack'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
+import ImageContainers from '@/app/components/ImageContainers/ImageContainers'
+
 
 export async function generateMetadata({ params }) {
 
@@ -48,20 +50,20 @@ export default function Softlife({ params }) {
             </div>
             <section className={styles.projectDetails} >
                 <div className={styles.heroImage}>
-                    <Image src={project.imgs[0]} fill={true} style={{ objectFit: 'cover', borderRadius:'10px' }} alt={`${project.title} hero image`}/>
+                    <Image src={project.imgs[0]} fill={true} style={{ objectFit: 'cover', borderRadius:'10px', objectPosition:'top 0% left 0%' }} alt={`${project.title} hero image`}/>
                 </div>
                 <div className={styles.projectDescription}>
                     {project.longDesc}
                 </div>
                 <section className={styles.projectImages}>
-                    {project.imgs.map((img) => {
-                    console.log(img)
+                    <ImageContainers images={project.imgs} title={project.title}/>
+                    {/* {project.imgs.map((img) => {
                      return   (
                      <div className={styles.imageContainers}>
-                            <Image src={img} fill={true} style={{ objectFit: 'contain' }} alt={`${project.title} screenshots`} ></Image>
+                            <Image src={img} fill={true} style={{ objectFit: 'contain' }} alt={`${project.title} screenshots`} className={`${zoomedImage === img ? 'zoomed' : ''}`} onClick={(event) => handleImageClick(event, img)}></Image>
                         </div>
                      )
-                     })}
+                     })} */}
                 </section>
             </section>
         </main>
