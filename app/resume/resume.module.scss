@@ -1,3 +1,16 @@
+.projectSection {
+    margin:1em 0;
+    &Title {
+        margin: 0 0 .5em 0;
+    }
+    &Links {
+        font-style:italic;
+        span {
+        font-weight:bold;
+        }
+    }
+}
+
 .resume {
     &Contacts {
         display: flex;
@@ -36,7 +49,16 @@
 
 .techIcons {
     display:flex;
+    flex-wrap:wrap;
     & img {
         margin:1em;
     }
+}
+
+.sectionTitle {
+    padding:.5em;
+    background-color:var(--primaryContainer);
+    color:var(--onPrimaryContainer);
+    border-radius:10px;
+    margin:0 0 1em 0;
 }

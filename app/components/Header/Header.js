@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from './header.module.scss'
 import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 export default function Header() {
     const [isSmallScreen, setIsSmallScreen] = useState(true);
@@ -43,13 +44,13 @@ export default function Header() {
         if (!menuOpen) {
             gsap.to(menuDrawerRef.current, { duration: .5, x: -200 });
             setMenuOpen(prev => !prev)
-            console.log(menuOpen)
+         
         } else {
             let tl = gsap.timeline();
             tl.to(menuDrawerRef.current, { duration: .3, x: -206 })
                 .to(menuDrawerRef.current, { duration: .5, x: 0 })
             setMenuOpen(prev => !prev)
-            console.log(menuOpen)
+         
         }
     }
 
@@ -73,7 +74,7 @@ export default function Header() {
                             <ul>
                                 <li>Portfolio</li>
                                 <li>About me...</li>
-                                <li>Resume</li>
+                                <Link href="/resume"><li>Resume</li></Link>
                                 <li>Contact</li>
                             </ul>
                         </nav>

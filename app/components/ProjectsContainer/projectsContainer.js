@@ -66,7 +66,7 @@ export default function ProjectsContainer() {
                 <div className={styles.projectsScroller}>
                     <div className={styles.projectCardSpacer}></div>
                     {projectData?.map((project, key) =>
-                        <Suspense fallback={<ProjectCardSuspense />}>
+                        <Suspense fallback={<ProjectCardSuspense />}  key={project.displayClass}>
                             <ProjectCard projectData={project} key={project.displayClass} ref={addToRefs(key)} />
                         </Suspense>
                     )

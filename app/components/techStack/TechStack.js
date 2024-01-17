@@ -3,7 +3,6 @@ import styles from './techstack.module.scss'
 
 export default function TechStack({ tech, imageSize}) {
     const size = imageSize
-    console.log(size)
     return (
         <>
             {tech?.map((techVal, index) => {

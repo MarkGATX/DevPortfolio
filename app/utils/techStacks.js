@@ -1,6 +1,6 @@
 export const techStacks = {
     'tech': [
-        {id: 'html', name: 'HTML5'},
+        {id: 'html5', name: 'HTML5'},
         {id: 'css3', name: 'CSS3'},
         {id: 'javascript', name: 'Javascript ES6+'},
         {id: 'mysql', name: 'MySQL'},
@@ -16,7 +16,8 @@ export const techStacks = {
         {id: 'jquery', name: 'JQuery'},
         {id: 'nodejs', name: 'Node.JS'},
         {id: 'mongoose', name: 'Mongoose '},
-        {id: 'sequelize', name: 'Sequelize'}
+        {id: 'sequelize', name: 'Sequelize'},
+        {id:'handlebars', name: "Handlebars"}
 
     ],
     'tools': [
@@ -26,6 +27,6 @@ export const techStacks = {
         {id: 'npm', name: 'npm'},
         {id: 'vscode', name: 'VS Code'},
         {id: 'mysql', name: 'SQL Workbench'},
-        {id: 'adobePhotoshop', name: 'Adobe Creative Cloud'}
+        {id: 'adobeCreativeCloud', name: 'Adobe Creative Cloud'}
     ]
 }
