@@ -108,19 +108,19 @@ export default function Resume() {
                     </ul>
                     <h4>Hello World Computer Science - Engineering Instructor</h4>
                     <p >2023 - present,  AUSTIN</p>
-                    <ul className={styles.experienceList}>  
+                    <ul className={styles.experienceList}>
                         <li>Part-time Teaching Assistant for Computer Science classes at the Ann Richards School for Young Women Leaders</li>
                         <li>Teach students web development and guide troubleshooting in their code and errors in the CoSpaces coding environment.</li>
                     </ul>
                     <h4 >Local Government Solutions  -  Developer</h4>
                     <p >2017 - 2018,  AUSTIN</p>
-                    <ul className={styles.experienceList}>  
+                    <ul className={styles.experienceList}>
                         <li>Assisted in customer and business transitions to LGS after HCSS was acquired. </li>
                         <li>Developed outlines for new customer training and retention programs and developed a revamped online brand presence.</li>
                     </ul>
                     <h4 >The Weirdlings  -  Creator and Producer</h4>
                     <p >2011 - 2020,   AUSTIN</p>
-                    <ul className={styles.experienceList}>  
+                    <ul className={styles.experienceList}>
                         <li>Guided growth of the award-winning channel to reach over 15,000 subscribers and 2.8 million lifetime views on YouTube.</li>
                         <li>Engaged with the world-wide digital video community and was elected to the International Academy of Web Television Board of Directors where I was named Secretary. </li>
                         <li>Created and maintained all social outlets and websites for The Weirdlings using WordPress and custom CSS.</li>
@@ -128,17 +128,17 @@ export default function Resume() {
                     </ul>
                     <h4 >Hill Country Software and Support - VP of Development</h4>
                     <p >2008 - 2017,  AUSTIN</p>
-                    <ul className={styles.experienceList}>  
+                    <ul className={styles.experienceList}>
                         <li>Implemented a complete UI/UX redesign and deployment of the web-based application of a COBOL backend with Javascript, JQuery, and updated HTML and CSS.</li>
                         <li>Migrated the corporate website to a WordPress CMS and implemented systems to directly notify customers of updates to systems and important notes.</li>
                     </ul>
                 </section>
                 <section className={styles.resumeExperience}>
                     <h3 className={styles.sectionTitle}>Education</h3>
-                    <ul>
-                    <li >University of Texas at Austin / Full-Stack Developer Certificate</li>
-                    <li >University of Texas at Austin  / Master in Sports Science and Nutrition</li>
-                    <li >University of Texas at Austin  / Bachelor of Arts in Plan II</li>
+                    <ul className={styles.educationList}>
+                        <li >University of Texas at Austin / Full-Stack Developer Certificate</li>
+                        <li >University of Texas at Austin  / Master in Sports Science and Nutrition</li>
+                        <li >University of Texas at Austin  / Bachelor of Arts in Plan II</li>
                     </ul>
                 </section>
             </div>
