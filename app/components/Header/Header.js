@@ -72,7 +72,7 @@ export default function Header() {
                                 <Link href='/' onClick={handleHamburgerClick}><li>Portfolio</li></Link>
                                 <Link href='/about_me' onClick={handleHamburgerClick}><li>About me...</li></Link>
                                 <Link href="/resume" onClick={handleHamburgerClick}><li>Resume</li></Link>
-                                <li>Contact</li>
+                                <Link href="/contact_me" onClick={handleHamburgerClick}> <li>Contact</li></Link>
                             </ul>
                         </nav>
                     </>
