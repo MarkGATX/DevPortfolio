@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from './header.module.scss'
-import { useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 
@@ -13,10 +13,9 @@ export default function Header() {
     const hamburgerRef = useRef();
     const menuDrawerRef = useRef();
 
-
-
     useLayoutEffect(() => {
         const headerHeight = headerRef.current.offsetHeight;
+        const hamburgerMenu = hamburgerRef.current;
         document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
         //check for window size
         const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -25,10 +24,9 @@ export default function Header() {
         }
         mediaQuery.addEventListener('change', handleMediaQueryChange);
         handleMediaQueryChange(mediaQuery);
-        const hamburgerMenu = hamburgerRef.current;
 
         if (isSmallScreen) {
-            hamburgerMenu.addEventListener('click', handleHamburgerClick)
+            hamburgerMenu.addEventListener('click', handleHamburgerClick);
         }
 
         return () => {
@@ -37,22 +35,21 @@ export default function Header() {
                 hamburgerMenu.removeEventListener('click', handleHamburgerClick)
             }
         }
-    }
+    },
     )
 
-    const handleHamburgerClick = () => {
+    const handleHamburgerClick = useCallback(() => {
+        console.log('click')
         if (!menuOpen) {
             gsap.to(menuDrawerRef.current, { duration: .5, x: -200 });
             setMenuOpen(prev => !prev)
-         
         } else {
             let tl = gsap.timeline();
             tl.to(menuDrawerRef.current, { duration: .3, x: -206 })
                 .to(menuDrawerRef.current, { duration: .5, x: 0 })
             setMenuOpen(prev => !prev)
-         
         }
-    }
+    })
 
 
     return (
@@ -67,14 +64,14 @@ export default function Header() {
                 {isSmallScreen ?
                     <>
                         <div className={styles.hamburgerMenuContainer}>
-                           
-                        <Image src='/images/menu_icon.svg' ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
+
+                            <Image src='/images/menu_icon.svg' ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
                         </div>
                         <nav className={styles.menuDrawer} ref={menuDrawerRef}>
                             <ul>
-                                <li>Portfolio</li>
-                                <Link href='/about_me'><li>About me...</li></Link>
-                                <Link href="/resume"><li>Resume</li></Link>
+                                <Link href='/' onClick={handleHamburgerClick}><li>Portfolio</li></Link>
+                                <Link href='/about_me' onClick={handleHamburgerClick}><li>About me...</li></Link>
+                                <Link href="/resume" onClick={handleHamburgerClick}><li>Resume</li></Link>
                                 <li>Contact</li>
                             </ul>
                         </nav>
