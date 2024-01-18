@@ -57,81 +57,100 @@ export default function Resume() {
                     <h3 className={styles.sectionTitle}>Projects Built</h3>
                     <div className={styles.projectSection}>
                         <h4 className={styles.projectSectionTitle}>The Softlife</h4>
-                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://thesoftlife.xyz/" target='_blank' rel='noreferrer'>https://thesoftlife.xyz/</a> </p>
-                        <p className={styles.projectSectionDesc}>A freelance development job leveraging the power of Next.js and React with Vercel hosting. I worked extensively with my clients to refine their vision for their e-commerce wishlist site in order to stay on schedule and within budget.</p>
                         <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
                         <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, GraphQL, Apollo GraphQL, MongoDB, SASS, CSS3, Google Fonts, Photoshop, Node.js, React Spring </p>
+                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://thesoftlife.xyz/" target='_blank' rel='noreferrer'>https://thesoftlife.xyz/</a> </p>
+
+                        <p className={styles.projectSectionDesc}>A freelance development job leveraging the power of Next.js and React with Vercel hosting. I worked extensively with my clients to refine their vision for their e-commerce wishlist site in order to stay on schedule and within budget.</p>
+
                     </div>
                     <div className={styles.projectSection}>
                         <h4 className={styles.projectSectionTitle}>Luxe Cavallo</h4>
-                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://luxecavallo.vercel.app/" target='_blank' rel='noreferrer'>https://luxecavallo.vercel.app/</a> </p>
-                        <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/luxecavallo" target="_blank" rel='noreferrer'> https://github.com/MarkGATX/luxecavallo</a></p>
-                        <p className={styles.projectSectionDesc}>A fictional luxury boutique created to be highly responsive and media-rich, providing an immersive and engaging user experience. </p>
                         <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
                         <p className={styles.projectSectionLinks}><span>Tools:</span>  React, GraphQL, Apollo, Express, MongoDB, Mongoose, JavaScript, CSS3, Adobe Font, Photoshop,  Node.js,  SASS, Greensock </p>
+                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://luxecavallo.vercel.app/" target='_blank' rel='noreferrer'>https://luxecavallo.vercel.app/</a> </p>
+                        <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/luxecavallo" target="_blank" rel='noreferrer'> https://github.com/MarkGATX/luxecavallo</a></p>
+
+                        <p className={styles.projectSectionDesc}>A fictional luxury boutique created to be highly responsive and media-rich, providing an immersive and engaging user experience. </p>
+
                     </div>
                     <div className={styles.projectSection}>
                         <h4 className={styles.projectSectionTitle}>Migrate</h4>
+                        <p className={styles.projectSectionLinks}><span>Role:</span>  Front-end design, Full-stack coding</p>
+                        <p className={styles.projectSectionLinks}><span>Tools:</span>  React, Express, MongoDB, JavaScript, CSS3, GoogleFonts, Photoshop,  Node.js, TypeKit, SASS, Greensock, Victory Charts, Unsplash API </p>
                         <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://migrate-abroad.herokuapp.com" target='_blank' rel='noreferrer'>https://migrate-abroad.herokuapp.com </a> </p>
                         <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/migrate" target="_blank" rel='noreferrer'> https://github.com/MarkGATX/migrate</a></p>
                         <p className={styles.projectSectionDesc}>A MERN application to help people looking to relocate to another country find a place that will feel like home utilizing complex APIs and data-visualization.</p>
-                        <p className={styles.projectSectionLinks}><span>Role:</span>  Front-end design, Full-stack coding</p>
-                        <p className={styles.projectSectionLinks}><span>Tools:</span>  React, Express, MongoDB, JavaScript, CSS3, GoogleFonts, Photoshop,  Node.js, TypeKit, SASS, Greensock, Victory Charts, Unsplash API </p>
+
                     </div>
                     <div className={styles.projectSection}>
                         <h4 className={styles.projectSectionTitle}>Wheezy Waiter</h4>
-                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://markgatx.github.io/wheezywaiter/" target='_blank' rel='noreferrer'>https://markgatx.github.io/wheezywaiter/ </a> </p>
-                        <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/wheezywaiter" target="_blank" rel='noreferrer'>https://github.com/MarkGATX/wheezywaiter</a></p>
-                        <p className={styles.projectSectionDesc}>An unofficial site for a YouTube creator that acts as a home for all of their projects, regardless of the rise and fall of other social outlets.
-                        </p>
                         <p className={styles.projectSectionLinks}><span>Role:</span>  Sole Developer</p>
                         <p className={styles.projectSectionLinks}><span>Tools:</span>  React, Material UI, JavaScript, CSS3, GoogleFonts, YouTube API, Spotify API</p>
+                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://markgatx.github.io/wheezywaiter/" target='_blank' rel='noreferrer'>https://markgatx.github.io/wheezywaiter/ </a> </p>
+                        <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/wheezywaiter" target="_blank" rel='noreferrer'>https://github.com/MarkGATX/wheezywaiter</a></p>
+
+                        <p className={styles.projectSectionDesc}>An unofficial site for a YouTube creator that acts as a home for all of their projects, regardless of the rise and fall of other social outlets.
+                        </p>
+
                     </div>
                     <div className={styles.projectSection}>
                         <h4 className={styles.projectSectionTitle}>Weather Dashboard</h4>
-                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://markgatx.github.io/Weather-Dashboard-Full-Stack-Bootcamp/" target="_blank" rel='noreferrer'>https://markgatx.github.io/Weather-Dashboard-Full-Stack-Bootcamp/</a> </p>
-                        <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/Weather-Dashboard-Full-Stack-Bootcamp" target="_blank" rel="noreferrer">https://github.com/MarkGATX/Weather-Dashboard-Full-Stack-Bootcamp</a></p>
-                        <p className={styles.projectSectionDesc}>Accurate weather forecasts for cities anywhere in the world using two weather APIs while storing past searches in a simple but powerful interface.</p>
                         <p className={styles.projectSectionLinks}><span>Role:</span> Sole Developer</p>
                         <p className={styles.projectSectionLinks}><span>Tools:</span> Bootstrap, JavaScript, CSS3, GoogleFonts, OpenWeather API, WeatherBit.io API</p>
+                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://markgatx.github.io/Weather-Dashboard-Full-Stack-Bootcamp/" target="_blank" rel='noreferrer'>https://markgatx.github.io/Weather-Dashboard-Full-Stack-Bootcamp/</a> </p>
+                        <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/Weather-Dashboard-Full-Stack-Bootcamp" target="_blank" rel="noreferrer">https://github.com/MarkGATX/Weather-Dashboard-Full-Stack-Bootcamp</a></p>
+
+                        <p className={styles.projectSectionDesc}>Accurate weather forecasts for cities anywhere in the world using two weather APIs while storing past searches in a simple but powerful interface.</p>
+
                     </div>
                 </section>
                 <section className={styles.resumeExperience}>
                     <h3 className={styles.sectionTitle}>Relevant Experience</h3>
-                    <h4 >Freelance - Full-stack Developer</h4>
-                    <p >2023 - present,  AUSTIN</p>
-                    <ul className={styles.experienceList}>
-                        <li>Contract with clients to create full-stack applications that meet their specific needs and goals.</li>
-                        <li>Develop applications using modern stacks, such as Next.js, React, Material UI, Bootstrap, GSAP, and more.</li>
-                        <li>Work with clients to develop comprehensive style guides that align with their goals and branding.</li>
-                        <li>Communicate and collaborate with clients about goals, timelines, and challenges through the development process</li>
-                    </ul>
-                    <h4>Hello World Computer Science - Engineering Instructor</h4>
-                    <p >2023 - present,  AUSTIN</p>
-                    <ul className={styles.experienceList}>
-                        <li>Part-time Teaching Assistant for Computer Science classes at the Ann Richards School for Young Women Leaders</li>
-                        <li>Teach students web development and guide troubleshooting in their code and errors in the CoSpaces coding environment.</li>
-                    </ul>
-                    <h4 >Local Government Solutions  -  Developer</h4>
-                    <p >2017 - 2018,  AUSTIN</p>
-                    <ul className={styles.experienceList}>
-                        <li>Assisted in customer and business transitions to LGS after HCSS was acquired. </li>
-                        <li>Developed outlines for new customer training and retention programs and developed a revamped online brand presence.</li>
-                    </ul>
-                    <h4 >The Weirdlings  -  Creator and Producer</h4>
-                    <p >2011 - 2020,   AUSTIN</p>
-                    <ul className={styles.experienceList}>
-                        <li>Guided growth of the award-winning channel to reach over 15,000 subscribers and 2.8 million lifetime views on YouTube.</li>
-                        <li>Engaged with the world-wide digital video community and was elected to the International Academy of Web Television Board of Directors where I was named Secretary. </li>
-                        <li>Created and maintained all social outlets and websites for The Weirdlings using WordPress and custom CSS.</li>
-                        <li>Developed all graphic effects for every video released, ranging from lower-thirds to full spash screens.</li>
-                    </ul>
-                    <h4 >Hill Country Software and Support - VP of Development</h4>
-                    <p >2008 - 2017,  AUSTIN</p>
-                    <ul className={styles.experienceList}>
-                        <li>Implemented a complete UI/UX redesign and deployment of the web-based application of a COBOL backend with Javascript, JQuery, and updated HTML and CSS.</li>
-                        <li>Migrated the corporate website to a WordPress CMS and implemented systems to directly notify customers of updates to systems and important notes.</li>
-                    </ul>
+                    <div className={styles.experienceSection}>
+                        <h4 className={styles.experienceSectionTitle} >Freelance - Full-stack Developer</h4>
+                        <p >2023 - present,  AUSTIN</p>
+                        <ul className={styles.experienceList}>
+                            <li>Contract with clients to create full-stack applications that meet their specific needs and goals.</li>
+                            <li>Develop applications using modern stacks, such as Next.js, React, Material UI, Bootstrap, GSAP, and more.</li>
+                            <li>Work with clients to develop comprehensive style guides that align with their goals and branding.</li>
+                            <li>Communicate and collaborate with clients about goals, timelines, and challenges through the development process</li>
+                        </ul>
+                    </div>
+                    <div className={styles.experienceSection}>
+                        <h4 className={styles.experienceSectionTitle} >Hello World Computer Science - Engineering Instructor</h4>
+                        <p >2023 - present,  AUSTIN</p>
+                        <ul className={styles.experienceList}>
+                            <li>Part-time Teaching Assistant for Computer Science classes at the Ann Richards School for Young Women Leaders</li>
+                            <li>Teach students web development and guide troubleshooting in their code and errors in the CoSpaces coding environment.</li>
+                        </ul>
+                    </div>
+                    <div className={styles.experienceSection}>
+                        <h4 className={styles.experienceSectionTitle} >Local Government Solutions  -  Developer</h4>
+                        <p >2017 - 2018,  AUSTIN</p>
+                        <ul className={styles.experienceList}>
+                            <li>Assisted in customer and business transitions to LGS after HCSS was acquired. </li>
+                            <li>Developed outlines for new customer training and retention programs and developed a revamped online brand presence.</li>
+                        </ul>
+                    </div>
+                    <div className={styles.experienceSection}>
+                        <h4 className={styles.experienceSectionTitle} >The Weirdlings  -  Creator and Producer</h4>
+                        <p >2011 - 2020,   AUSTIN</p>
+                        <ul className={styles.experienceList}>
+                            <li>Guided growth of the award-winning channel to reach over 15,000 subscribers and 2.8 million lifetime views on YouTube.</li>
+                            <li>Engaged with the world-wide digital video community and was elected to the International Academy of Web Television Board of Directors where I was named Secretary. </li>
+                            <li>Created and maintained all social outlets and websites for The Weirdlings using WordPress and custom CSS.</li>
+                            <li>Developed all graphic effects for every video released, ranging from lower-thirds to full spash screens.</li>
+                        </ul>
+                    </div>
+                    <div className={styles.experienceSection}>
+                        <h4 className={styles.experienceSectionTitle} >Hill Country Software and Support - VP of Development</h4>
+                        <p >2008 - 2017,  AUSTIN</p>
+                        <ul className={styles.experienceList}>
+                            <li>Implemented a complete UI/UX redesign and deployment of the web-based application of a COBOL backend with Javascript, JQuery, and updated HTML and CSS.</li>
+                            <li>Migrated the corporate website to a WordPress CMS and implemented systems to directly notify customers of updates to systems and important notes.</li>
+                        </ul>
+                    </div>
                 </section>
                 <section className={styles.resumeExperience}>
                     <h3 className={styles.sectionTitle}>Education</h3>

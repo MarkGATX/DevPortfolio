@@ -73,7 +73,7 @@ export default function Header() {
                         <nav className={styles.menuDrawer} ref={menuDrawerRef}>
                             <ul>
                                 <li>Portfolio</li>
-                                <li>About me...</li>
+                                <Link href='/about_me'><li>About me...</li></Link>
                                 <Link href="/resume"><li>Resume</li></Link>
                                 <li>Contact</li>
                             </ul>

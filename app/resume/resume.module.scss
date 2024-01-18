@@ -1,49 +1,84 @@
 .educationList {
     list-style-type: none;
-    margin:0 0 1em 0;
+    margin: 0 0 1em 0;
+
     & li {
-        margin:.5em 0 0 0;
-        font-size:.8rem;
+        margin: .5em 0 0 0;
+        font-size: .8rem;
     }
 }
 
-.experienceList {
-    list-style-type: none;
-    margin:0 0 1em 0;
-    & li {
-        margin:.5em 0 0 2em;
-        font-size:.8rem;
+.experience {
+    &List {
+        list-style-type: none;
+        margin: 0 0 1em 0;
+
+        & li {
+            margin: .5em 0 0 0;
+            font-size: .8rem;
+            padding: 0 0 0 2em;
+            position:relative;
+            
+        &::before {
+            content: '•'; 
+            position: absolute;
+            left: .5em;
+            color:var(--tertiary); 
+        }
+        }
+
+
+    }
+
+    &Section {
+        margin: 2em 0;
+
+        &Title {
+            background-image:linear-gradient(360deg, transparent 0%, var(--outline) 10%, transparent 20%);
+        }
     }
 }
 
 .projectSection {
-    margin:1em 0;
+    margin: 2em 0;
+
     &Title {
         margin: 0 0 .5em 0;
-       
+        background-image:linear-gradient(360deg, transparent 0%, var(--outline) 10%, transparent 20%);
     }
+
     &Links {
-        font-style:italic;
+        font-style: italic;
+        margin:1em 0;
+
         span {
-        font-weight:bold;
+            font-weight: bold;
+            font-style:normal;
         }
     }
+
     &Desc {
-        margin:1em 0;
+        margin: 1em 0;
     }
 }
 
 .resume {
+    &Container a {
+        color:var(--tertiary);
+        text-decoration: underline;
+    }
     &Contacts {
         display: flex;
         flex-direction: column;
         font-size: .8rem;
         margin: 2em 0;
+
         &Left {
             & p {
                 margin-top: .5rem;
             }
         }
+
         &Right {
             & p {
                 margin-top: .5rem;
@@ -52,35 +87,40 @@
     }
 
     &Name {
-        margin:2em 0;
+        margin: 2em 0;
     }
+
     &Title {
-        margin:0 0 1em 0;
+        margin: 0 0 1em 0;
     }
+
     &Summary {
-        margin:2em 0;
+        margin: 2em 0;
+
         & p {
             font-size: .8rem;
-            line-height:1.2rem;
+            line-height: 1.2rem;
         }
     }
+
     &Tech {
-        margin:2em 0;
+        margin: 2em 0;
     }
 }
 
 .techIcons {
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
+
     & img {
-        margin:1em;
+        margin: 1em;
     }
 }
 
 .sectionTitle {
-    padding:.5em;
-    background-color:var(--primaryContainer);
-    color:var(--onPrimaryContainer);
-    border-radius:10px;
-    margin:0 0 1em 0;
+    padding: .5em;
+    background-color: var(--primaryContainer);
+    color: var(--onPrimaryContainer);
+    border-radius: 10px;
+    margin: 0 0 1em 0;
 }

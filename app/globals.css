@@ -15,6 +15,7 @@
   --onSecondary:#ffffff;
   --secondaryContainer: #ffdbcc;
   --onSecondaryContainer:#2c160c;
+  --tertiary:#665f31;
   --surface:#fffbff;
   --onSurface:#201a18;
   --shadow:oklch(22.41% 0.01 39.3 / .3);
@@ -69,8 +70,9 @@
     --onSecondary:#442a1f;
     --secondaryContainer: #5d4034;
     --onSecondaryContainer:#ffdbcc;
+    --tertiary:#d1c88f;
     --surface:#201a18;
-    --onSurface:#ede0db
+    --onSurface:#ede0db;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(to bottom right,
