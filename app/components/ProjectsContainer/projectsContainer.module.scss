@@ -10,6 +10,11 @@
     margin:2em 0 0 0;
 }
 
+.projectsAndScroller {
+    display:flex;
+    justify-content:center;
+}
+
 .projectsScroller {
     height:100%;
     overflow:auto;
@@ -34,6 +39,33 @@
     position:relative;
     // top:-125px;
     height:calc(100dvh - var(--projectsContainerOffset));
+}
+
+.scrollerButtons {
+    display:flex;
+    flex-direction:column;
+    align-self:center;
+
+    & svg {
+    width:48px;
+    height:48px;
+    margin:1em 0;
+    fill:var(--secondaryContainer);
+    stroke:var(--onSecondaryContainer);
+    stroke-width:1;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    transition:all .3s;
+}
+& svg:hover {
+
+    fill:var(--primaryContainer);
+    stroke:var(--onPrimaryContainer);
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    transform:scale(1.05);
+}
 }
 
 .topFade {

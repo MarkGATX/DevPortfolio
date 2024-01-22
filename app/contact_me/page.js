@@ -18,12 +18,7 @@ export default function Contact_Me() {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const message = messageRef.current.value;
-
-        // if (!validateEmail(email)) {
-        //     setErrorMessage('Please use a valid email address');
-        //     return;
-        // }
-
+        
         emailjs.sendForm('default_service', 'portfolio_contact', formRef.current, '9YVbKkrKLvP796bXY')
             .then((result) => {
                 // clear out the input after a successful submit..
