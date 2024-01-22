@@ -3,7 +3,7 @@
 import styles from './projectsContainer.module.scss'
 import { projectData } from '../../utils/projectData'
 import ProjectCard from '../ProjectCard/ProjectCard'
-import { Suspense, useLayoutEffect, useRef } from 'react';
+import { Suspense, useLayoutEffect, useRef, useState } from 'react';
 import ProjectCardSuspense from '../ProjectCard/ProjectCardSuspense';
 
 export default function ProjectsContainer() {
@@ -13,6 +13,8 @@ export default function ProjectsContainer() {
     const scrollerRef = useRef();
     const scrollUpButtonRef = useRef();
     const scrollDownButtonRef = useRef();
+    const [isScrollingUp, setIsScrollingUp] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
 
 
     const addToRefs = (el) => {
@@ -25,16 +27,18 @@ export default function ProjectsContainer() {
     useLayoutEffect(() => {
 
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
-        document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 120) + "px");
+        document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 100) + "px");
 
     }
     )
 
+
+
     const handleScrollDown = () => {
         console.log('click');
-        const scroll = scrollerRef.current
+        const scroll = scrollerRef.current;
         scroll.scrollTo({
-            top: scroll.scrollTop + 300, // Scroll down 100 pixels from the current position
+            top: scroll.scrollTop + 200, // Scroll down 100 pixels from the current position
             behavior: 'smooth'
         });
     };
@@ -43,7 +47,7 @@ export default function ProjectsContainer() {
         console.log('click');
         const scroll = scrollerRef.current
         scroll.scrollTo({
-            top: scroll.scrollTop - 300, // Scroll down 100 pixels from the current position
+            top: scroll.scrollTop - 200, // Scroll down 100 pixels from the current position
             behavior: 'smooth'
         });
     };
@@ -53,7 +57,6 @@ export default function ProjectsContainer() {
             <div className={styles.projectsTitle} ref={projectTitleRef}>
                 <h1>My Projects...</h1>
             </div>
- 
             <div className={styles.projectsAndScroller}>
                 <div className={styles.projectsContainer}>
                     <div className={styles.topFade}></div>
@@ -77,7 +80,7 @@ export default function ProjectsContainer() {
                         </g>
                         <polyline points="34.8,32 24,10.6 13.2,32 " />
                     </svg>
-                    <svg onClick={handleScrollDown} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg onMouseDown={handleScrollDown} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />
