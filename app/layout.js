@@ -1,8 +1,6 @@
 import { inter, outfit } from './ui/fonts'
-import './globals.css'
+import './globals.scss'
 import Header from './components/Header/Header'
-
-
 
 export const metadata = {
   title: {
@@ -25,10 +23,10 @@ export const metadata = {
 // })
 
 
-
 export default function RootLayout({ children }) {
+
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" data-theme='dark' className={`${inter.variable} ${outfit.variable}`}>
       <body>
         <Header />
         {children}

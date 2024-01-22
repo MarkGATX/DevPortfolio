@@ -7,3 +7,13 @@ export async function emailMe (formData) {
         message: formData.get('message'),
       };
 }
+
+export async function darkModeToggle ()  {
+    const element = document.querySelector('html[data-theme]')
+    const theme = element.dataset.theme
+    if (theme === 'dark') {
+      element.dataset.theme='light'
+    } else {
+      element.dataset.theme ='dark'
+    }
+  }

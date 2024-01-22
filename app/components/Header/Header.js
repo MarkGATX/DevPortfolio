@@ -6,6 +6,7 @@ import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 
+
 export default function Header() {
     const [isSmallScreen, setIsSmallScreen] = useState(true);
     const [menuOpen, setMenuOpen] = useState(false)
@@ -52,6 +53,16 @@ export default function Header() {
     })
 
 
+    const darkModeToggle = () =>  {
+        const element = document.querySelector('html[data-theme]')
+        const theme = element.dataset.theme
+        if (theme === 'dark') {
+          element.dataset.theme='light'
+        } else {
+          element.dataset.theme ='dark'
+        }
+      }
+
     return (
         <>
             <header ref={headerRef}>
@@ -61,6 +72,7 @@ export default function Header() {
                         <h2>Mark Gardner</h2>
                     </div>
                 </a>
+                <button onClick={darkModeToggle}>toggle</button>
                 {isSmallScreen ?
                     <>
                         <div className={styles.hamburgerMenuContainer}>

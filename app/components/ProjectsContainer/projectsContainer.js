@@ -13,22 +13,20 @@ export default function ProjectsContainer() {
     const scrollerRef = useRef();
     const scrollUpButtonRef = useRef();
     const scrollDownButtonRef = useRef();
-    const [isScrollingUp, setIsScrollingUp] = useState(false);
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
-
-
-    const addToRefs = (el) => {
-        if (el && !projectRefs.current.includes(el)) {
-            projectRefs.current.push(el)
-        }
-    }
 
 
     useLayoutEffect(() => {
 
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
         document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 100) + "px");
+        scrollUpButtonRef.current.addEventListener("pointerup", handleScrollUp);
+        scrollDownButtonRef.current.addEventListener("pointerup", handleScrollDown)
 
+        return () => {
+            scrollUpButtonRef.current.removeEventListener("pointerup", handleScrollUp);
+            scrollDownButtonRef.current.removeEventListener("pointerup", handleScrollDown);
+
+        }
     }
     )
 
@@ -64,7 +62,7 @@ export default function ProjectsContainer() {
                         <div className={styles.projectCardSpacer}></div>
                         {projectData?.map((project, key) =>
                             <Suspense fallback={<ProjectCardSuspense />} key={project.displayClass}>
-                                <ProjectCard projectData={project} key={project.displayClass} ref={addToRefs(key)} />
+                                <ProjectCard projectData={project} key={project.displayClass}  />
                             </Suspense>
                         )
                         }
@@ -73,14 +71,14 @@ export default function ProjectsContainer() {
                     <div className={styles.bottomFade}></div>
                 </div>
                 <div className={styles.scrollerButtons}>
-                    <svg onClick={handleScrollUp} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg  ref={scrollUpButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />
                         </g>
                         <polyline points="34.8,32 24,10.6 13.2,32 " />
                     </svg>
-                    <svg onMouseDown={handleScrollDown} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg  ref={scrollDownButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />
