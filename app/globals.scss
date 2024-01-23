@@ -3,24 +3,24 @@
   --border-radius: 12px;
   --headerPrimary: #99461a;
   --onHeaderPrimary: #ffffff;
-  --background: #fffbff;
-  --backgroundOffset:#d1cdd1;
-  --outline: #85736c;
-  --onBackground: #201a18;
-  --primary: #99461a;
-  --onPrimary: #ffffff;
-  --primaryContainer:#ffdbcc;
-  --onPrimaryContainer: #351000;
-  --secondary:#76574a;
-  --onSecondary:#ffffff;
-  --secondaryContainer: #ffdbcc;
-  --onSecondaryContainer:#2c160c;
-  --tertiary:#665f31;
-  --onTertiary:#ffffff;
-  --surface:#fffbff;
-  --onSurface:#201a18;
-  --surfaceVariant:#f4ded5;
-  --onSurfaceVariant:#52443d;
+  // --background: #fffbff;
+  // --backgroundOffset:#d1cdd1;
+  // --outline: #85736c;
+  // --onBackground: #201a18;
+  // --primary: #99461a;
+  // --onPrimary: #ffffff;
+  // --primaryContainer:#ffdbcc;
+  // --onPrimaryContainer: #351000;
+  // --secondary:#76574a;
+  // --onSecondary:#ffffff;
+  // --secondaryContainer: #ffdbcc;
+  // --onSecondaryContainer:#2c160c;
+  // --tertiary:#665f31;
+  // --onTertiary:#ffffff;
+  // --surface:#fffbff;
+  // --onSurface:#201a18;
+  // --surfaceVariant:#f4ded5;
+  // --onSurfaceVariant:#52443d;
   --shadow:oklch(22.41% 0.01 39.3 / .3);
 
   --headerHeight:170px;
@@ -76,29 +76,31 @@
     --onTertiary:#363106;
     --surface:#201a18;
     --onSurface:#ede0db;
+    --surfaceVariant:#52443d;
+    --onSurfaceVariant:#d8c2ba;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --background: oklch(22.41% 0.01 39.3);
-    --backgroundOffset: oklch(37.56% 0.01 39.3);
-    --outline: #a08d85;
-    --onBackground: #ede0db;
-    --primary: #ffb695;
-    --onPrimary: #571f00;
-    --primaryContainer:#7a2f03;
-    --onPrimaryContainer: #ffdbcc;
-    --secondary:#e6bead;
-    --onSecondary:#442a1f;
-    --secondaryContainer: #5d4034;
-    --onSecondaryContainer:#ffdbcc;
-    --tertiary:#d1c88f;
-    --onTertiary:#363106;
-    --surface:#201a18;
-    --onSurface:#ede0db;
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --foreground-rgb: 255, 255, 255;
+//     --background-start-rgb: 0, 0, 0;
+//     --background-end-rgb: 0, 0, 0;
+//     --background: oklch(22.41% 0.01 39.3);
+//     --backgroundOffset: oklch(37.56% 0.01 39.3);
+//     --outline: #a08d85;
+//     --onBackground: #ede0db;
+//     --primary: #ffb695;
+//     --onPrimary: #571f00;
+//     --primaryContainer:#7a2f03;
+//     --onPrimaryContainer: #ffdbcc;
+//     --secondary:#e6bead;
+//     --onSecondary:#442a1f;
+//     --secondaryContainer: #5d4034;
+//     --onSecondaryContainer:#ffdbcc;
+//     --tertiary:#d1c88f;
+//     --onTertiary:#363106;
+//     --surface:#201a18;
+//     --onSurface:#ede0db;
 
     /* --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(to bottom right,
@@ -120,8 +122,8 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200; */
-  }
-}
+//   }
+// }
 
 * {
   box-sizing: border-box;
@@ -170,6 +172,8 @@ html[data-theme='dark']{
   --onTertiary:#363106;
   --surface:#201a18;
   --onSurface:#ede0db;
+  --surfaceVariant:#52443d;
+  --onSurfaceVariant:#d8c2ba;
 }
 
 html,

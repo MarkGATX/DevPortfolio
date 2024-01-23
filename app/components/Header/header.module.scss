@@ -1,3 +1,30 @@
+.darkModeToggle {
+    height:32px;
+    width:94px;
+    background-color:var(--secondaryContainer);
+    position:absolute;
+    top:1em;
+    right:1em;
+    border-radius:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    & sub {
+        margin:0 6px 0 4px;
+        transition:all .3s;
+    }
+    &Disc {
+        height:24px;
+        width:24px;
+        border-radius:50%;
+        position:absolute;
+        top:4px;
+        left:4px;
+        background-color:var(--onSecondaryContainer);
+        transition:all .5s;
+    }
+}
+
 .headerAvatar {
     border-radius:100%;
     margin-right:1em;

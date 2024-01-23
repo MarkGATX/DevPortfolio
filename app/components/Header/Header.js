@@ -13,6 +13,9 @@ export default function Header() {
     const headerRef = useRef();
     const hamburgerRef = useRef();
     const menuDrawerRef = useRef();
+    const toggleDiscRef = useRef();
+    const lightModeTextRef = useRef();
+    const darkModeTextRef = useRef();
 
     useLayoutEffect(() => {
         const headerHeight = headerRef.current.offsetHeight;
@@ -56,10 +59,16 @@ export default function Header() {
     const darkModeToggle = () =>  {
         const element = document.querySelector('html[data-theme]')
         const theme = element.dataset.theme
-        if (theme === 'dark') {
-          element.dataset.theme='light'
+        if (theme === 'light') {
+            toggleDiscRef.current.style.left = "66px";
+          element.dataset.theme='dark'
+          lightModeTextRef.current.style.color = 'var(--onSecondaryyContainer)'
+          darkModeTextRef.current.style.color = 'transparent'
         } else {
-          element.dataset.theme ='dark'
+          element.dataset.theme ='light'
+          toggleDiscRef.current.style.left = "4px";
+          lightModeTextRef.current.style.color = 'transparent'
+          darkModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
         }
       }
 
@@ -72,7 +81,11 @@ export default function Header() {
                         <h2>Mark Gardner</h2>
                     </div>
                 </a>
-                <button onClick={darkModeToggle}>toggle</button>
+                <div className={styles.darkModeToggle} onClick={darkModeToggle}>
+                    <sub ref={lightModeTextRef}>light</sub>
+                    <sub ref={darkModeTextRef}>dark</sub>
+                    <div ref={toggleDiscRef} className={styles.darkModeToggleDisc}></div>
+                </div>
                 {isSmallScreen ?
                     <>
                         <div className={styles.hamburgerMenuContainer}>
