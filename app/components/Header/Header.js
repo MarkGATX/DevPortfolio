@@ -32,6 +32,18 @@ export default function Header() {
         if (isSmallScreen) {
             hamburgerMenu.addEventListener('click', handleHamburgerClick);
         }
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDarkMode) {
+            toggleDiscRef.current.style.left = "66px";
+            lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
+            darkModeTextRef.current.style.color = 'transparent'
+        } else {
+            toggleDiscRef.current.style.left = "4px";
+            lightModeTextRef.current.style.color = 'transparent'
+            darkModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
+        
+        }
+        // darkModeToggle();
 
         return () => {
             mediaQuery.removeEventListener('change', handleMediaQueryChange)
@@ -62,7 +74,7 @@ export default function Header() {
         if (theme === 'light') {
             toggleDiscRef.current.style.left = "66px";
           element.dataset.theme='dark'
-          lightModeTextRef.current.style.color = 'var(--onSecondaryyContainer)'
+          lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
           darkModeTextRef.current.style.color = 'transparent'
         } else {
           element.dataset.theme ='light'

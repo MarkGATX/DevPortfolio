@@ -9,8 +9,13 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    &:hover .darkModeToggleDisc{
+        animation:discWiggle 1s 3;
+    }
     & sub {
         margin:0 6px 0 4px;
+        color:transparent;
         transition:all .3s;
     }
     &Disc {
@@ -105,4 +110,22 @@
     .headerNames {
         flex-direction:column;
     }
+}
+
+@keyframes discWiggle {
+    10%, 90% {
+        transform: translateX(1px);
+      }
+    
+      20%, 80% {
+        transform:  translateX(-1px)
+      }
+    
+      30%, 50%, 70% {
+        transform:  translateX(1px)
+      }
+    
+      40%, 60% {
+        transform:  translateX(-1px)
+      }
 }

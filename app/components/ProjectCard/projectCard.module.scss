@@ -1,3 +1,5 @@
+@use '../../mixins';
+
 .projectCardBackground {
     width: 100%;
     height: 200px;
@@ -9,7 +11,7 @@
 }
 
 .projectCardContainer {
-    // margin-bottom:.5em;
+    @include mixins.generalTransition('.3s');
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
