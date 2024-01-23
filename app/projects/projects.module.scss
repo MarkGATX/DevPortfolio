@@ -1,3 +1,5 @@
+@use '../mixins';
+
 .alignLeft {
 justify-content: flex-start !important;
 }
@@ -64,6 +66,7 @@ img.zoomed {
 }
 
 .smallProjectCard {
+    @include mixins.generalTransition;
     position:relative;
     width:30%;
     height:100px;
@@ -75,7 +78,6 @@ img.zoomed {
     border:2px solid var(--secondaryContainer);
     border-radius:10px;
     overflow:hidden;
-    transition: all .3s;
 
 }
 
@@ -88,6 +90,7 @@ img.zoomed {
 }
 
 .smallProjectContainer {
+    @include mixins.generalTransition;
     width:100%;
     display:flex;
     justify-content: center;

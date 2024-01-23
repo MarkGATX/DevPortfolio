@@ -1,8 +1,11 @@
+@use '../../mixins';
+
 .imageContainers {
+    @include mixins.generalTransition;
     width:100%;
     height:200px;
     position:relative;
-    transition: all .3s;
+
 }
 
 img.zoomed {

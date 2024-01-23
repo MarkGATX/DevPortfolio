@@ -1,3 +1,5 @@
+@use '../app/mixins';
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -99,6 +101,7 @@ a {
 }
 
 button {
+  @include mixins.generalTransition;
   padding:.5em;
   background-color: var(--secondary);
   color:var(--onSecondary);
@@ -106,7 +109,6 @@ button {
   border-radius:10px;
   border:none;
   cursor: pointer;
-  transition:all .3s;
   margin-right:2em;
 }
 
@@ -125,6 +127,7 @@ h5 {
 }
 
 header {
+  @include mixins.generalTransition;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -149,12 +152,14 @@ main {
 }
 
 nav ul {
+  @include mixins.generalTransition;
   list-style-type: none;
   display:flex;
   justify-content: space-between;
 }
 
 nav ul li{
+  @include mixins.generalTransition;
   margin:0 1em 0 0;
   font-size:.8rem;
 }

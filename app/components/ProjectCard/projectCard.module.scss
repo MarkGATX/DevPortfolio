@@ -11,7 +11,7 @@
 }
 
 .projectCardContainer {
-    @include mixins.generalTransition('.3s');
+    @include mixins.generalTransition;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -81,6 +81,7 @@
 
 
 .projectCardTitle {
+    @include mixins.generalTransition;
     font-weight: normal;
     padding: 1em 1em 1em .5em;
     background-color: var(--primaryContainer);
