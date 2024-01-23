@@ -26,12 +26,6 @@ export default function Softlife({ params }) {
                 <h1>{project.title}</h1>
                 <p>{project.desc}</p>
             </div>
-            <div className={styles.projectTech}>
-                <p>Techstack</p>
-                <div className={`${styles.techStack} ${styles.alignLeft}`}>
-                <TechStack tech={project.tech} />
-                </div>
-            </div>
             <div className={styles.linkButtons}>
                 {project?.livePath ?
                     <Link href={project?.livePath}  target='_blank'>
@@ -48,12 +42,20 @@ export default function Softlife({ params }) {
                     null
                 }
             </div>
+            <div className={styles.projectTech}>
+                <p>Techstack</p>
+                <div className={`${styles.techStack} ${styles.alignLeft}`}>
+                <TechStack tech={project.tech} />
+                </div>
+            </div>
+            
             <section className={styles.projectDetails} >
                 <div className={styles.heroImage}>
                     <Image src={project.imgs[0]} fill={true} style={{ objectFit: 'cover', borderRadius:'10px', objectPosition:'top 0% left 0%' }} alt={`${project.title} hero image`}/>
                 </div>
                 <div className={styles.projectDescription}>
-                    {project.longDesc}
+                    <h3>Description</h3>
+                    <article>{project.longDesc}</article>
                 </div>
                 <section className={styles.projectImages}>
                     <ImageContainers images={project.imgs} title={project.title}/>

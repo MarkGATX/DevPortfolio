@@ -65,10 +65,10 @@ export default function Contact_Me() {
                     <p className="">You can always reach me on GitHub or LinkedIn</p>
                     <div className={styles.contactMeLinkImages}>
                         <a className="" target="_blank" rel="noreferrer" href="https://github.com/markgatx">
-                            <Image src='/images/tech/github.webp' width={48} height={48} /></a>
+                            <Image src='/images/tech/github.webp' width={48} height={48} alt='GitHub logo' /></a>
                         <a className="" target="_blank" rel="noreferrer"
                             href="https://www.linkedin.com/in/mark-gardner-ATX/">
-                            <Image src='/images/tech/linked_in.webp' width={48} height={48} />
+                            <Image src='/images/tech/linked_in.webp' width={48} height={48} alt="LinkedIn logo" />
                         </a>
                     </div>
                 </div>

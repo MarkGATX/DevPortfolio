@@ -6,6 +6,10 @@ import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 
+const getThemeFromPrefersColorScheme = () => {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return prefersDarkMode ? 'dark' : 'light';
+  };
 
 export default function Header() {
     const [isSmallScreen, setIsSmallScreen] = useState(true);
@@ -16,23 +20,36 @@ export default function Header() {
     const toggleDiscRef = useRef();
     const lightModeTextRef = useRef();
     const darkModeTextRef = useRef(); 
+    const themeToggleRef = useRef();
   
 
     useLayoutEffect(() => {
-        const headerHeight = headerRef.current.offsetHeight;
+        let headerHeight = headerRef.current.offsetHeight;
         const hamburgerMenu = hamburgerRef.current;
         document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
         //check for window size
         const mediaQuery = window.matchMedia('(max-width: 768px)');
+        // const menuDrawerQuery = window.matchMedia('(max-width: 425px)');
+
         function handleMediaQueryChange(event) {
             setIsSmallScreen(event.matches);
+            headerHeight = headerRef.current.offsetHeight;
+            document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
         }
+        // function handleMenuDrawerChange(event) {
+        //     console.log('screen')
+        //     headerHeight = headerRef.current.offsetHeight;
+        //     document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
+        // }
+
         mediaQuery.addEventListener('change', handleMediaQueryChange);
-        handleMediaQueryChange(mediaQuery);
+        // menuDrawerQuery.addEventListener('change', handleMenuDrawerChange)
+        // handleMediaQueryChange(mediaQuery);
 
         // if (isSmallScreen) {
         //     hamburgerMenu.addEventListener('click', handleHamburgerClick);
         // }
+       
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (prefersDarkMode) { 
             
@@ -53,15 +70,16 @@ export default function Header() {
         // darkModeToggle();
 
         return () => {
-            mediaQuery.removeEventListener('change', handleMediaQueryChange)
+            mediaQuery.removeEventListener('change', handleMediaQueryChange)       
+            // menuDrawerQuery.removeEventListener('change', handleMenuDrawerChange)
+
             // if (isSmallScreen) {
             //     hamburgerMenu.removeEventListener('click', handleHamburgerClick)
             // }
         }
     },[])
 
-    const handleHamburgerClick = useCallback(() => {
-        console.log('click')
+    const handleHamburgerClick = useCallback((event) => {
         if (!menuOpen) {
             gsap.to(menuDrawerRef.current, { duration: .5, x: -200 });
             setMenuOpen(prev => !prev)
@@ -75,6 +93,7 @@ export default function Header() {
 
 
     const darkModeToggle = () =>  {
+        
         const element = document.querySelector('html[data-theme]')
         const theme = element.dataset.theme
         if (theme === 'light') {
@@ -97,22 +116,22 @@ export default function Header() {
             <header ref={headerRef}>
                 <a href='/'>
                     <div className={styles.headerNames}>
-                        <Image src='/images/mark_with_coffee.jpg' width={100} height={100} className={styles.headerAvatar} alt="Mark Gardner drinking too much coffee"></Image>
+                        <Image src='/images/mark_with_coffee.jpg' width={100} height={100} className={styles.headerAvatar} alt="Mark Gardner drinking too much coffee" priority='true'></Image>
                         <h2>Mark Gardner</h2>
                     </div>
                 </a>
-                <div className={styles.darkModeToggle} onClick={darkModeToggle}>
+                <div ref={themeToggleRef} className={styles.darkModeToggle} onClick={darkModeToggle}>
                     <sub ref={lightModeTextRef}>light</sub>
                     <sub ref={darkModeTextRef}>dark</sub>
                     <div ref={toggleDiscRef} className={styles.darkModeToggleDisc}></div>
                 </div>
                 {isSmallScreen ?
                     <>
-                        <div className={styles.hamburgerMenuContainer}>
+                        <div className={styles.hamburgerMenuContainer}  onClick={(event) => event.stopPropagation()} >
 
                             <Image src='/images/menu_icon.svg' onClick={handleHamburgerClick} ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
                         </div>
-                        <nav className={styles.menuDrawer} ref={menuDrawerRef}>
+                        <nav className={styles.menuDrawer}ref={menuDrawerRef}>
                             <ul>
                                 <Link href='/' onClick={handleHamburgerClick}><li>Portfolio</li></Link>
                                 <Link href='/about_me' onClick={handleHamburgerClick}><li>About me...</li></Link>

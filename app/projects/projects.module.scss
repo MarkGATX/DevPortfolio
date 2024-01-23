@@ -8,10 +8,26 @@ justify-content: flex-start !important;
     width:90%;
     height:40dvh;
     position:relative;
-    overflow:hidden;
+    // overflow:hidden;
     display:flex;
     align-items:flex-start;
     object-position: top;
+    z-index:4;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 40dvh;
+        background-image: linear-gradient(45deg, var(--shadow), var(--shadow));
+        box-shadow: inset 0 0 14px 14px var(--background);
+        color: var(--onSurfaceVariant);
+        padding: 0.5em;
+        transform: rotate(2deg);
+        position: relative;
+        z-index: -1;
+        border: 2px solid var(--background);
+        // right: -70px;
+    }
 }
 
 // .imageContainers {
@@ -34,6 +50,13 @@ img.zoomed {
     width:100px;
     overflow:hidden;
     position:relative;
+}
+
+.linkButtons {
+    margin:1em .5em 1em 0;
+    & a button{
+        margin:1em 1em;
+    }
 }
 
 .projectDescription {
@@ -63,7 +86,36 @@ img.zoomed {
     margin: 2em 0;
     display:flex;
     flex-direction:column;
+    & p {
+        background-image: linear-gradient(45deg, var(--surfaceVariant),var(--surfaceVariantOffset));
+        box-shadow: inset 0 0 5px 10px var(--background);
+        padding: .5em;
+        color: var(--onSurfaceVariant);
+        padding:.5em;
+    }
 }
+
+.projectDescription {
+    & h3{
+        background-image: linear-gradient(45deg, var(--surfaceVariant),var(--surfaceVariantOffset));
+        box-shadow: inset 0 0 10px 14px var(--background);
+        padding: .5em;
+        color: var(--onSurfaceVariant);
+
+    }
+    & article {
+        padding:.5em;
+    }
+}
+
+// .projectTitle {
+//     padding: .5em;
+//     background-color: var(--primaryContainer);
+//     background-image:linear-gradient(140deg, var(--primaryContainer), var(--primaryContainerOffset));
+//     color: var(--onPrimaryContainer);
+//     border-radius: 10px;
+//     margin: 0 0 1em 0;
+// }
 
 .smallProjectCard {
     @include mixins.generalTransition;

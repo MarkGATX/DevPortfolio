@@ -83,7 +83,7 @@
     background-image: linear-gradient(var(--background) 20%, transparent 95%);
     position: relative;
     top: 0;
-    z-index: 2;
+    z-index: 4;
 }
 
 .bottomFade {
@@ -92,5 +92,5 @@
     height: 100px;
     position: relative;
     top: -200px;
-    z-index: 2;
+    z-index: 4;
 }

@@ -33,7 +33,7 @@ export default function ProjectsContainer() {
 
 
     const handleScrollDown = () => {
-        console.log('click');
+    
         const scroll = scrollerRef.current;
         scroll.scrollTo({
             top: scroll.scrollTop + 200, // Scroll down 100 pixels from the current position
@@ -42,7 +42,7 @@ export default function ProjectsContainer() {
     };
 
     const handleScrollUp = () => {
-        console.log('click');
+    
         const scroll = scrollerRef.current
         scroll.scrollTo({
             top: scroll.scrollTop - 200, // Scroll down 100 pixels from the current position

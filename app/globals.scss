@@ -3,8 +3,8 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --headerPrimary: #99461a;
-  --onHeaderPrimary: #ffffff;
+  --headerPrimary: oklch(49.44% 0.124 45.13); //#99461a;
+  --onHeaderPrimary: oklch(100% 0 0); // #ffffff;
   --shadow:oklch(22.41% 0.01 39.3 / .3);
   --headerHeight:170px;
   --projectsTitleHeight:100px;
@@ -12,27 +12,31 @@
 }
 
 .dark-mode {
-  --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
     --background: oklch(22.41% 0.01 39.3);
-    --backgroundOffset: oklch(37.56% 0.01 39.3);
-    --outline: #a08d85;
-    --onBackground: #ede0db;
-    --primary: #ffb695;
-    --onPrimary: #571f00;
-    --primaryContainer:#7a2f03;
-    --onPrimaryContainer: #ffdbcc;
-    --secondary:#e6bead;
-    --onSecondary:#442a1f;
-    --secondaryContainer: #5d4034;
-    --onSecondaryContainer:#ffdbcc;
-    --tertiary:#d1c88f;
-    --onTertiary:#363106;
-    --surface:#201a18;
-    --onSurface:#ede0db;
-    --surfaceVariant:#52443d;
-    --onSurfaceVariant:#d8c2ba;
+    --backgroundOffset: oklch(27.41% 0.01 39.3);
+    --outline: oklch(65.81% 0.026 44.22); //#a08d85;
+    --onBackground: oklch(91.57% 0.016 42.38); //#ede0db;
+    --primary: oklch(83.71% 0.096 45.26); //#ffb695;
+    --primaryOffset:oklch(88.71% 0.096 45.26);
+    --onPrimary: oklch(32.01% 0.0919 44.7255); // #571f00;
+    --primaryContainer:oklch(40.69% 0.116 44.2); // #7a2f03;
+    --primaryContainerOffset: oklch(45.69% 0.116 44.2);
+    --onPrimaryContainer: oklch(91.76% 0.045 43.92); //#ffdbcc;
+    --secondary:oklch(83.2% 0.052 44.27); //#e6bead;
+    --secondaryOffset: oklch(88.2% 0.052 44.27);
+    --onSecondary:oklch(31.42% 0.043 43.67); // #442a1f;
+    --secondaryContainer: oklch(40.08% 0.045 43.39); //#5d4034;
+    --secondaryContainerOffset: oklch(45.08% 0.045 43.39);
+    --onSecondaryContainer:oklch(91.76% 0.045 43.92); //#ffdbcc;
+    --tertiary:oklch(82.65% 0.075 100.25); //#d1c88f;
+    --tertiaryOffset:oklch(87.65% 0.075 100.25);
+    --onTertiary:oklch(30.93% 0.059 102.49); //#363106;
+    --surface:oklch(22.41% 0.01 39.3); //#201a18;
+    --surfaceOffset:oklch(27.41% 0.01 39.3);;
+    --onSurface:oklch(91.57% 0.016 42.38); //#ede0db;
+    --surfaceVariant:oklch(39.9% 0.023 48.13); //#52443d;
+    --surfaceVariantOffset:oklch(44.9% 0.023 48.13);
+    --onSurfaceVariant:oklch(83.03% 0.027 41.09); //#d8c2ba;
 }
 
 * {
@@ -42,46 +46,61 @@
 }
 
 html[data-theme='light'] {
-  --background: #fffbff;
-  --backgroundOffset:#d1cdd1;
-  --outline: #85736c;
-  --onBackground: #201a18;
-  --primary: #99461a;
-  --onPrimary: #ffffff;
-  --primaryContainer:#ffdbcc;
-  --onPrimaryContainer: #351000;
-  --secondary:#76574a;
-  --onSecondary:#ffffff;
-  --secondaryContainer: #ffdbcc;
-  --onSecondaryContainer:#2c160c;
-  --tertiary:#665f31;
-  --onTertiary:#ffffff;
-  --surface:#fffbff;
-  --onSurface:#201a18;
-  --surfaceVariant:#f4ded5;
-  --onSurfaceVariant:#52443d;
+  --background: oklch(99.23% 0.0067 325.6274); //#fffbff;
+  --backgroundOffset:oklch(94.23% 0.0067 325.6274); //#cecace;
+  --outline:oklch(57.03% 0.025 42.44); // #85736c;
+  --onBackground:oklch(22.41% 0.01 39.3); // #201a18;
+  --primary:oklch(49.44% 0.124 45.13); // #99461a;
+  --primaryOffset:oklch(42.44% 0.124 45.13);
+  --onPrimary: oklch(100% 0 0); //#ffffff;
+  --primaryContainer:oklch(91.76% 0.045 43.92); //#ffdbcc;
+  --primaryContainerOffset:oklch(84.76% 0.045 43.92);
+  --onPrimaryContainer:oklch(23.08% 0.066 44.93); // #351000;
+  --secondary:oklch(48.56% 0.046 43.78); //#76574a;
+  --secondaryOffset:oklch(41.56% 0.046 43.78);
+  --onSecondary:oklch(100% 0 0); //#ffffff;
+  --secondaryContainer: oklch(91.76% 0.045 43.92); //#ffdbcc;
+  --secondaryContainerOffset:oklch(84.76% 0.045 43.92);
+  --onSecondaryContainer:oklch(22.85% 0.04 44.7); //#2c160c;
+  --tertiary:oklch(48.1% 0.066 100.78); //#665f31;
+  --tertiaryOffset:oklch(41.1% 0.066 100.78);
+  --onTertiary:oklch(1005 0 0); //#ffffff;
+  --surface:oklch(99.23% 0.006725315390859499 325.62738137631163);//#fffbff;
+  --surfaceOffset:oklch(92.23% 0.006725315390859499 325.62738137631163);
+  --onSurface:oklch(22.41% 0.01 39.3); //#201a18;
+  --surfaceVariant:oklch(91.6% 0.027 43.65); //#f4ded5;
+  --surfaceVariantOffset:oklch(84.6% 0.027 43.65);
+  --onSurfaceVariant:oklch(39.9% 0.023 48.13); //#52443d;
   --shadow:oklch(22.41% 0.01 39.3 / .3);
 }
 
 html[data-theme='dark']{
   --background: oklch(22.41% 0.01 39.3);
-  --backgroundOffset: oklch(37.56% 0.01 39.3);
-  --outline: #a08d85;
-  --onBackground: #ede0db;
-  --primary: #ffb695;
-  --onPrimary: #571f00;
-  --primaryContainer:#7a2f03;
-  --onPrimaryContainer: #ffdbcc;
-  --secondary:#e6bead;
-  --onSecondary:#442a1f;
-  --secondaryContainer: #5d4034;
-  --onSecondaryContainer:#ffdbcc;
-  --tertiary:#d1c88f;
-  --onTertiary:#363106;
-  --surface:#201a18;
-  --onSurface:#ede0db;
-  --surfaceVariant:#52443d;
-  --onSurfaceVariant:#d8c2ba;
+  --backgroundOffset: oklch(17.41% 0.01 39.3);
+  --outline: oklch(65.81% 0.026 44.22); //#a08d85;
+  --onBackground: oklch(91.57% 0.016 42.38); //#ede0db;
+  --primary: oklch(83.71% 0.096 45.26); //#ffb695;
+  --primaryOffset:oklch(75.71% 0.096 45.26);
+  --onPrimary: oklch(32.01% 0.0919 44.7255); // #571f00;
+  --primaryContainer:oklch(40.69% 0.116 44.2); // #7a2f03;
+  --primaryContainerOffset: oklch(43.69% 0.116 44.2);
+  --onPrimaryContainer: oklch(91.76% 0.045 43.92); //#ffdbcc;
+  --secondary:oklch(83.2% 0.052 44.27); //#e6bead;
+  --secondaryOffset: oklch(76.2% 0.052 44.27);
+  --onSecondary:oklch(31.42% 0.043 43.67); // #442a1f;
+  --secondaryContainer: oklch(40.08% 0.045 43.39); //#5d4034;
+  --secondaryContainerOffset: oklch(33.08% 0.045 43.39);
+  --onSecondaryContainer:oklch(91.76% 0.045 43.92); //#ffdbcc;
+  --tertiary:oklch(82.65% 0.075 100.25); //#d1c88f;
+  --tertiaryOffset:oklch(75.65% 0.075 100.25);
+  --onTertiary:oklch(30.93% 0.059 102.49); //#363106;
+  --surface:oklch(22.41% 0.01 39.3); //#201a18;
+  --surfaceOffset:oklch(15.41% 0.01 39.3);;
+  --onSurface:oklch(91.57% 0.016 42.38); //#ede0db;
+  --surfaceVariant:oklch(39.9% 0.023 48.13); //#52443d;
+  --surfaceVariantOffset:oklch(32.9% 0.023 48.13);
+  --onSurfaceVariant:oklch(83.03% 0.027 41.09); //#d8c2ba;
+
 }
 
 html,
@@ -103,7 +122,8 @@ a {
 button {
   @include mixins.generalTransition;
   padding:.5em;
-  background-color: var(--secondary);
+  // background-color: var(--secondary);
+  background-image:linear-gradient(140deg, var(--secondary), var(--secondaryOffset));
   color:var(--onSecondary);
   min-width:150px;
   border-radius:10px;
@@ -113,7 +133,8 @@ button {
 }
 
 button:hover {
-  background-color: var(--primary);
+  // background-color: var(--primary);
+  background-image:linear-gradient(140deg, var(--primary), var(--primaryOffset));
   color:var(--onPrimary);
   transform:scale(1.03);
 }

@@ -34,8 +34,10 @@
         margin: 2em 0;
 
         &Title {
-            background-image:linear-gradient(360deg, transparent 0, var(--outline) 2px, transparent 4px);
-        }
+            background-image: linear-gradient(45deg, var(--surfaceVariant),var(--surfaceVariantOffset));
+            box-shadow: inset 0 0 12px 13px var(--background);
+            padding: .5em;
+            color: var(--onSurfaceVariant);        }
     }
 }
 
@@ -44,12 +46,16 @@
 
     &Title {
         margin: 0 0 .5em 0;
-        background-image:linear-gradient(360deg, transparent 0, var(--outline) 2px, transparent 4px);
+        // background-image:linear-gradient(360deg, transparent 0, var(--outline) 2px, transparent 4px);
+        background-image: linear-gradient(45deg, var(--surfaceVariant),var(--surfaceVariantOffset));
+        box-shadow: inset 0 0 12px 13px var(--background);
+        padding: .5em;
+        color: var(--onSurfaceVariant);
     }
 
     &Links {
         font-style: italic;
-        margin:1em 0;
+        margin:1em .5em;
 
         span {
             font-weight: bold;
@@ -58,7 +64,7 @@
     }
 
     &Desc {
-        margin: 1em 0;
+        margin: 1em .5em;
     }
 }
 
@@ -120,6 +126,7 @@
 .sectionTitle {
     padding: .5em;
     background-color: var(--primaryContainer);
+    background-image:linear-gradient(140deg, var(--primaryContainer), var(--primaryContainerOffset));
     color: var(--onPrimaryContainer);
     border-radius: 10px;
     margin: 0 0 1em 0;
