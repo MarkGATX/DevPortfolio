@@ -15,7 +15,8 @@ export default function Header() {
     const menuDrawerRef = useRef();
     const toggleDiscRef = useRef();
     const lightModeTextRef = useRef();
-    const darkModeTextRef = useRef();
+    const darkModeTextRef = useRef(); 
+  
 
     useLayoutEffect(() => {
         const headerHeight = headerRef.current.offsetHeight;
@@ -29,15 +30,21 @@ export default function Header() {
         mediaQuery.addEventListener('change', handleMediaQueryChange);
         handleMediaQueryChange(mediaQuery);
 
-        if (isSmallScreen) {
-            hamburgerMenu.addEventListener('click', handleHamburgerClick);
-        }
+        // if (isSmallScreen) {
+        //     hamburgerMenu.addEventListener('click', handleHamburgerClick);
+        // }
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (prefersDarkMode) {
+        if (prefersDarkMode) { 
+            
+            const element = document.querySelector('html[data-theme]')
+            element.dataset.theme = 'dark'
             toggleDiscRef.current.style.left = "66px";
             lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
             darkModeTextRef.current.style.color = 'transparent'
         } else {
+           
+            const element = document.querySelector('html[data-theme]')
+            element.dataset.theme = 'light'
             toggleDiscRef.current.style.left = "4px";
             lightModeTextRef.current.style.color = 'transparent'
             darkModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
@@ -47,12 +54,11 @@ export default function Header() {
 
         return () => {
             mediaQuery.removeEventListener('change', handleMediaQueryChange)
-            if (isSmallScreen) {
-                hamburgerMenu.removeEventListener('click', handleHamburgerClick)
-            }
+            // if (isSmallScreen) {
+            //     hamburgerMenu.removeEventListener('click', handleHamburgerClick)
+            // }
         }
-    },
-    )
+    },[])
 
     const handleHamburgerClick = useCallback(() => {
         console.log('click')
@@ -72,11 +78,13 @@ export default function Header() {
         const element = document.querySelector('html[data-theme]')
         const theme = element.dataset.theme
         if (theme === 'light') {
+           
             toggleDiscRef.current.style.left = "66px";
           element.dataset.theme='dark'
           lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
           darkModeTextRef.current.style.color = 'transparent'
         } else {
+            
           element.dataset.theme ='light'
           toggleDiscRef.current.style.left = "4px";
           lightModeTextRef.current.style.color = 'transparent'
@@ -102,7 +110,7 @@ export default function Header() {
                     <>
                         <div className={styles.hamburgerMenuContainer}>
 
-                            <Image src='/images/menu_icon.svg' ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
+                            <Image src='/images/menu_icon.svg' onClick={handleHamburgerClick} ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
                         </div>
                         <nav className={styles.menuDrawer} ref={menuDrawerRef}>
                             <ul>
@@ -116,10 +124,10 @@ export default function Header() {
                     :
                     <nav>
                         <ul>
-                            <li>Portfolio</li>
-                            <li>About me...</li>
-                            <li>Resume</li>
-                            <li>Contact</li>
+                        <Link href='/'> <li>Portfolio</li></Link>
+                        <Link href='/about_me'>  <li>About me...</li></Link>
+                        <Link href="/resume">   <li>Resume</li></Link>
+                        <Link href="/contact_me">    <li>Contact</li></Link>
                         </ul>
                     </nav>
                 }
