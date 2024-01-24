@@ -1,73 +1,75 @@
 .darkModeToggle {
-    height:32px;
-    width:94px;
-    background-color:var(--secondaryContainer);
-    background-image:linear-gradient(140deg, var(--secondaryContainer), var(--secondaryContainerOffset));
-    position:absolute;
-    top:1em;
-    right:1em;
-    border-radius:50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    height: 32px;
+    width: 94px;
+    background-color: var(--secondaryContainer);
+    background-image: linear-gradient(170deg, var(--secondaryContainer), var(--secondaryContainerOffset));
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    &:hover .darkModeToggleDisc{
-        animation:discWiggle 1s 1;
+    &:hover .darkModeToggleDisc {
+        animation: discWiggle 1s 1;
     }
+
     & sub {
-        margin:0 6px 0 4px;
-        color:transparent;
-        transition:all .3s;
+        margin: 0 6px 0 4px;
+        color: transparent;
+        transition: all .3s;
     }
+
     &Disc {
-        height:24px;
-        width:24px;
-        border-radius:50%;
-        position:absolute;
-        top:4px;
-        left:4px;
-        background-color:var(--onSecondaryContainer);
-        transition:all .5s;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        background-color: var(--onSecondaryContainer);
+        transition: all .5s;
     }
 }
 
 .headerAvatar {
-    border-radius:100%;
-    margin-right:1em;
+    border-radius: 100%;
+    margin-right: 1em;
 }
 
 .headerNames {
-    display:flex;
+    display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    
+
     & h2 {
         font-weight: normal;
     }
 }
 
 .hamburgerMenu {
-    position:relative;
+    position: relative;
     filter: invert(1);
-    
+
 }
 
 .hamburgerMenu:hover {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .hamburgerMenuContainer {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 .menuDrawer {
-    position:absolute;
-    width:150px;
-    right:-210px;
-    top:var(--headerHeight);
+    position: absolute;
+    width: 150px;
+    right: -210px;
+    top: var(--headerHeight);
     background-color: var(--headerPrimary);
-    color:var(--onHeaderPrimary);
+    color: var(--onHeaderPrimary);
     padding: 0 0 1em 1em;
     border-radius: 0 0 0 10px;
     box-shadow: var(--shadow) 0 5px 3px;
@@ -99,34 +101,40 @@
 // } 
 
 .menuDrawer ul {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
-.menuDrawer ul li{
-    padding:.5rem;
+.menuDrawer ul li {
+    padding: .5rem;
 }
 
 @media screen and (max-width:425px) {
     .headerNames {
-        flex-direction:column;
+        flex-direction: column;
     }
 }
 
 @keyframes discWiggle {
-    10%, 90% {
+
+    10%,
+    90% {
         transform: translateX(1px);
-      }
-    
-      20%, 80% {
-        transform:  translateX(-1px)
-      }
-    
-      30%, 50%, 70% {
-        transform:  translateX(1px)
-      }
-    
-      40%, 60% {
-        transform:  translateX(-1px)
-      }
+    }
+
+    20%,
+    80% {
+        transform: translateX(-1px)
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translateX(1px)
+    }
+
+    40%,
+    60% {
+        transform: translateX(-1px)
+    }
 }

@@ -17,14 +17,14 @@
             margin: .5em 0 0 0;
             font-size: .8rem;
             padding: 0 0 0 2em;
-            position:relative;
-            
-        &::before {
-            content: '•'; 
-            position: absolute;
-            left: .5em;
-            color:var(--tertiary); 
-        }
+            position: relative;
+
+            &::before {
+                content: '•';
+                position: absolute;
+                left: .5em;
+                color: var(--tertiary);
+            }
         }
 
 
@@ -34,10 +34,11 @@
         margin: 2em 0;
 
         &Title {
-            background-image: linear-gradient(45deg, var(--surfaceVariant),var(--surfaceVariantOffset));
-            box-shadow: inset 0 0 12px 18px var(--background);
+            background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
+            box-shadow: inset 0 0 10px 21px var(--background);
             padding: .5em;
-            color: var(--onSurfaceVariant);        }
+            color: var(--onSurfaceVariant);
+        }
     }
 }
 
@@ -47,19 +48,19 @@
     &Title {
         margin: 0 0 .5em 0;
         // background-image:linear-gradient(360deg, transparent 0, var(--outline) 2px, transparent 4px);
-        background-image: linear-gradient(45deg, var(--surfaceVariant),var(--surfaceVariantOffset));
-        box-shadow: inset 0 0 12px 18px var(--background);
+        background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
+        box-shadow: inset 0 0 10px 21px var(--background);
         padding: .5em;
         color: var(--onSurfaceVariant);
     }
 
     &Links {
         font-style: italic;
-        margin:1em .5em;
+        margin: 1em .5em;
 
         span {
             font-weight: bold;
-            font-style:normal;
+            font-style: normal;
         }
     }
 
@@ -70,9 +71,10 @@
 
 .resume {
     &Container a {
-        color:var(--tertiary);
+        color: var(--tertiary);
         text-decoration: underline;
     }
+
     &Contacts {
         display: flex;
         flex-direction: column;
@@ -117,6 +119,7 @@
 .techIcons {
     display: flex;
     flex-wrap: wrap;
+  
 
     & img {
         margin: 1em;
@@ -124,16 +127,16 @@
 }
 
 .techSectionTitle {
-    background-image: linear-gradient(45deg, var(--surfaceVariant),var(--surfaceVariantOffset));
-        box-shadow: inset 0 0 5px 15px var(--background);
-        padding: .5em;
-        color: var(--onSurfaceVariant);
+    background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
+    box-shadow: inset 0 0 10px 17px var(--background);
+    padding: .5em;
+    color: var(--onSurfaceVariant);
 }
 
 .sectionTitle {
     padding: .5em;
     background-color: var(--primaryContainer);
-    background-image:linear-gradient(140deg, var(--primaryContainer), var(--primaryContainerOffset));
+    background-image: linear-gradient(170deg, var(--primaryContainer), var(--primaryContainerOffset));
     color: var(--onPrimaryContainer);
     border-radius: 10px;
     margin: 0 0 1em 0;
