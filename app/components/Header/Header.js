@@ -29,26 +29,14 @@ export default function Header() {
         document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
         //check for window size
         const mediaQuery = window.matchMedia('(max-width: 768px)');
-        // const menuDrawerQuery = window.matchMedia('(max-width: 425px)');
 
         function handleMediaQueryChange(event) {
             setIsSmallScreen(event.matches);
             headerHeight = headerRef.current.offsetHeight;
             document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
         }
-        // function handleMenuDrawerChange(event) {
-        //     console.log('screen')
-        //     headerHeight = headerRef.current.offsetHeight;
-        //     document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
-        // }
 
         mediaQuery.addEventListener('change', handleMediaQueryChange);
-        // menuDrawerQuery.addEventListener('change', handleMenuDrawerChange)
-        // handleMediaQueryChange(mediaQuery);
-
-        // if (isSmallScreen) {
-        //     hamburgerMenu.addEventListener('click', handleHamburgerClick);
-        // }
        
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (prefersDarkMode) { 
@@ -71,11 +59,6 @@ export default function Header() {
 
         return () => {
             mediaQuery.removeEventListener('change', handleMediaQueryChange)       
-            // menuDrawerQuery.removeEventListener('change', handleMenuDrawerChange)
-
-            // if (isSmallScreen) {
-            //     hamburgerMenu.removeEventListener('click', handleHamburgerClick)
-            // }
         }
     },[])
 
