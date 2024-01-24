@@ -32,20 +32,20 @@ export default function Resume() {
                 </section>
                 <section className={styles.resumeTech}>
                     <h3 className={styles.sectionTitle}>Technical Skills</h3>
-                    <h5 >Technology: </h5>
+                    <h5 className={styles.techSectionTitle}>Technology: </h5>
                     <div className={styles.techIcons}>
                         {techStacks.tech.map((tech, index) => (
                             <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
                         ))}
                     </div>
-                    <h5 className=''>Libraries: </h5>
+                    <h5 className={styles.techSectionTitle}>Libraries: </h5>
                     <div className={styles.techIcons}>
                         {techStacks.libraries.map((tech, index) => (
                             <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
                         ))}
 
                     </div>
-                    <h5 className='resumeHead'>Tools:</h5>
+                    <h5 className={styles.techSectionTitle}>Tools:</h5>
                     <div className={styles.techIcons}>
                         {techStacks.tools.map((tech, index) => (
                             <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
