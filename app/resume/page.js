@@ -10,29 +10,35 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-
 export default function Resume() {
 
     useGSAP(() => {
-        const animatedSections = document.querySelectorAll('section')
-        console.log(animatedSections)
+        const animatedSections = document.querySelectorAll('section');
+      
         animatedSections.forEach((section) => {
-            gsap.from(section, {
-              duration: .3,
-              autoAlpha: 0,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: section,
-                start: 'top 70%',
-                end: 'bottom 0%%',
-                toggleActions: 'play none none reverse',
-              
-              },
-              scale:1.2,
-              boxShadow:'0 5px 5px 3px var(--shadow)',
-            })
-    })
-})
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 85%',
+              end: 'bottom 25%',
+              toggleActions: 'play none none reverse',
+            },
+          });
+      
+          tl.from(section, {
+            duration: .2,
+            autoAlpha: 0,
+            ease: 'none',
+            scale:1.1
+          })
+          .to(section, {
+            duration: .2,
+            autoAlpha: 1,
+            ease: 'none',
+            scale:1
+          });
+        });
+      });
     
     
     return (
