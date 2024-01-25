@@ -1,6 +1,6 @@
 .educationList {
     list-style-type: none;
-    margin: 0 0 4em 0;
+    margin: 0 0 5em 0;
 
     & li {
         margin: .5em 0 0 0;
@@ -46,10 +46,8 @@
     margin: 2em 0;
 
     &Title {
-        margin: 0 0 .5em 0;
-        // background-image:linear-gradient(360deg, transparent 0, var(--outline) 2px, transparent 4px);
         background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
-        box-shadow: inset 0 0 10px 15px var(--background);
+        box-shadow: inset 0 0 10px 20px var(--background);
         padding: .5em;
         color: var(--onSurfaceVariant);
     }
@@ -139,5 +137,5 @@
     background-image: linear-gradient(170deg, var(--primaryContainer), var(--primaryContainerOffset));
     color: var(--onPrimaryContainer);
     border-radius: 10px;
-    margin: 0 0 1em 0;
+    margin: 2em 0 2em 0;
 }
