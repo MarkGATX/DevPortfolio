@@ -1,4 +1,10 @@
 @use '../../mixins';
+@import '../ProjectCard/projectCard.module.scss';
+
+.projectCardSpacer {
+    height:300px;
+    width:100%;
+}
 
 .projectCardSpacer::after {
     height: 100px;
@@ -6,6 +12,16 @@
     width: 100%;
     position: relative;
     display: block;
+}
+
+// .projectsAnimateWrapper .a:last-child { 
+//     :global(.projectCard_projectCardContainer){
+//     margin-bottom:5em;
+//     }
+// }
+
+.projectsAnimateWrapper a:last-child div[data-type='projectCard'] {
+    margin-bottom:12em;
 }
 
 .projectsTitle {

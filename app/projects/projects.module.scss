@@ -5,10 +5,13 @@
 }
 
 .heroImage {
+    object-position: 'top 50% left 50%';
+
+    &Container {
     width: 90%;
     height: 40dvh;
     position: relative;
-    // overflow:hidden;
+
     display: flex;
     align-items: flex-start;
     object-position: top;
@@ -18,6 +21,7 @@
         box-shadow: 0 0 15px 1px var(--secondaryContainer);
 
     }
+}
 
     // &::after {
     //     content: "";
@@ -176,5 +180,8 @@ img.zoomed {
 @media screen and (min-width:768px) {
     .imageContainers {
         width: 43%;
+    }
+    .heroImage {
+        object-position:top 0% left 0%;
     }
 }

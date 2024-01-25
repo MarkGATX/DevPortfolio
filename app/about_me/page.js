@@ -5,7 +5,7 @@ export default function AboutMe() {
     return (
         <main>
             <section className={styles.aboutMeContainer}>
-                <h2 className={styles.aboutMeTitle}>About Me...</h2>
+                <h1 className={styles.aboutMeTitle}>About Me...</h1>
                     <div className="">
                         <p> I'm a Front-End and Full-Stack Developer who constantly pushes the boundaries of what I can achieve. When I decide on a goal, I figure out what I need to learn to make it succeed. Then I go after it.</p>
                         <p>Whether diving into tutorials on the latest web framework or studying cinematography to direct a film, it always feels fantastic to look back at the finished project and see how much I learned. While I am definitely my own worst critic, I accomplished something new and exciting at the end of the day.</p>

@@ -62,8 +62,8 @@ export default function ProjectName({ params }) {
 
 
             <section className={styles.projectDetails} >
-                <div className={styles.heroImage}>
-                    <Image src={project.imgs[0]} fill={true} style={{ objectFit: 'cover', borderRadius: '10px', objectPosition: 'top 0% left 0%' }} alt={`${project.title} hero image`} sizes="90vw" />
+                <div className={styles.heroImageContainer}>
+                    <Image src={project.imgs[0]} fill={true} className={styles.heroImage} style={{ objectFit: 'cover', borderRadius: '10px' }} alt={`${project.title} hero image`} sizes="90vw" />
                 </div>
                
                 <div className={styles.projectDescription}>

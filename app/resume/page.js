@@ -69,7 +69,7 @@ export default function Resume() {
     return (
         <main>
             <div className={styles.resumeContainer}>
-                <h2 className={styles.resumeTitle}>Resume</h2>
+                <h1 className={styles.resumeTitle}>Resume</h1>
                 <Link href='/docs/Mark_Gardner-Front-End-Dev-resume-2024.pdf' target="_blank" rel="noreferrer"><button>Downloadable PDF here</button></Link>
                 <section className={styles.resumeName}>
                     <h2>MARK GARDNER</h2>

@@ -36,7 +36,7 @@ export default function Contact_Me() {
     return (
         <main>
             <section className={styles.contactMeContainer}>
-                <h2 className="">Contact Me</h2>
+                <h1 className="">Contact Me</h1>
                 <div className={styles.contactMeFormContainer}>
                     {message ?
                         <div className={styles.contactMeFormResponse}>
