@@ -43,6 +43,7 @@
 .projectsContainer {
     position: relative;
     height: calc(100dvh - var(--projectsContainerOffset));
+    margin:0 2em 0 1em;
 }
 
 .scrollerButtons {

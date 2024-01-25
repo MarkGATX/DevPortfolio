@@ -3,16 +3,20 @@
 import styles from './projectsContainer.module.scss'
 import { projectData } from '../../utils/projectData'
 import ProjectCard from '../ProjectCard/ProjectCard'
-import { Suspense, useLayoutEffect, useRef, useState } from 'react';
+import { Suspense, useLayoutEffect, useRef } from 'react';
 import ProjectCardSuspense from '../ProjectCard/ProjectCardSuspense';
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export default function ProjectsContainer() {
-    // gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger)
     const projectTitleRef = useRef();
     const projectRefs = useRef([]);
     const scrollerRef = useRef();
     const scrollUpButtonRef = useRef();
     const scrollDownButtonRef = useRef();
+    const cardAnimationContainerRef = useRef();
 
 
     useLayoutEffect(() => {
@@ -25,15 +29,46 @@ export default function ProjectsContainer() {
         return () => {
             scrollUpButtonRef.current.removeEventListener("pointerup", handleScrollUp);
             scrollDownButtonRef.current.removeEventListener("pointerup", handleScrollDown);
-
         }
     }
     )
 
+    useGSAP(() => {
+        const animatedProjects = document.querySelectorAll('[data-type="projectCard"]')
+        console.log(animatedProjects)
+        animatedProjects.forEach((project)=> {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: project,
+                    // toggleActions: 'play none none reverse',
+                    scroller:'#projectsScroller',
+                    scrub:.5,
+                   
+                },
+            });
 
+            // tl.from(project, {
+            //     ease: 'none',
+            //     scale: .8,
+            //     rotateX:"90deg",
+                
+            // })
+                tl.to(project, {
+                    keyframes: {
+                        "0%":   { scale:.7, autoAlpha: 0,},
+                        "15%" :   { scale:1, autoAlpha: 1,},
+                        "70%" :   {scale:1, autoAlpha: 1,}, // finetune with individual eases
+                        "100%":  { scale:.7,autoAlpha: 0,},
+                       },
+                    
+                });
+        })
+        
+    }
+    )
+    
 
     const handleScrollDown = () => {
-    
         const scroll = scrollerRef.current;
         scroll.scrollTo({
             top: scroll.scrollTop + 200, // Scroll down 100 pixels from the current position
@@ -42,7 +77,6 @@ export default function ProjectsContainer() {
     };
 
     const handleScrollUp = () => {
-    
         const scroll = scrollerRef.current
         scroll.scrollTo({
             top: scroll.scrollTop - 200, // Scroll down 100 pixels from the current position
@@ -58,27 +92,29 @@ export default function ProjectsContainer() {
             <div className={styles.projectsAndScroller}>
                 <div className={styles.projectsContainer}>
                     <div className={styles.topFade}></div>
-                    <div ref={scrollerRef} className={styles.projectsScroller}>
+                    <div ref={scrollerRef} id='projectsScroller' className={styles.projectsScroller}>
                         <div className={styles.projectCardSpacer}></div>
-                        {projectData?.map((project, key) =>
-                            <Suspense fallback={<ProjectCardSuspense />} key={project.displayClass}>
-                                <ProjectCard projectData={project} key={project.displayClass}  />
-                            </Suspense>
-                        )
-                        }
+                        <div ref={cardAnimationContainerRef} className={styles.projectsAnimateWrapper}>
+                            {projectData?.map((project, key) =>
+                                <Suspense fallback={<ProjectCardSuspense />} key={project.displayClass}>
+                                    <ProjectCard projectData={project} key={project.displayClass} />
+                                </Suspense>
+                            )
+                            }
+                        </div>
                         <div className={styles.projectCardSpacer}></div>
                     </div>
                     <div className={styles.bottomFade}></div>
                 </div>
                 <div className={styles.scrollerButtons}>
-                    <svg  ref={scrollUpButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg ref={scrollUpButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />
                         </g>
                         <polyline points="34.8,32 24,10.6 13.2,32 " />
                     </svg>
-                    <svg  ref={scrollDownButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg ref={scrollDownButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />

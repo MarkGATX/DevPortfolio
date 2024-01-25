@@ -51,7 +51,7 @@ export default function Resume() {
                 autoAlpha: 0,
                 ease: 'none',
                 scale: 1.1,
-                rotateX:'-90deg'
+                rotateX: '-90deg'
 
             })
                 .to(content, {
@@ -59,10 +59,10 @@ export default function Resume() {
                     autoAlpha: 1,
                     ease: 'none',
                     scale: 1,
-                    rotateX:'0'
+                    rotateX: '0'
 
                 });
-            })
+        })
     });
 
 
