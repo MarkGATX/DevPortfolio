@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './projectsContainer.module.scss'
-import { projectData } from '../../utils/projectData'
+import { projectData } from '../../utils/projectData original'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import { Suspense, useLayoutEffect, useRef } from 'react';
 import ProjectCardSuspense from '../ProjectCard/ProjectCardSuspense';
@@ -36,30 +36,30 @@ export default function ProjectsContainer() {
     useGSAP(() => {
         const animatedProjects = document.querySelectorAll('[data-type="projectCard"]')
         console.log(animatedProjects)
-        animatedProjects.forEach((project)=> {
+        animatedProjects.forEach((project) => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: project,
                     toggleActions: 'play none none reverse',
-                    scroller:'#projectsScroller',
-                    scrub:.5,
-                   
+                    scroller: '#projectsScroller',
+                    scrub: .5,
+
                 },
             });
-                tl.to(project, {
-                    keyframes: {
-                        "0%":   { scale:.7, autoAlpha: 0,},
-                        "25%" :   { scale:1, autoAlpha: 1,},
-                        "75%" :   {scale:1, autoAlpha: 1,}, // finetune with individual eases
-                        "100%":  { scale:.7,autoAlpha: 0,},
-                       },
-                    ease:'power1.inOut'
-                });
+            tl.to(project, {
+                keyframes: {
+                    "0%": { scale: .7, autoAlpha: 0, },
+                    "25%": { scale: 1, autoAlpha: 1, },
+                    "75%": { scale: 1, autoAlpha: 1, }, // finetune with individual eases
+                    "100%": { scale: .7, autoAlpha: 0, },
+                },
+                ease: 'power1.inOut'
+            });
         })
-        
+
     }
     )
-    
+
 
     const handleScrollDown = () => {
         const scroll = scrollerRef.current;

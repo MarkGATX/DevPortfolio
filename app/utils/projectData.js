@@ -8,10 +8,10 @@ export const projectData = [
         "longDesc": "This is a full-stack social media wish-list application developed with Next.js. I developed for my clients. Users can create their own accounts to make and populate wish-lists. They can follow other users as well as create private Families.  Users and visitors can contribute financially to wishes with a PayPal integration. The look and feel of the site went through many iterations and revisions after my initial pitch. We worked together extensively to move the application from an initial pitch of a 'soft-grunge' design into their final decision to lean into a minimalist site with an almost mid-century modern feel.",
         "role": "Sole Full-Stack Developer",
         "imgs": [
-            '/images/softlife_home.webp',
-            '/images/pitch_v_final.webp',
-            '/images/softlife_profileList.webp',
-            '/images/softlife_profile_dash.webp'
+            {src:'/images/softlife_home.webp',ratio:1000/1242, alt:'Softlife home page'},
+            {src:'/images/pitch_v_final.webp',ratio:700/387, alt:'initial pitch screen and final site'},
+            {src:'/images/softlife_profileList.webp',ratio:2208/1928, alt:'Softlife profile'},
+            {src:'/images/softlife_profile_dash.webp', ratio:2208/2688, alt:'softlife profile page'}
         ],
         "tech": [
             "react",
@@ -41,8 +41,8 @@ export const projectData = [
         "longDesc": "This project started with me wanting to develope an animated vertical navbar on a desktop application. From there it evolved into a Full-stack project that pushed my knowledge and understanding of app development using a MERN stack and graphL. The layouts between mobile and desktop versions are drastically different, which presented several unique challenges. I've learned a lot about the structure of code and making sure unique layouts stay responsive at various screen resolutions and not just screen width. I'm happy with the overall look and feel and overtime I'll flesh out more of the functionality.",
         "role": "Sole Full-stack developer",
         "imgs": [
-            '/images/luxecavallo_home.webp',
-            '/images/luxe_product_detail.webp'          
+            {src:'/images/luxecavallo_home.webp',ratio:2747/1982,alt:'Luxe Cavallo home page'},
+            {src:'/images/luxe_product_detail.webp', ratio:563/500,alt:'product detail page'}          
         ],
         "tech": [
             "react",
@@ -70,8 +70,8 @@ export const projectData = [
         "longDesc": " The world is a big place and with the growing acceptance of remote work and the desire to experience different parts of the world, finding good information on what life could be like can be hard. Migrate takes data from the Social Progress Imperative and displays it in a format that's easy to understand.This was a final group project in the UT-Austin Full-Stack Development Bootcamp. We were given a one-week deadline to develop a MERN stack applicaton. We also use GSAP, SASS, and Victory Charts to make a solid and smooth user experience.",
         "role": "Front-End and Full-Stack Development",
         "imgs": [
-            '/images/migrate-splash.webp',
-            '/images/migrate-single-country.webp'
+            {src:'/images/migrate-splash.webp',ratio:500/513, alt:"Migrate website splash screen"},
+            {src:'/images/migrate-single-country.webp', ratio:500/280, alt:'Migrate single couuntry detail'}
         ],
         "tech": [
             "react",
@@ -102,8 +102,8 @@ export const projectData = [
         "longDesc": "I developed this unofficial site for my friend Craig to help keep my coding sharp while teaching myself another front-end framework, namely Material UI. Using his current official site and feedback he gave as a starting point, I developed a custom color theme using Material Design concepts and theme generators and also implemented a dark-mode toggle. The YouTube API also provides videos with a simple one-line query for my custom video sections. With the creator economy still booming and with the constant rise of fall of social media outlets, having an evergreen home on the internet is vital for content creators. ",
         "role": "Sole-Developer",
         "imgs": [
-            '/images/wheezy_main.webp',
-            '/images/wheezy_player.webp'
+            {src:'/images/wheezy_main.webp', ratio:500/294, alt:'Wheezy Waiter home page'},
+            {src:'/images/wheezy_player.webp',ratio:500/387, alt:'custom video player'}
         ],
         "tech": [
             "react",
@@ -128,8 +128,8 @@ export const projectData = [
         "longDesc": "This was a mid-class group project in the Full-Stack Development Bootcamp. We were given one week to develop an app to help gardeners of all experience levels to start and maintain a garden.  Users can select where they live and be presented with a list of crops that grow well in that area. Then they can use that information to develop a plan for a square foot garden by dragging and dropping plants in their virtual garden. It's a simple to use but powerful app that can help home gardeners everywhere.",
         "role": "Front-End and Full-Stack Developer",
         "imgs": [
-            '/images/garden2_bg.webp',
-            '/images/garden2_vege_shot.webp'
+            {src:'/images/garden2_bg.webp', ratio:919/430, alt:'Garden squared home page'},
+            {src:'/images/garden2_vege_shot.webp', ratio:1920/888, alt:'specific vegetable in Garden squared'}
         ],
         "tech": [
             "css3",
@@ -157,7 +157,7 @@ export const projectData = [
         "longDesc": "This is a solo project for the UT-Austin Full-Stack Bootcamp that aims to create a simple yet powerful weather dashboard. This app uses two separate weather APIs to pinpoint locations and to return five day weather forecasts. The logic behind the app will even help you pinpoint exactly which city you want to search for by providing you with options from all over the world. Your last five searches are also saved in local storage for ease of use.",
         "role": "Sole-Developer",
         "imgs": [
-            '/images/weather_dash_bg.webp'
+            {src:'/images/weather_dash_bg.webp', ratio:700/471, alt:'weather dashboard'}
         ],
         "tech": [
             "Bootstrap",
@@ -179,8 +179,8 @@ export const projectData = [
         "longDesc": "This solo project for the UT-Austin Full-Stack Bootcamp is meant to be one of our first exposures to CMS systems. It has a basic user-login that will allow users to create Thoughts and also post replies to other user Thoughts. This is one of the earliest uses of Bootstrap for me as a developer and I've definitely learned a lot since then. In the end, I wanted to try and slightly different look and feel to the expected tech blog and I think I achieved that while maintaining good function on the back end.",
         "role": "Sole-Developer",
         "imgs": [
-            '/images/scribl_notes_home.webp',
-            '/images/scrible_notes_comments.webp'
+            {src:'/images/scribl_notes_home.webp',ratio:700/599, alt:'Scribl notes home page'},
+            {src:'/images/scrible_notes_comments.webp',ratio:700/387, alt:'Sceribl notes comments'}
         ],
         "tech": [
             "css3",
@@ -207,8 +207,8 @@ export const projectData = [
         "longDesc": "The idea for this game was inspired by a Mini-Project meant to be done during one hour of our UT-Austin Full Stack Bootcamp. I really liked the idea and wanted to try and liven it up a bit. While the basic function of a high-score system has been used before in camp, I wanted to add some extra flair. I made a few modifications, including changing the score system to increase scores based on perceived difficulty, adding animations for slecting letters and winning the game, and including an API call to a dictionary to show the final word's definition after the game. In the end, I'm really proud of this simple application and one day I may even increase the size of the word array.",
         "role": "Sole-Developer",
         "imgs": [
-            '/images/word_guess_game_screenshot.webp',
-            '/images/word_guess_game_screenshot_labelled.webp'
+            {src:'/images/word_guess_game_screenshot.webp', ratio:760/725, alt:'Game screenshot'},
+            {src:'/images/word_guess_game_screenshot_labelled.webp',ratio:760/725, alt:'Game screenshot'}
         ],
         "tech": [
             "css3",
@@ -229,8 +229,8 @@ export const projectData = [
         "longDesc": "This coding quiz game is a project from the UT-Austin Full-Stack Bootcamp that challenged students early on with web APIs and all of our HTML and CSS knowledge to that point. I added a few more bells and whistles to my final project by randomizing the questions and the answers to each question. I also added some very basic :hover effects and some additional CSS stylings to give it a little more effect. I'm pround of the final result. In fact, the grader for the Bootcamp said, 'This is one of the most put-together, well-designed, and intuitive quizzes I've seen!' ",
         "role": "Sole-Developer",
         "imgs": [
-            '/images/Coding_Quiz_Question_example.webp',
-            '/images/Coding_Quiz_High_Scores.webp'
+            {src:'/images/Coding_Quiz_Question_example.webp',ratio:768/487, alt:'example of coding question'},
+            {src:'/images/Coding_Quiz_High_Scores.webp',ratio:768/487, alt:'high scores example'}
         ],
         "tech": [
             "css3",
@@ -250,7 +250,7 @@ export const projectData = [
         "longDesc": "This is the very first group project that was assigned at the UT-Austin Boot Camp. This was meant to be our first introduction to collaborative coding using GitHub while pushing our use of third-party APIs. My role was primarily to use the MapBox API to render map locations. I also helped as needed on other aspects of the backend by helping to troubleshoot when called on.",
         "role": "MapBox API, Back-end code",
         "imgs": [
-            '/images/Playdate_Screenshot_with_active_event.webp'
+            {src:'/images/Playdate_Screenshot_with_active_event.webp',ratio:600/884,alt:'Playdate screenshot with active event'}
         ],
         "tech": [
             "materialize",
@@ -271,8 +271,8 @@ export const projectData = [
         "longDesc": "This is a video project I took on to help out a local non-profit called CARY, the Center for At-Risk Youth. With a very small budget I went into the school and shot video for one school day with the permission of everyone involved. While the original intent was for a 2-3 minute video, the footage I had and the story that needed to be told was much bigger than that. I finally finished it at around 12 minutes long and the results made everyone involved happy and helped increase engagement with their donors. ",
         "role": "DP, Editor, Producer",
         "imgs": [
-            '/images/CARY_still_1.webp',
-            '/images/CARY_still_2.webp'
+            {src:'/images/CARY_still_1.webp',ratio:500/281,alt:'CARY still ftom video'},
+            {src:'/images/CARY_still_2.webp',ratio:500/281,alt:'CARY still ftom video'}
         ],
         "tech": [
             "adobePhotoshop",
@@ -290,9 +290,9 @@ export const projectData = [
         "longDesc": "This is one of my online streaming projects with The Heroes of Awesome that streamed live plays of the Star Trek Adventures Role-Playing Game. This was one of my most ambitiuous streaming projects since it entailed multiple cameras as well as seven people with mics and an interactive overlay during gameplay. I also used this as a reason to learn some basic Blender skills. I'm actually very proud of one of the starships I rendered. The Sovereign-class USS Mazu was based off another model but as I was trying to use it, I ended up completely remaking the vast majority of it into a fairly successful render. I still wish I could see that ship in action.",
         "role": "Creator, Developer, Game Master",
         "imgs": [
-            '/images/constellation_background.webp',
-            '/images/MAZU-A.webp',
-            '/images/constell-play.webp'
+            {src:'/images/constellation_background.webp',ratio:980/551,alt:'Mazu-A screenshot'},
+            {src:'/images/MAZU-A.webp',ratio:700/394,alt:'Mazu flyby'},
+            {src:'/images/constell-play.webp',ratio:700/392,alt:'Gameplay screenshot'}
         ],
         "tech": [
             "blender",
@@ -311,8 +311,8 @@ export const projectData = [
         "longDesc": "This is another of my video production projects that turned into an even more exciting live-stream. It started as a simple food blog, and then after the members of our fan community asked for it, it turned into a cocktail stream. I invited bartenders, restauranteurs, food bloggers, and even a few YouTube celebrities on to a talk-show format where we also created brand new cocktails from scratch. Some were great. Some were... not. But it was always a good time. ",
         "role": "Creator, Producer, Host",
         "imgs": [
-            '/images/negroni_thumb.webp', 
-           ' /images/whiskey_thumb.webp'
+            {src:'/images/negroni_thumb.webp',ratio:246/18, alt:'Negroni thumbnail'}, 
+           {src:'/images/whiskey_thumb.webp',ratio:246/138,alt:'whiskey thumb'}
         ],
         "tech": [
             "wordpress",
@@ -330,7 +330,7 @@ export const projectData = [
         "longDesc": "This was the show that started a campaign that lasted for years. I created and produced the episodes that consisted of a group of new players learning how to play Dungeons and Dragons. It's still one of my most popular shows and even predates some of the more well-known role-playing groups online. I still have people recognize myself and some of the other players from our games and it's still one of my best memories as a video creator.",
         "role": "Creator, Producer, Player",
         "imgs": [
-            '/images/hoa_bg.webp'
+            {src:'/images/hoa_bg.webp',ratio:920/524,alt:'Heroes of Awesome background'}
         ],
         "tech": [
             "adobePhotoshop",
@@ -348,7 +348,7 @@ export const projectData = [
         "longDesc": "This is a feature-length, series project that I wrote several years ago. At one point an online network wanted to see a proof of concept to make decisions about moving ahead with projects. So I wrote a quick proof of concept pilot to introduce the world and characters and shot it over one weekend. I then edited the final footage and applied all the effects, except our limited creature effects that were done by an animation studio in Austin. In the end I love that we were able to accomplish what we did in such a short time. There are still some things that make me cringe that I wish I had time to reshoot, but all things considered I'm very proud of what we did. The network did pass on the full season, so if anyone wants to fund a great series, have I got a deal for you.",
         "role": "Writer, Director, Editor",
         "imgs": [
-            '/images/weird_girls_thumb.webp'
+            {src:'/images/weird_girls_thumb.webp',ratio:711/400,alt:'Weird Girls thumbnail'}
         ],
         "tech": [
             "adobePhotoshop",
@@ -367,7 +367,7 @@ export const projectData = [
         "longDesc": "This is a very simple HTML page that was done as a mini-project for one of our first tests of using CSS in the UT-Austin Full-Stack Boot Camp. I was able to get the page completed in the one-hour given and decided that I wanted to keep it around to use. So on occassion I will still post some trick or use of CSS to the Snippet page just in case I want an easy resource later.",
         "role": "Sole-Developer",
         "imgs": [
-            '/images/css_snippet_bg.webp'
+            {src:'/images/css_snippet_bg.webp',ratio:685/410,alt:'Snippets screenshot'}
         ],
         "tech": [
             "css3",
@@ -385,7 +385,7 @@ export const projectData = [
         "longDesc": "This is a 13-episode web series with a running time well over 2 hours that debuted on the now defunct channel KoldcastTV. This was my first ever writing on this scale as well as my first effort Producing and Directing for film. It was very successful on Koldcast with millions of views and garnered well over 25 award nominations, including Best Drama, Best Writing, and Best Cinematography. I learned a lot on this project and even with its evident flaws 10 years after the fact, I'm still immensely proud of what our team accomplished together.",
         "role": "Writer, Director, Producer",
         "imgs": [
-            '/images/CELL_hqdefault.webp'
+            {src:'/images/CELL_hqdefault.webp',ratio:246/138,alt:'CELL thumbnail'}
         ],
         "tech": [
             "adobePhotoshop",

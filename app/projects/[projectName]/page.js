@@ -26,16 +26,16 @@ export default function ProjectName({ params }) {
         notFound();
     }
     console.log(project.imgs)
-    const imageSources = project.imgs.map(img => {
+    // const imageSources = project.imgs.map(img => {
 
-        return {
-            src: img,
-            aspect_ratio: 1,
-            alt: 'project image' // Default alt text, change as needed
+    //     return {
+    //         src: img.src,
+    //         aspect_ratio: img.ratio,
+    //         alt: img.alt // Default alt text, change as needed
 
-        }
-    });
-    console.log(imageSources)
+    //     }
+    // });
+    // console.log('image sources'+imageSources)
 
     return (
         <main>
@@ -63,9 +63,9 @@ export default function ProjectName({ params }) {
 
             <section className={styles.projectDetails} >
                 <div className={styles.heroImageContainer}>
-                    <Image src={project.imgs[0]} fill={true} className={styles.heroImage} style={{ objectFit: 'cover', borderRadius: '10px' }} alt={`${project.title} hero image`} sizes="90vw" />
+                    <Image src={project.imgs[0].src} fill={true} className={styles.heroImage} style={{ objectFit: 'cover', borderRadius: '10px' }} alt={`${project.title} hero image`} sizes="90vw" />
                 </div>
-               
+
                 <div className={styles.projectDescription}>
                     <h3>Description</h3>
                     <article>{project.longDesc}</article>
@@ -78,8 +78,8 @@ export default function ProjectName({ params }) {
                 </div>
                 <section className={styles.projectImages}>
                     {/* <ImageContainers images={project.imgs} title={project.title}/> */}
-                    {/* <Gallery widths={widths} ratios={ratios} images={imageSources} lastRowBehavior='preserve' gap='.5em' /> */}
-                    <ProjectGallery widths={widths} ratios={ratios} images={imageSources} />
+                    <Gallery widths={widths} ratios={ratios} images={project.imgs} lastRowBehavior='preserve' gap='.5em' />
+                    {/* <ProjectGallery widths={widths} ratios={ratios} images={project.imgs} /> */}
                     {/* {project.imgs.map((img) => {
                      return   (
                      <div className={styles.imageContainers}>
