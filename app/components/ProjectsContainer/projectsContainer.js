@@ -40,23 +40,16 @@ export default function ProjectsContainer() {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: project,
-                    // toggleActions: 'play none none reverse',
+                    toggleActions: 'play none none reverse',
                     scroller:'#projectsScroller',
                     scrub:.5,
                    
                 },
             });
-
-            // tl.from(project, {
-            //     ease: 'none',
-            //     scale: .8,
-            //     rotateX:"90deg",
-                
-            // })
                 tl.to(project, {
                     keyframes: {
                         "0%":   { scale:.7, autoAlpha: 0,},
-                        "15%" :   { scale:1, autoAlpha: 1,},
+                        "25%" :   { scale:1, autoAlpha: 1,},
                         "75%" :   {scale:1, autoAlpha: 1,}, // finetune with individual eases
                         "100%":  { scale:.7,autoAlpha: 0,},
                        },
