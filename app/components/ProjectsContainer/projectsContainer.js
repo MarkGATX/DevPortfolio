@@ -57,10 +57,10 @@ export default function ProjectsContainer() {
                     keyframes: {
                         "0%":   { scale:.7, autoAlpha: 0,},
                         "15%" :   { scale:1, autoAlpha: 1,},
-                        "70%" :   {scale:1, autoAlpha: 1,}, // finetune with individual eases
+                        "75%" :   {scale:1, autoAlpha: 1,}, // finetune with individual eases
                         "100%":  { scale:.7,autoAlpha: 0,},
                        },
-                    
+                    ease:'power1.inOut'
                 });
         })
         
