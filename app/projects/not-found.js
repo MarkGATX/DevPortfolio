@@ -14,8 +14,6 @@ export default function NotFound() {
             </div>
             <div className={styles.smallProjectContainer}>
                 {projectData.map((project) => {
-                    console.log('notfound')
-                    console.log(project.imgs)
                     return (
                         <Link href={`/projects/${project.link}`} className={styles.smallProjectCard} key={project.title}>
 

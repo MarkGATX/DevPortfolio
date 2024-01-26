@@ -16,7 +16,6 @@ const widths = [ 500, 1000, 1600 ]
 const ratios = [ 2.2, 4, 6, 8 ]
 
 export default function AboutMeGallery() {
-    console.log(images)
     return (
         <Gallery
                 widths={widths}

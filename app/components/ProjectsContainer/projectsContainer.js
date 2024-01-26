@@ -35,7 +35,6 @@ export default function ProjectsContainer() {
 
     useGSAP(() => {
         const animatedProjects = document.querySelectorAll('[data-type="projectCard"]')
-        console.log(animatedProjects)
         animatedProjects.forEach((project) => {
             const tl = gsap.timeline({
                 scrollTrigger: {

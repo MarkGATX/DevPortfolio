@@ -62,6 +62,10 @@ img.zoomed {
 }
 
 .linkButtons {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     margin: 1em .5em 1em 0;
 
     & a button {
@@ -71,6 +75,7 @@ img.zoomed {
 
 .projectDescription {
     margin: 2em 0;
+   
 }
 
 .projectDetails {
@@ -91,6 +96,18 @@ img.zoomed {
     // flex-wrap: wrap;
     // gap: 1em;
     margin: 2em 0;
+    & h3 {
+        background-image: linear-gradient(45deg, var(--surfaceVariant), var(--surfaceVariantOffset));
+        box-shadow: inset 0 0 10px 18px var(--background);
+        padding: .5em;
+        color: var(--onSurfaceVariant);
+        margin:0 0 2em 0;
+
+    }
+    & img {
+        border:3px solid var(--secondaryContainer);
+        border-radius:10px;
+    }
 }
 
 .projectTech {
@@ -100,21 +117,22 @@ img.zoomed {
     width:100%;
     align-self: flex-start;
 
-    & p {
+    & h3 {
         background-image: linear-gradient(45deg, var(--surfaceVariant), var(--surfaceVariantOffset));
-        box-shadow: inset 0 0 10px 15px var(--background);
+        box-shadow: inset 0 0 10px 18px var(--background);
         padding: .5em;
         color: var(--onSurfaceVariant);
-        padding: .5em;
+        margin:0 0 2em 0;
     }
 }
 
 .projectDescription {
     & h3 {
         background-image: linear-gradient(45deg, var(--surfaceVariant), var(--surfaceVariantOffset));
-        box-shadow: inset 0 0 10px 24px var(--background);
+        box-shadow: inset 0 0 10px 18px var(--background);
         padding: .5em;
         color: var(--onSurfaceVariant);
+        margin:0 0 2em 0;
 
     }
 
@@ -185,4 +203,14 @@ img.zoomed {
     .heroImage {
         object-position:top 0% left 0%;
     }
+    
 }
+
+@media screen and (min-width:425px) {
+    .linkButtons {
+        flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    }
+}
+

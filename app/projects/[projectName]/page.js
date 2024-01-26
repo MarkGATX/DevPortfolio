@@ -25,17 +25,7 @@ export default function ProjectName({ params }) {
     if (!project) {
         notFound();
     }
-    console.log(project.imgs)
-    // const imageSources = project.imgs.map(img => {
-
-    //     return {
-    //         src: img.src,
-    //         aspect_ratio: img.ratio,
-    //         alt: img.alt // Default alt text, change as needed
-
-    //     }
-    // });
-    // console.log('image sources'+imageSources)
+   
 
     return (
         <main>
@@ -71,22 +61,16 @@ export default function ProjectName({ params }) {
                     <article>{project.longDesc}</article>
                 </div>
                 <div className={styles.projectTech}>
-                    <p>Techstack</p>
+                    <h3>Techstack</h3>
                     <div className={`${styles.techStack} ${styles.alignLeft}`}>
                         <TechStack tech={project.tech} />
                     </div>
                 </div>
                 <section className={styles.projectImages}>
-                    {/* <ImageContainers images={project.imgs} title={project.title}/> */}
-                    <Gallery widths={widths} aspect_ratio={ratios} images={project.imgs} lastRowBehavior='preserve' gap='.5em' />
-                    {/* <ProjectGallery widths={widths} ratios={ratios} images={project.imgs} /> */}
-                    {/* {project.imgs.map((img) => {
-                     return   (
-                     <div className={styles.imageContainers}>
-                            <Image src={img} fill={true} style={{ objectFit: 'contain' }} alt={`${project.title} screenshots`} className={`${zoomedImage === img ? 'zoomed' : ''}`} onClick={(event) => handleImageClick(event, img)}></Image>
-                        </div>
-                     )
-                     })} */}
+                <h3>Project Gallery</h3>
+                    
+                    <ProjectGallery widths={widths} ratios={ratios} images={project.imgs} />
+                    
                 </section>
             </section>
             <section className={styles.otherProjects}>
