@@ -78,7 +78,7 @@ export default function ProjectName({ params }) {
                 </div>
                 <section className={styles.projectImages}>
                     {/* <ImageContainers images={project.imgs} title={project.title}/> */}
-                    <Gallery widths={widths} ratios={ratios} images={project.imgs} lastRowBehavior='preserve' gap='.5em' />
+                    <Gallery widths={widths} aspect_ratio={ratios} images={project.imgs} lastRowBehavior='preserve' gap='.5em' />
                     {/* <ProjectGallery widths={widths} ratios={ratios} images={project.imgs} /> */}
                     {/* {project.imgs.map((img) => {
                      return   (

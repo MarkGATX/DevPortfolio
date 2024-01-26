@@ -1,5 +1,5 @@
 import styles from './projects.module.scss'
-import { projectData } from '../utils/projectData original'
+import { projectData } from '../utils/projectData'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -14,18 +14,15 @@ export default function NotFound() {
             </div>
             <div className={styles.smallProjectContainer}>
                 {projectData.map((project) => {
+                    console.log(project.imgs)
                     return (
                         <Link href={`/projects/${project.link}`} className={styles.smallProjectCard} key={project.title}>
 
                             <sub className={styles.smallProjectCardTitle}>{project.title}</sub>
-                            {project.imgs.length > 0 ?
-                                <div className={styles.imgClip}>
-                                    <Image src={project.imgs[0]} fill='true' style={{ objectFit: 'cover' }} alt={`${project.title} thumbnail`}></Image>
-                                </div>
-                                :
-                                null
-                            }
-
+                            <div className={styles.imgClip}>
+                                <Image src={project.imgs[0].src} fill='true' style={{ objectFit: 'cover' }} alt={`${project.title} thumbnail`}></Image>
+                            </div>
+                           
                         </Link>
                     )
                 })}

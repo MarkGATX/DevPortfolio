@@ -41,8 +41,8 @@ export const projectData = [
         "longDesc": "This project started with me wanting to develope an animated vertical navbar on a desktop application. From there it evolved into a Full-stack project that pushed my knowledge and understanding of app development using a MERN stack and graphL. The layouts between mobile and desktop versions are drastically different, which presented several unique challenges. I've learned a lot about the structure of code and making sure unique layouts stay responsive at various screen resolutions and not just screen width. I'm happy with the overall look and feel and overtime I'll flesh out more of the functionality.",
         "role": "Sole Full-stack developer",
         "imgs": [
-            {src:'/images/luxecavallo_home.webp',ratio:2747/1982,alt:'Luxe Cavallo home page'},
-            {src:'/images/luxe_product_detail.webp', ratio:563/500,alt:'product detail page'}          
+            {src:'/images/luxecavallo_home.webp',ratio:'2747/1982',alt:'Luxe Cavallo home page'},
+            {src:'/images/luxe_product_detail.webp', ratio:'563/500',alt:'product detail page'}          
         ],
         "tech": [
             "react",
