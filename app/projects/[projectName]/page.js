@@ -25,7 +25,7 @@ export default function ProjectName({ params }) {
     if (!project) {
         notFound();
     }
-   
+
 
     return (
         <main>
@@ -58,7 +58,9 @@ export default function ProjectName({ params }) {
 
                 <div className={styles.projectDescription}>
                     <h3>Description</h3>
-                    <article>{project.longDesc}</article>
+                    <article>
+                        <p>{project.longDesc}</p>
+                    </article>
                 </div>
                 <div className={styles.projectTech}>
                     <h3>Techstack</h3>
@@ -67,10 +69,10 @@ export default function ProjectName({ params }) {
                     </div>
                 </div>
                 <section className={styles.projectImages}>
-                <h3>Project Gallery</h3>
-                    
+                    <h3>Project Gallery</h3>
+
                     <ProjectGallery widths={widths} ratios={ratios} images={project.imgs} />
-                    
+
                 </section>
             </section>
             <section className={styles.otherProjects}>

@@ -8,7 +8,7 @@ export const projectData = [
         "longDesc": "This is a full-stack social media wish-list application developed with Next.js. I developed for my clients. Users can create their own accounts to make and populate wish-lists. They can follow other users as well as create private Families.  Users and visitors can contribute financially to wishes with a PayPal integration. The look and feel of the site went through many iterations and revisions after my initial pitch. We worked together extensively to move the application from an initial pitch of a 'soft-grunge' design into their final decision to lean into a minimalist site with an almost mid-century modern feel.",
         "role": "Sole Full-Stack Developer",
         "imgs": [
-            {src:'/images/softlife_home.webp',aspect_ratio:1000/1242, alt:'Softlife home page'},
+            {src:'/images/softlife_home.webp',aspect_ratio:1920/2366, alt:'Softlife home page'},
             {src:'/images/pitch_v_final.webp',aspect_ratio:700/387, alt:'initial pitch screen and final site'},
             {src:'/images/softlife_profileList.webp',aspect_ratio:2208/1928, alt:'Softlife profile'},
             {src:'/images/softlife_profile_dash.webp', aspect_ratio:2208/2688, alt:'softlife profile page'}
@@ -41,8 +41,8 @@ export const projectData = [
         "longDesc": "This project started with me wanting to develope an animated vertical navbar on a desktop application. From there it evolved into a Full-stack project that pushed my knowledge and understanding of app development using a MERN stack and graphL. The layouts between mobile and desktop versions are drastically different, which presented several unique challenges. I've learned a lot about the structure of code and making sure unique layouts stay responsive at various screen resolutions and not just screen width. I'm happy with the overall look and feel and overtime I'll flesh out more of the functionality.",
         "role": "Sole Full-stack developer",
         "imgs": [
-            {src:'/images/luxecavallo_home.webp',aspect_ratio:'2747/1982',alt:'Luxe Cavallo home page'},
-            {src:'/images/luxe_product_detail.webp', aspect_ratio:'563/500',alt:'product detail page'}          
+            {src:'/images/luxecavallo_home.webp',aspect_ratio:2747/1982,alt:'Luxe Cavallo home page'},
+            {src:'/images/luxe_product_detail.webp', aspect_ratio:563/500,alt:'product detail page'}          
         ],
         "tech": [
             "react",
@@ -70,7 +70,7 @@ export const projectData = [
         "longDesc": " The world is a big place and with the growing acceptance of remote work and the desire to experience different parts of the world, finding good information on what life could be like can be hard. Migrate takes data from the Social Progress Imperative and displays it in a format that's easy to understand.This was a final group project in the UT-Austin Full-Stack Development Bootcamp. We were given a one-week deadline to develop a MERN stack applicaton. We also use GSAP, SASS, and Victory Charts to make a solid and smooth user experience.",
         "role": "Front-End and Full-Stack Development",
         "imgs": [
-            {src:'/images/migrate-splash.webp',aspect_ratio:500/513, alt:"Migrate website splash screen"},
+            {src:'/images/migrate-splash.webp',aspect_ratio:1920/1443, alt:"Migrate website splash screen"},
             {src:'/images/migrate-single-country.webp', aspect_ratio:500/280, alt:'Migrate single couuntry detail'}
         ],
         "tech": [
@@ -102,7 +102,7 @@ export const projectData = [
         "longDesc": "I developed this unofficial site for my friend Craig to help keep my coding sharp while teaching myself another front-end framework, namely Material UI. Using his current official site and feedback he gave as a starting point, I developed a custom color theme using Material Design concepts and theme generators and also implemented a dark-mode toggle. The YouTube API also provides videos with a simple one-line query for my custom video sections. With the creator economy still booming and with the constant rise of fall of social media outlets, having an evergreen home on the internet is vital for content creators. ",
         "role": "Sole-Developer",
         "imgs": [
-            {src:'/images/wheezy_main.webp', aspect_ratio:500/294, alt:'Wheezy Waiter home page'},
+            {src:'/images/wheezy_main.webp', aspect_ratio:1920/1208, alt:'Wheezy Waiter home page'},
             {src:'/images/wheezy_player.webp',aspect_ratio:500/387, alt:'custom video player'}
         ],
         "tech": [
@@ -128,7 +128,7 @@ export const projectData = [
         "longDesc": "This was a mid-class group project in the Full-Stack Development Bootcamp. We were given one week to develop an app to help gardeners of all experience levels to start and maintain a garden.  Users can select where they live and be presented with a list of crops that grow well in that area. Then they can use that information to develop a plan for a square foot garden by dragging and dropping plants in their virtual garden. It's a simple to use but powerful app that can help home gardeners everywhere.",
         "role": "Front-End and Full-Stack Developer",
         "imgs": [
-            {src:'/images/garden2_bg.webp', aspect_ratio:919/430, alt:'Garden squared home page'},
+            {src:'/images/garden2_bg.webp', aspect_ratio:1920/1306, alt:'Garden squared home page'},
             {src:'/images/garden2_vege_shot.webp', aspect_ratio:1920/888, alt:'specific vegetable in Garden squared'}
         ],
         "tech": [
@@ -157,7 +157,7 @@ export const projectData = [
         "longDesc": "This is a solo project for the UT-Austin Full-Stack Bootcamp that aims to create a simple yet powerful weather dashboard. This app uses two separate weather APIs to pinpoint locations and to return five day weather forecasts. The logic behind the app will even help you pinpoint exactly which city you want to search for by providing you with options from all over the world. Your last five searches are also saved in local storage for ease of use.",
         "role": "Sole-Developer",
         "imgs": [
-            {src:'/images/weather_dash_bg.webp', aspect_ratio:700/471, alt:'weather dashboard'}
+            {src:'/images/weather_dash_bg.webp', aspect_ratio:1920/1403, alt:'weather dashboard'}
         ],
         "tech": [
             "Bootstrap",
@@ -179,7 +179,7 @@ export const projectData = [
         "longDesc": "This solo project for the UT-Austin Full-Stack Bootcamp is meant to be one of our first exposures to CMS systems. It has a basic user-login that will allow users to create Thoughts and also post replies to other user Thoughts. This is one of the earliest uses of Bootstrap for me as a developer and I've definitely learned a lot since then. In the end, I wanted to try and slightly different look and feel to the expected tech blog and I think I achieved that while maintaining good function on the back end.",
         "role": "Sole-Developer",
         "imgs": [
-            {src:'/images/scribl_notes_home.webp',aspect_ratio:700/599, alt:'Scribl notes home page'},
+            {src:'/images/scribl_notes_home.webp',aspect_ratio:1920/1591, alt:'Scribl notes home page'},
             {src:'/images/scrible_notes_comments.webp',aspect_ratio:700/387, alt:'Sceribl notes comments'}
         ],
         "tech": [
@@ -207,7 +207,7 @@ export const projectData = [
         "longDesc": "The idea for this game was inspired by a Mini-Project meant to be done during one hour of our UT-Austin Full Stack Bootcamp. I really liked the idea and wanted to try and liven it up a bit. While the basic function of a high-score system has been used before in camp, I wanted to add some extra flair. I made a few modifications, including changing the score system to increase scores based on perceived difficulty, adding animations for slecting letters and winning the game, and including an API call to a dictionary to show the final word's definition after the game. In the end, I'm really proud of this simple application and one day I may even increase the size of the word array.",
         "role": "Sole-Developer",
         "imgs": [
-            {src:'/images/word_guess_game_screenshot.webp', aspect_ratio:760/725, alt:'Game screenshot'},
+            {src:'/images/word_guess_game_screenshot.webp', aspect_ratio:1920/1755, alt:'Game screenshot'},
             {src:'/images/word_guess_game_screenshot_labelled.webp',aspect_ratio:760/725, alt:'Game screenshot'}
         ],
         "tech": [
@@ -229,7 +229,7 @@ export const projectData = [
         "longDesc": "This coding quiz game is a project from the UT-Austin Full-Stack Bootcamp that challenged students early on with web APIs and all of our HTML and CSS knowledge to that point. I added a few more bells and whistles to my final project by randomizing the questions and the answers to each question. I also added some very basic :hover effects and some additional CSS stylings to give it a little more effect. I'm pround of the final result. In fact, the grader for the Bootcamp said, 'This is one of the most put-together, well-designed, and intuitive quizzes I've seen!' ",
         "role": "Sole-Developer",
         "imgs": [
-            {src:'/images/Coding_Quiz_Question_example.webp',aspect_ratio:768/487, alt:'example of coding question'},
+            {src:'/images/Coding_Quiz_Question_example.webp',aspect_ratio:1920/1412, alt:'example of coding question'},
             {src:'/images/Coding_Quiz_High_Scores.webp',aspect_ratio:768/487, alt:'high scores example'}
         ],
         "tech": [
@@ -250,7 +250,7 @@ export const projectData = [
         "longDesc": "This is the very first group project that was assigned at the UT-Austin Boot Camp. This was meant to be our first introduction to collaborative coding using GitHub while pushing our use of third-party APIs. My role was primarily to use the MapBox API to render map locations. I also helped as needed on other aspects of the backend by helping to troubleshoot when called on.",
         "role": "MapBox API, Back-end code",
         "imgs": [
-            {src:'/images/Playdate_Screenshot_with_active_event.webp',aspect_ratio:600/884,alt:'Playdate screenshot with active event'}
+            {src:'/images/Playdate_Screenshot_with_active_event.webp',aspect_ratio:1920/2077,alt:'Playdate screenshot with active event'}
         ],
         "tech": [
             "materialize",
@@ -348,7 +348,8 @@ export const projectData = [
         "longDesc": "This is a feature-length, series project that I wrote several years ago. At one point an online network wanted to see a proof of concept to make decisions about moving ahead with projects. So I wrote a quick proof of concept pilot to introduce the world and characters and shot it over one weekend. I then edited the final footage and applied all the effects, except our limited creature effects that were done by an animation studio in Austin. In the end I love that we were able to accomplish what we did in such a short time. There are still some things that make me cringe that I wish I had time to reshoot, but all things considered I'm very proud of what we did. The network did pass on the full season, so if anyone wants to fund a great series, have I got a deal for you.",
         "role": "Writer, Director, Editor",
         "imgs": [
-            {src:'/images/weird_girls_thumb.webp',aspect_ratio:711/400,alt:'Weird Girls thumbnail'}
+            {src:'/images/weird_girls_thumb.webp',aspect_ratio:1080/753,alt:'Weird Girls hero shots'},
+            {src:'/images/weird_girls_promo.webp',aspect_ratio:711/400,alt:'Weird Girls thumbnail'}
         ],
         "tech": [
             "adobePhotoshop",
