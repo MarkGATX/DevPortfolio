@@ -48,8 +48,8 @@ export default function ProjectsContainer() {
             tl.to(project, {
                 keyframes: {
                     "0%": { scale: .7, autoAlpha: 0, },
-                    "25%": { scale: 1, autoAlpha: 1, },
-                    "75%": { scale: 1, autoAlpha: 1, }, // finetune with individual eases
+                    "10%": { scale: 1, autoAlpha: 1, },
+                    "90%": { scale: 1, autoAlpha: 1, }, // finetune with individual eases
                     "100%": { scale: .7, autoAlpha: 0, },
                 },
                 ease: 'power1.inOut'
@@ -63,7 +63,7 @@ export default function ProjectsContainer() {
     const handleScrollDown = () => {
         const scroll = scrollerRef.current;
         scroll.scrollTo({
-            top: scroll.scrollTop + 200, // Scroll down 100 pixels from the current position
+            top: scroll.scrollTop + 100, // Scroll down 100 pixels from the current position
             behavior: 'smooth'
         });
     };
@@ -71,7 +71,7 @@ export default function ProjectsContainer() {
     const handleScrollUp = () => {
         const scroll = scrollerRef.current
         scroll.scrollTo({
-            top: scroll.scrollTop - 200, // Scroll down 100 pixels from the current position
+            top: scroll.scrollTop - 100, // Scroll down 100 pixels from the current position
             behavior: 'smooth'
         });
     };

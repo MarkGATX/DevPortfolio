@@ -1,0 +1,60 @@
+@use '../../mixins';
+
+.imgClip {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    position: relative;
+}
+
+.smallScroller {
+    &Container {
+        @include mixins.generalTransition;
+        width: 60dvw;
+        height:140px;
+        background-image:linear-gradient(90deg, transparent 0%, var(--surfaceVariant) 10%);
+
+        position: fixed;
+        bottom:5%;
+        z-index:10;
+        left:40%;
+        opacity:.5;
+        padding:0 0 0 2em;
+       
+        &:hover {
+            opacity:1;
+        }
+    }
+
+    &Projects {
+        display:flex;
+        gap:2em;
+        width:auto;
+        overflow-x:scroll;
+        height:90%;
+    }
+
+    &Card {
+        @include mixins.generalTransition;
+        position: relative;
+        width: 75px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border: 2px solid var(--secondaryContainer);
+        border-radius: 5px;
+        overflow: hidden;
+
+    }
+
+    &Card:hover {
+        transform: scale(1.1);
+    }
+
+    &CardTitle {
+        padding: .5em
+    }
+
+}

@@ -4,9 +4,8 @@ import TechStack from '@/app/components/techStack/TechStack'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import ImageContainers from '@/app/components/ImageContainers/ImageContainers'
-import { Gallery } from 'next-gallery'
 import ProjectGallery from '@/app/components/ProjectGallery/ProjectGallery'
+// import SmallProjectScroller from '@/app/components/SmallProjectScroller/SmallProjectScroller'
 
 
 export async function generateMetadata({ params }) {
@@ -29,6 +28,9 @@ export default function ProjectName({ params }) {
 
     return (
         <main>
+            {/* <section className={styles.otherProjects}>
+                <SmallProjectScroller />
+            </section> */}
             <div className={styles.projectTitle}>
                 <h1>{project.title}</h1>
                 <p>{project.desc}</p>
@@ -75,9 +77,7 @@ export default function ProjectName({ params }) {
 
                 </section>
             </section>
-            <section className={styles.otherProjects}>
-
-            </section>
+            
         </main>
     )
 }
