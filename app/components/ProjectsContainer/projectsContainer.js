@@ -1,26 +1,27 @@
 'use client'
 
 import styles from './projectsContainer.module.scss'
-import { projectData } from '../../utils/projectData original'
+import { projectData } from '../../utils/projectData'
 import ProjectCard from '../ProjectCard/ProjectCard'
-import { Suspense, useLayoutEffect, useRef } from 'react';
+import { Suspense, useLayoutEffect, useRef, useState } from 'react';
 import ProjectCardSuspense from '../ProjectCard/ProjectCardSuspense';
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
+
 export default function ProjectsContainer() {
     gsap.registerPlugin(ScrollTrigger)
     const projectTitleRef = useRef();
-    const projectRefs = useRef([]);
     const scrollerRef = useRef();
     const scrollUpButtonRef = useRef();
     const scrollDownButtonRef = useRef();
     const cardAnimationContainerRef = useRef();
 
 
-    useLayoutEffect(() => {
 
+    useLayoutEffect(() => {
+              
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
         document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 100) + "px");
         scrollUpButtonRef.current.addEventListener("pointerup", handleScrollUp);

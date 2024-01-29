@@ -2,36 +2,29 @@
 
 .projectCard {
 
+    height:60dvh;
     &Background {
         width: 100%;
-        height: 200px;
+        height: 100%;
         background-blend-mode: luminosity, multiply;
         background-position: 50% 50%, 0 0, 50% 50%;
         background-repeat: no-repeat;
         background-size: cover, 100% 300%, cover;
         transition: all .5s;
     }
-
     &Clip {
         width: 100%;
-        height: 180px;
+        height:100%;
         overflow: hidden;
     }
-
     &Container {
-        @include mixins.generalTransition;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        width:100%;
+        height:80%;
+        width:450px;
         border: 4px solid var(--onPrimaryContainer);
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-        z-index: 3;
-        // transform:scale(.7);
-
-
+        border-radius:10px;
+        margin:0 2em 0 2em;
+        overflow:hidden;
         &:hover {
             border: 4px solid var(--onSurfaceVariant);
 
@@ -41,19 +34,8 @@
                 transform: scale3d(1.05, 1.05, 1.05);
                 // animation: bounce .5s ease-in-out;
             }
-
-            & .projectCardTitle::after {
-                // display:block;
-                opacity: .9;
-            }
         }
     }
-
-    &Link {
-        width: 80%;
-
-    }
-
     &Tech {
         display: flex;
         justify-content: center;
@@ -68,7 +50,6 @@
         padding: 1em .5em;
 
     }
-
     &Title {
         @include mixins.generalTransition;
         font-weight: normal;
@@ -77,6 +58,7 @@
         background-image: linear-gradient(170deg, var(--primaryContainer), var(--primaryContainerOffset));
         color: var(--onPrimaryContainer);
         line-height: .3rem;
+
 
         & h2 {
             line-height: 1.5rem;
@@ -98,19 +80,8 @@
             line-height: 1rem;
             height: auto;
             padding: .3rem;
-
-            // display:none;
         }
     }
-}
-
-.projectCardSuspense {
-    background-color: var(--outline);
-    animation: skeleton 2s infinite;
-}
-
-.techImage {
-    margin: .3em;
 }
 
 /* classes for project background */
@@ -232,17 +203,5 @@
     100% {
         transform: scale3d(1.05, 1.05, 1.05);
 
-    }
-}
-
-@media screen and (min-width:768px) {
-    .projectCard {
-        display:flex;
-        justify-content:center;
-        align-items: center;
-        &Container {
-            width: 60%;
-            height: 80%;
-        }
     }
 }

@@ -1,8 +1,9 @@
 @use '../../mixins';
 
+
 .projectCardSpacer {
-    height:300px;
-    width:100%;
+    height:50dvh;
+    width:150px;
 }
 
 .projectCardSpacer::after {
@@ -12,30 +13,37 @@
     position: relative;
     display: block;
 }
+.projectsAnimateWrapper {
+    width:auto;
+    display:flex;
 
-
-.projectsAnimateWrapper a:last-child div[data-type='projectCard'] {
-    margin-bottom:12em;
+& a:last-child div[data-type='projectCard'] {
+    margojectsAnimatein-right:8em;
+}
 }
 
-.projectsTitle {
-    margin: 2em 0 0 0;
+.projectsTitleDesk {
+    margin: 2em 0 2em 0;
 }
 
 .projectsAndScroller {
+    width:7000px;
     display: flex;
     justify-content: center;
+    height:100%;
+    align-items: center;
+    flex-wrap:nowrap;
 }
 
 .projectsScroller {
     height: 100%;
+    width:100%;
     overflow: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    top: -100px;
     position: relative;
+    flex-wrap:nowrap;
 
 
     /* Hide scrollbar for IE, Edge and Firefox */
@@ -53,7 +61,7 @@
 .projectsContainer {
     position: relative;
     height: calc(100dvh - var(--projectsContainerOffset));
-    margin:0 2em 0 1em;
+
 }
 
 .scrollerButtons {
@@ -86,22 +94,4 @@
     & svg:active {
         transform: scale(.9);
     }
-}
-
-.topFade {
-    
-    height: 100px;
-    background-image: linear-gradient(var(--background) 20%, transparent 95%);
-    position: relative;
-    top: 0;
-    z-index: 4;
-}
-
-.bottomFade {
-    
-    background-image: linear-gradient(transparent 20%, var(--background) 95%);
-    height: 100px;
-    position: relative;
-    top: -200px;
-    z-index: 4;
 }

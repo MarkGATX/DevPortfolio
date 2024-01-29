@@ -10,19 +10,6 @@ export const metadata = {
   description: `Portfolio site highlighting Mark Gardner's work`,
 }
 
-// export const inter = Inter({
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable:'--font-Inter'
-// })
-
-// export const outfit = Outfit({
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable:'--font-Inter'
-// })
-
-
 export default function RootLayout({ children }) {
 
   return (

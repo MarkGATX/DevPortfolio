@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import styles from './projectCard.module.scss'
+import styles from './projectCardDesk.module.scss'
 import { forwardRef } from 'react';
 import TechStack from '../techStack/TechStack';
 
 
 // export default function ProjectCard({ projectData }) {
-const ProjectCard = forwardRef(({ projectData }, ref) => {
-
+export default function ProjectCardDesk({projectData}) {
     const { title, displayClass, desc, tech, link } = projectData
+
     return (
-        <Link href={`/projects/${link}`} className={styles.projectCardLink} ref={ref}>
+        <Link href={`/projects/${link}`} className={styles.projectCardLink}>
             <div data-type="projectCard" className={styles.projectCard}>
                 <section className={styles.projectCardContainer}>
                     <div className={styles.projectCardTitle}>
@@ -29,6 +29,4 @@ const ProjectCard = forwardRef(({ projectData }, ref) => {
 
     )
 }
-)
 
-export default ProjectCard
