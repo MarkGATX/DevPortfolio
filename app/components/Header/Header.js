@@ -12,7 +12,7 @@ const getThemeFromPrefersColorScheme = () => {
   };
 
 export default function Header() {
-    const [isSmallScreen, setIsSmallScreen] = useState(true);
+    const [isSmallScreen, setIsSmallScreen] = useState();
     const [menuOpen, setMenuOpen] = useState(false)
     const headerRef = useRef();
     const hamburgerRef = useRef();
@@ -35,6 +35,8 @@ export default function Header() {
             headerHeight = headerRef.current.offsetHeight;
             document.documentElement.style.setProperty("--headerHeight", headerHeight + "px");
         }
+
+        setIsSmallScreen(mediaQuery.matches);
 
         mediaQuery.addEventListener('change', handleMediaQueryChange);
        
@@ -108,7 +110,9 @@ export default function Header() {
                     <sub ref={darkModeTextRef}>dark</sub>
                     <div ref={toggleDiscRef} className={styles.darkModeToggleDisc}></div>
                 </div>
-                {isSmallScreen ?
+                {isSmallScreen === undefined ?
+                    null:
+                    isSmallScreen ?
                     <>
                         <div className={styles.hamburgerMenuContainer}  onClick={(event) => event.stopPropagation()} >
 

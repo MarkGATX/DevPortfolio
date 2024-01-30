@@ -3,22 +3,22 @@
 
 .projectCardSpacer {
     height:50dvh;
-    width:150px;
+    width:20dvw;
 }
 
-.projectCardSpacer::after {
-    height: 100px;
-    content: "";
-    width: 100%;
-    position: relative;
-    display: block;
-}
+// .projectCardSpacer::after {
+//     height: 100px;
+//     content: "";
+//     width: 100%;
+//     position: relative;
+//     display: block;
+// }
 .projectsAnimateWrapper {
     width:auto;
     display:flex;
 
 & a:last-child div[data-type='projectCard'] {
-    margojectsAnimatein-right:8em;
+    margin-right:8em;
 }
 }
 
@@ -46,34 +46,37 @@
     flex-wrap:nowrap;
 
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    // -ms-overflow-style: none;
+    // /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
     /* IE and Edge */
-    // scrollbar-width: none;
+    scrollbar-width: none;
     /* Firefox */
 }
 
 /* hide scrollbar on chrome */
-// .projectsScroller::-webkit-scrollbar {
-//     display: none;
-// }
+ .projectsScroller::-webkit-scrollbar {
+    display: none;
+ }
 
 .projectsContainer {
     position: relative;
-    height: calc(100dvh - var(--projectsContainerOffset));
+    // height: calc(100dvh - var(--projectsContainerOffset));
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
 
 }
 
 .scrollerButtons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-self: center;
 
     & svg {
         @include mixins.generalTransition;
         width: 48px;
         height: 48px;
-        margin: 1em 0;
+        margin: 0 1em;
         fill: var(--secondary);
         stroke: var(--onSecondary);
         stroke-width: 2;
