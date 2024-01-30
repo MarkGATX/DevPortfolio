@@ -12,8 +12,8 @@ const images = [
     { src: '/images/exploring_Cardiff.webp', aspect_ratio: 500/375, alt:'exploring Cardiff and the Wheel' },
 ]
 
-const widths = [ 500, 1000, 1600 ]
-const ratios = [ 2.2, 4, 6, 8 ]
+const widths = [ 768, 1024, 1600 ]
+const ratios = [ 2.2, 3, 4, 5 ]
 
 export default function AboutMeGallery() {
     return (

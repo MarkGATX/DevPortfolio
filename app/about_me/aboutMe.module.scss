@@ -1,16 +1,37 @@
 .aboutMe {
-&Container {
-    & p {
-        margin:1em 0;
+    &Container {
+        & p {
+            margin: 1em 0;
+        }
     }
-}
 
     &Title {
         margin: 0 0 1em 0;
     }
 
+    &Text {
+
+    }
+
 }
 
 .galleryContainer {
-    margin:1.5em 0;
+    margin: 1.5em 0;
+}
+
+@media screen and (min-width:1024px) {
+    .aboutMe {
+        &Container {
+            display:flex;
+            align-items: flex-start;
+            gap:2em
+        }
+        &Text {
+            width:50%;
+        }
+    }
+    .galleryContainer {
+        width:45%;
+        justify-self: center;
+    }
 }
