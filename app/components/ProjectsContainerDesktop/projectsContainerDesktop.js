@@ -4,7 +4,7 @@ import styles from './projectContainerDesktop.module.scss'
 import { projectData } from '../../utils/projectData'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 // import ProjectCard from '../ProjectCard/ProjectCard';
 // import ProjectCardSuspense from '../ProjectCard/ProjectCardSuspense';
 import ProjectCardDesk from '../ProjectCardDesk/ProjectCardDesk';
@@ -21,38 +21,27 @@ export default function ProjectsContainerDesktop() {
     const cardAnimationContainerRef = useRef();
     const scrollerButtonDivRef = useRef();
     const [showScrollButtons, setShowScrollButtons] = useState(false);
+    const [leftButtonEnd, setLeftButtonEnd] = useState();
+    const [rightButtonEnd, setRightButtonEnd] = useState();
 
     useLayoutEffect(() => {
 
+        const scroller = scrollerRef.current;
+        scroller.addEventListener('wheel', handleWheel);
+    
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
         document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 200) + "px");
         setShowScrollButtons(true)
-    } 
+
+        return () => {
+            scroller.removeEventListener('wheel', handleWheel);
+        };
+    }, [] 
     )
 
-  
-
-    const handleScrollPointerDown = (event) => {
-        console.log('click')
-        if (event.target === scrollLeftButtonRef.current) {
-            const scroll = scrollerRef.current;
-        scrollInterval = setInterval(() => {
-            scroll.scrollLeft += 10; // Scroll left 10 pixels from the current position
-        }, 10);
-        }
-     else if (event.target === scrollRightButtonRef.current) {
-        const scroll = scrollerRef.current
-        scrollInterval = setInterval(() => {
-            scroll.scrollLeft -= 10; // Scroll right 10 pixels from the current position
-        }, 10);
-      }
-    }
-
-
+    const {contextSafe} = useGSAP()
 
     useGSAP(() => {
-        // let animatedProjectsDesk = gsap.utils.toArray('[data-type="projectCard"]');
-        const scroller = document.querySelector("#projectsScroller");
         const animatedProjectsDesk = document.querySelectorAll('[data-type="projectCard"]')
         console.log(animatedProjectsDesk)
 
@@ -77,37 +66,54 @@ export default function ProjectsContainerDesktop() {
                 // ease: 'power1.out'
             });
         })
+        
+
     }, [])
 
 
 
     let scrollInterval;
 
-    const handleScrollLeft = () => {
-        console.log('click')
+    const handleWheel = contextSafe((e) => {
+        e.preventDefault();
+        const deltaX = e.deltaY * 2
+        // scrollerRef.current.scrollLeft += e.deltaY;
+        gsap.to(scrollerRef.current, {scrollLeft: `+=${deltaX}`})
+    }
+    );
+
+    const handleScrollLeft = contextSafe(() => {
         const scroll = scrollerRef.current;
-
         scrollInterval = setInterval(() => {
-            scroll.scrollLeft += 10; // Scroll left 10 pixels from the current position
+            gsap.to(scroll, {scrollLeft: '+=100'})
         }, 10);
-    }
+    })
 
-    const handleScrollRight = () => {
+    const handleScrollRight = contextSafe(() => {
         const scroll = scrollerRef.current
         scrollInterval = setInterval(() => {
-            scroll.scrollLeft -= 10; // Scroll right 10 pixels from the current position
+            gsap.to(scroll, {scrollLeft: '-=100'})
         }, 10);
-    };
+    });
 
-    const handlePointerUp = () => {
+    const handlePointerUp = contextSafe(() => {
         const scroll = scrollerRef.current
-        //scroll width -1 is to take not that scrollLeft is a decimal so it never reached scrollwidth.
-        if (scroll.scrollLeft + scroll.clientWidth  >= scroll.scrollWidth - 1) {
-            console.log('Scroller is all the way to the right');
+ 
+        if (scroll.scrollLeft===0) {
+            setLeftButtonEnd(true)
+            setRightButtonEnd(false)
         }
+        if (scroll.scrollLeft + scroll.clientWidth  >= scroll.scrollWidth - 1) {
+            setRightButtonEnd(true)
+            setLeftButtonEnd(false)
+        }
+        if (scroll.scrollLeft!==0 && scroll.scrollLeft + scroll.clientWidth  < scroll.scrollWidth - 1){
+            setLeftButtonEnd(false);
+            setRightButtonEnd(false)
+        }
+       
         clearInterval(scrollInterval);
-    }
-
+    })
 
     return (
         <>
@@ -116,6 +122,7 @@ export default function ProjectsContainerDesktop() {
             </div>
 
             <div className={styles.projectsContainer}>
+            <div className={styles.leftFade}></div>
                 <div ref={scrollerRef} id='projectsScroller' className={styles.projectsScroller}>
                     <div className={styles.projectCardSpacer}></div>
                     <div ref={cardAnimationContainerRef} className={styles.projectsAnimateWrapper}>
@@ -127,17 +134,19 @@ export default function ProjectsContainerDesktop() {
                         )
                         }
                     </div>
+                    
                 </div>
+                <div className={styles.rightFade}></div>
                 {showScrollButtons ?
                     <div ref={scrollerButtonDivRef} className={styles.scrollerButtons}>
-                        <svg ref={scrollRightButtonRef} onPointerDown={handleScrollRight} onPointerUp={handlePointerUp} ersion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        <svg ref={scrollRightButtonRef} onPointerDown={handleScrollRight} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={leftButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                             viewBox="0 0 48 48" >
                             <g>
                                 <circle cx="24" cy="24" r="21.5" />
                             </g>
                             <polyline points="32.8,13.2 11.4,24 32.8,34.8 " />
                         </svg>
-                        <svg ref={scrollLeftButtonRef} onPointerDown={handleScrollLeft} onPointerUp={handlePointerUp}  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        <svg ref={scrollLeftButtonRef} onPointerDown={handleScrollLeft} onPointerUp={handlePointerUp}onPointerLeave={handlePointerUp} className={rightButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                             viewBox="0 0 48 48" >
                             <g>
                                 <circle cx="24" cy="24" r="21.5" />

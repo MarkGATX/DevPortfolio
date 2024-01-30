@@ -67,7 +67,7 @@ export default function Resume() {
 
 
     return (
-        <main>
+        <main className={styles.resumeMain}>
             <div className={styles.resumeContainer}>
                 <h1 className={styles.resumeTitle}>Resume</h1>
                 <Link href='/docs/Mark_Gardner-Front-End-Dev-resume-2024.pdf' target="_blank" rel="noreferrer"><button>Downloadable PDF here</button></Link>
@@ -88,7 +88,7 @@ export default function Resume() {
                 </section>
                 <section id='summary' className={styles.resumeSummary}>
                     <h3 data-module-class="sectionTitle" className={styles.sectionTitle} >Summary</h3>
-                    <p data-module-class="sectionTitle" >{`As a Front-End Developer, I have experience in a variety of technologies, including Next.js, React, Vercel, JavaScript, Bootstrap, Material UI, GraphQL, MongoDB, HTML, and CSS. My technical skills are complemented by 13 years of video production experience, which has given me a keen eye for detail, a talent for visual storytelling, and the soft skills needed to work with diverse teams. I’m passionate about learning and thrive on tackling new challenges head-on. With over 18 years of professional experience across multiple industries, I’ve successfully worked on teams that consistently deliver quality products and I’m dedicated to delivering high-quality work that exceeds expectations.`}</p>
+                    <p data-module-class="sectionTitle" >{`As a Front-End Developer, I have experience in a variety of technologies, including Next.js, React, Vercel, JavaScript, Bootstrap, Material UI, HTML, and CSS. My technical skills are complemented by 13 years of video production experience, which has given me a keen eye for detail, a talent for visual storytelling, and the soft skills needed to work with diverse teams. I’m passionate about learning and thrive on tackling new challenges head-on. With over 18 years of professional experience across multiple industries, I’ve successfully worked on teams that consistently deliver quality products and I’m dedicated to delivering high-quality work that exceeds expectations.`}</p>
                 </section>
                 <section className={styles.resumeTech}>
                     <h3 className={styles.sectionTitle}>Technical Skills</h3>

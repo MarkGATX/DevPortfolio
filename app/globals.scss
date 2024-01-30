@@ -171,6 +171,7 @@ main {
   min-height: calc(100dvh - var(--headerHeight));
   top: var(--headerHeight);
   position: relative;
+  transition:all .3s;
 
 }
 

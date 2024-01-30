@@ -1,18 +1,31 @@
 @use '../../mixins';
 
+.leftFade {
+    background-image: linear-gradient(-90deg, transparent 30%, var(--background) 100%);
+    height:50dvh;
+    width:250px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:4;
+}
+
+.rightFade {
+    background-image: linear-gradient(90deg, transparent 30%, var(--background) 100%);
+    height:50dvh;
+    width:250px;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:4;
+}
 
 .projectCardSpacer {
     height:50dvh;
     width:20dvw;
 }
 
-// .projectCardSpacer::after {
-//     height: 100px;
-//     content: "";
-//     width: 100%;
-//     position: relative;
-//     display: block;
-// }
+
 .projectsAnimateWrapper {
     width:auto;
     display:flex;
@@ -101,4 +114,10 @@
 
 .disabled {
     opacity:.5;
+    scale:0;
+}
+
+.on {
+    opacity:1;
+    scale:1;
 }
