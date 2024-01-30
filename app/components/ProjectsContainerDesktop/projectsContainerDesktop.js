@@ -30,45 +30,34 @@ export default function ProjectsContainerDesktop() {
 
     useGSAP(() => {
         // let animatedProjectsDesk = gsap.utils.toArray('[data-type="projectCard"]');
+        const scroller = document.querySelector("#projectsScroller");
         const animatedProjectsDesk = document.querySelectorAll('[data-type="projectCard"]')
-
         console.log(animatedProjectsDesk)
-        animatedProjectsDesk.forEach((project) => {
-            // const tl = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: project,
-            //         toggleActions: 'play none none reverse',
-            //         scroller: '#projectsScroller',
-            //         horizontal:true,
-            //         scrub: .5,
 
-            //     },
-            // });
-            //     gsap.to(project, {
-            //         keyframes: {
-            //             "0%": { scale: .7, autoAlpha: 0, },
-            //             "10%": { scale: 1, autoAlpha: 1, },
-            //             "90%": { scale: 1, autoAlpha: 1, }, // finetune with individual eases
-            //             "100%": { scale: .7, autoAlpha: 0, },
-            //         },
-            //         ease: 'power1.inOut'
-            //     });
-            // })
-            gsap.to(project, {
-                xPercent: -100 * (animatedProjectsDesk.length - 1),
-                ease: "none",
+        animatedProjectsDesk.forEach((project) => {
+            const tl = gsap.timeline({
                 scrollTrigger: {
+                    trigger: project,
+                    toggleActions: 'play none none reverse',
                     scroller: '#projectsScroller',
-                    horizontal: true,
-                    pin: true,
-                    scrub: 1,
-                    markers: true,
-                    snap: 1 / (animatedProjectsDesk.length - 1),
-                    end: () => "+=" + document.querySelector("#projectsScroller").offsetWidth
-                }
-            })
+                    scrub: .5,
+                    markers:true,
+                    horizontal:true,
+
+                },
+            });
+            tl.to(project, {
+                keyframes: {
+                    "0%": { scale: .8, autoAlpha: 0, },
+                    "30%": { scale: 1, autoAlpha: 1, ease: 'power3.in' },
+                    "90%": { scale: 1, autoAlpha: 1, ease: 'power1.in'}, // finetune with individual eases
+                    "100%": { scale: .8, autoAlpha: 0,  },
+                },
+                ease: 'power1.out'
+            });
         })
-    })
+        }, [])
+    
 
 
     return (

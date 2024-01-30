@@ -16,9 +16,8 @@ export default function ProjectCardDesk({projectData}) {
                         <h2>{title}</h2>
                         <sub>{desc}</sub>
                     </div>
-                    <div className={styles.projectCardClip}>
                         <div className={`${styles.projectCardBackground} ${styles[displayClass]}`}></div>
-                    </div>
+
 
                 </section>
                 <section className={styles.projectCardTech}>

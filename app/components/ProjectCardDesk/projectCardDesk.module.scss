@@ -1,7 +1,7 @@
 @use '../../mixins';
 
 .projectCard {
-
+    margin:0 2em 0 2em;
     height:60dvh;
     &Background {
         width: 100%;
@@ -23,7 +23,7 @@
         width:450px;
         border: 4px solid var(--onPrimaryContainer);
         border-radius:10px;
-        margin:0 2em 0 2em;
+        margin:0;
         overflow:hidden;
         &:hover {
             border: 4px solid var(--onSurfaceVariant);
