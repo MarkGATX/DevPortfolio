@@ -73,7 +73,6 @@ export default function ProjectsContainer() {
     const handleWheel = contextSafe((e) => {
         e.preventDefault();
         const deltaY = e.deltaY * 2;
-        // scrollerRef.current.scrollLeft += e.deltaY;
         gsap.to(scrollerRef.current, {scrollTop: `+=${deltaY}`})
     
     const scroll = scrollerRef.current

@@ -35,7 +35,7 @@
 
         &Title {
             background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
-            box-shadow: inset 0 0 10px 15px var(--background);
+            box-shadow: inset 0 0 10px 12px var(--background);
             padding: .5em;
             color: var(--onSurfaceVariant);
         }
@@ -49,7 +49,7 @@
 
     &Title {
         background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
-        box-shadow: inset 0 0 10px 20px var(--background);
+        box-shadow: inset 0 0 10px 12px var(--background);
         padding: .5em;
         color: var(--onSurfaceVariant);
     }
@@ -96,9 +96,9 @@
     }
 
     &Image {
-        object-fit: cover;
+        object-fit:contain;
         opacity:.1;
-        object-position: top left;
+        object-position: top right;
         // mask-image:linear-gradient(to right, oklch(100% 0 0 / 0) , oklch(100% 0 128 / 1));
         mask-image:
             linear-gradient(
@@ -121,18 +121,18 @@
               hsl(0, 0%, 100%) 100%
             );
         
-       
+            &Container {
+                width:25%;
+                height:auto;
+                position:relative;
+                top:0;
+                right:0;
+                box-shadow:inset 0 0 5px 15px var(--background);
+                display:none;
+            }
     }
 
-    &ImageContainer {
-        width:40%;
-        height:auto;
-        position:relative;
-        top:0;
-        right:0;
-        box-shadow:inset 0 0 5px 15px var(--background);
-        display:none;
-    }
+   
 
     &Name {
         margin: 2em 0;
@@ -144,6 +144,7 @@
 
     &SectionDetailsContainer {
         display:flex;
+        justify-content: space-between;
     }
 
     &Summary {
@@ -172,7 +173,7 @@
 
 .techSectionTitle {
     background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
-    box-shadow: inset 0 0 10px 17px var(--background);
+    box-shadow: inset 0 0 10px 13px var(--background);
     padding: .5em;
     color: var(--onSurfaceVariant);
 }

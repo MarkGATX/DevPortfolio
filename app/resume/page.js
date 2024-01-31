@@ -153,12 +153,12 @@ export default function Resume() {
                         <h4 className={styles.projectSectionTitle}>The Softlife</h4>
                         <div className={styles.resumeSectionDetailsContainer} >
                             <div>
-                        <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
-                        <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, GraphQL, Apollo GraphQL, MongoDB, SASS, CSS3, Google Fonts, Photoshop, Node.js, React Spring </p>
-                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://thesoftlife.xyz/" target='_blank' rel='noreferrer'>https://thesoftlife.xyz/</a> </p>
+                                <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
+                                <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, GraphQL, Apollo GraphQL, MongoDB, SASS, CSS3, Google Fonts, Photoshop, Node.js, React Spring </p>
+                                <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://thesoftlife.xyz/" target='_blank' rel='noreferrer'>https://thesoftlife.xyz/</a> </p>
 
-                        <p className={styles.projectSectionDesc}>A freelance development job leveraging the power of Next.js and React with Vercel hosting. I worked extensively with my clients to refine their vision for their e-commerce wishlist site in order to stay on schedule and within budget.</p>
-                        </div>
+                                <p className={styles.projectSectionDesc}>A freelance development job leveraging the power of Next.js and React with Vercel hosting. I worked extensively with my clients to refine their vision for their e-commerce wishlist site in order to stay on schedule and within budget.</p>
+                            </div>
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
                                 <Image src="/images/softlife_home.webp" fill={true} alt="Softlife image" className={styles.resumeImage}  ></Image>
                             </div>
@@ -168,13 +168,13 @@ export default function Resume() {
                         <h4 className={styles.projectSectionTitle}>Luxe Cavallo</h4>
                         <div className={styles.resumeSectionDetailsContainer} >
                             <div>
-                        <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
-                        <p className={styles.projectSectionLinks}><span>Tools:</span>  React, GraphQL, Apollo, Express, MongoDB, Mongoose, JavaScript, CSS3, Adobe Font, Photoshop,  Node.js,  SASS, Greensock </p>
-                        <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://luxecavallo.vercel.app/" target='_blank' rel='noreferrer'>https://luxecavallo.vercel.app/</a> </p>
-                        <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/luxecavallo" target="_blank" rel='noreferrer'> https://github.com/MarkGATX/luxecavallo</a></p>
+                                <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
+                                <p className={styles.projectSectionLinks}><span>Tools:</span>  React, GraphQL, Apollo, Express, MongoDB, Mongoose, JavaScript, CSS3, Adobe Font, Photoshop,  Node.js,  SASS, Greensock </p>
+                                <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://luxecavallo.vercel.app/" target='_blank' rel='noreferrer'>https://luxecavallo.vercel.app/</a> </p>
+                                <p className={styles.projectSectionLinks}><span>GitHub Repo:</span> <a href="https://github.com/MarkGATX/luxecavallo" target="_blank" rel='noreferrer'> https://github.com/MarkGATX/luxecavallo</a></p>
 
-                        <p className={styles.projectSectionDesc}>A fictional luxury boutique created to be highly responsive and media-rich, providing an immersive and engaging user experience. </p>
-                        </div>
+                                <p className={styles.projectSectionDesc}>A fictional luxury boutique created to be highly responsive and media-rich, providing an immersive and engaging user experience. </p>
+                            </div>
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
                                 <Image src="/images/luxecavallo_home2.webp" fill={true} alt="Luxe Cavallo image" className={styles.resumeImage}  ></Image>
                             </div>
@@ -236,56 +236,107 @@ export default function Resume() {
                     <h3 data-module-class="sectionTitle" className={styles.sectionTitle}>Relevant Experience</h3>
                     <article data-module-class="titleContent" className={styles.experienceSection}>
                         <h4 className={styles.experienceSectionTitle} >Freelance - Full-stack Developer</h4>
-                        <p >2023 - present,  AUSTIN</p>
-                        <ul className={styles.experienceList}>
-                            <li>Contract with clients to create full-stack applications that meet their specific needs and goals.</li>
-                            <li>Develop applications using modern stacks, such as Next.js, React, Material UI, Bootstrap, GSAP, and more.</li>
-                            <li>Work with clients to develop comprehensive style guides that align with their goals and branding.</li>
-                            <li>Communicate and collaborate with clients about goals, timelines, and challenges through the development process</li>
-                        </ul>
+                        <div className={styles.resumeSectionDetailsContainer} >
+                            <div>
+                                <p >2023 - present,  AUSTIN</p>
+                                <ul className={styles.experienceList}>
+                                    <li>Contract with clients to create full-stack applications that meet their specific needs and goals.</li>
+                                    <li>Develop applications using modern stacks, such as Next.js, React, Material UI, Bootstrap, GSAP, and more.</li>
+                                    <li>Work with clients to develop comprehensive style guides that align with their goals and branding.</li>
+                                    <li>Communicate and collaborate with clients about goals, timelines, and challenges through the development process</li>
+                                </ul>
+                            </div>
+
+                            <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
+                                <Image src="/images/tech_background.webp" fill={true} alt="tech image" className={styles.resumeImage}  ></Image>
+                            </div>
+                        </div>
                     </article>
                     <article data-module-class="titleContent" className={styles.experienceSection}>
                         <h4 className={styles.experienceSectionTitle} >Hello World Computer Science - Engineering Instructor</h4>
-                        <p >2023 - present,  AUSTIN</p>
-                        <ul className={styles.experienceList}>
-                            <li>Part-time Teaching Assistant for Computer Science classes at the Ann Richards School for Young Women Leaders</li>
-                            <li>Teach students web development and guide troubleshooting in their code and errors in the CoSpaces coding environment.</li>
-                        </ul>
+                        <div className={styles.resumeSectionDetailsContainer} >
+                            <div>
+                                <p >2023 - present,  AUSTIN</p>
+                                <ul className={styles.experienceList}>
+                                    <li>Part-time Teaching Assistant for Computer Science classes at the Ann Richards School for Young Women Leaders</li>
+                                    <li>Teach students web development and guide troubleshooting in their code and errors in the CoSpaces coding environment.</li>
+                                </ul>
+                            </div>
+
+                            <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
+                                <Image src="/images/helloworld.webp" fill={true} alt="hello world cs logo" className={styles.resumeImage}  ></Image>
+                            </div>
+                        </div>
                     </article>
                     <article data-module-class="titleContent" className={styles.experienceSection}>
                         <h4 className={styles.experienceSectionTitle} >Local Government Solutions  -  Developer</h4>
-                        <p >2017 - 2018,  AUSTIN</p>
-                        <ul className={styles.experienceList}>
-                            <li>Assisted in customer and business transitions to LGS after HCSS was acquired. </li>
-                            <li>Developed outlines for new customer training and retention programs and developed a revamped online brand presence.</li>
-                        </ul>
+                        <div className={styles.resumeSectionDetailsContainer} >
+                            <div>
+                                <p >2017 - 2018,  AUSTIN</p>
+                                <ul className={styles.experienceList}>
+                                    <li>Assisted in customer and business transitions to LGS after HCSS was acquired. </li>
+                                    <li>Developed outlines for new customer training and retention programs and developed a revamped online brand presence.</li>
+                                </ul>
+                            </div>
+
+                            <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
+                                <Image src="/images/lgs.webp" fill={true} alt="local government solutions logo" className={styles.resumeImage}  ></Image>
+                            </div>
+                        </div>
                     </article>
                     <article data-module-class="titleContent" className={styles.experienceSection}>
                         <h4 className={styles.experienceSectionTitle} >The Weirdlings  -  Creator and Producer</h4>
-                        <p >2011 - 2020,   AUSTIN</p>
-                        <ul className={styles.experienceList}>
-                            <li>Guided growth of the award-winning channel to reach over 15,000 subscribers and 2.8 million lifetime views on YouTube.</li>
-                            <li>Engaged with the world-wide digital video community and was elected to the International Academy of Web Television Board of Directors where I was named Secretary. </li>
-                            <li>Created and maintained all social outlets and websites for The Weirdlings using WordPress and custom CSS.</li>
-                            <li>Developed all graphic effects for every video released, ranging from lower-thirds to full spash screens.</li>
-                        </ul>
+                        <div className={styles.resumeSectionDetailsContainer} >
+                            <div>
+                                <p >2011 - 2020,   AUSTIN</p>
+                                <ul className={styles.experienceList}>
+                                    <li>Guided growth of the award-winning channel to reach over 15,000 subscribers and 2.8 million lifetime views on YouTube.</li>
+                                    <li>Engaged with the world-wide digital video community and was elected to the International Academy of Web Television Board of Directors where I was named Secretary. </li>
+                                    <li>Created and maintained all social outlets and websites for The Weirdlings using WordPress and custom CSS.</li>
+                                    <li>Developed all graphic effects for every video released, ranging from lower-thirds to full spash screens.</li>
+                                </ul>
+                            </div>
+
+                            <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
+                                <Image src="/images/weirdlings.webp" fill={true} alt="The Weirdlings Swear Cat logo" className={styles.resumeImage}  ></Image>
+                            </div>
+                        </div>
                     </article>
                     <article data-module-class="titleContent" className={styles.experienceSection}>
                         <h4 className={styles.experienceSectionTitle} >Hill Country Software and Support - VP of Development</h4>
-                        <p >2008 - 2017,  AUSTIN</p>
-                        <ul className={styles.experienceList}>
-                            <li>Implemented a complete UI/UX redesign and deployment of the web-based application of a COBOL backend with Javascript, JQuery, and updated HTML and CSS.</li>
-                            <li>Migrated the corporate website to a WordPress CMS and implemented systems to directly notify customers of updates to systems and important notes.</li>
-                        </ul>
+                        <div className={styles.resumeSectionDetailsContainer} >
+                            <div>
+                                <p >2008 - 2017,  AUSTIN</p>
+                                <ul className={styles.experienceList}>
+                                    <li>Implemented a complete UI/UX redesign and deployment of the web-based application of a COBOL backend with Javascript, JQuery, and updated HTML and CSS.</li>
+                                    <li>Migrated the corporate website to a WordPress CMS and implemented systems to directly notify customers of updates to systems and important notes.</li>
+                                </ul>
+                            </div>
+
+                            <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
+                                <Image src="/images/hcss.webp" fill={true} alt="Hill Country Software and Support logo" className={styles.resumeImage}  ></Image>
+                            </div>
+                        </div>
                     </article>
+
                 </section>
                 <section className={styles.resumeExperience}>
-                    <h3 data-module-class="sectionTitle" className={styles.sectionTitle}>Education</h3>
-                    <ul data-module-class="titleContent" className={styles.educationList}>
-                        <li >University of Texas at Austin / Full-Stack Developer Certificate</li>
-                        <li >University of Texas at Austin  / Master in Sports Science and Nutrition</li>
-                        <li >University of Texas at Austin  / Bachelor of Arts in Plan II</li>
-                    </ul>
+                    <article data-module-class="titleContent" className={styles.experienceSection}>
+                        <h3 data-module-class="sectionTitle" className={styles.sectionTitle}>Education</h3>
+                        <div className={styles.resumeSectionDetailsContainer} >
+                            <div>
+                                <ul data-module-class="titleContent" className={styles.educationList}>
+                                    <li >University of Texas at Austin / Full-Stack Developer Certificate</li>
+                                    <li >University of Texas at Austin  / Master in Sports Science and Nutrition</li>
+                                    <li >University of Texas at Austin  / Bachelor of Arts in Plan II</li>
+                                </ul>
+                            </div>
+
+                            <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
+                                <Image src="/images/Texas_Longhorns_logo.webp" fill={true} alt="Texas Longhorns logo" className={styles.resumeImage}  ></Image>
+                            </div>
+                        </div>
+                    </article>
                 </section>
             </div>
         </main>
