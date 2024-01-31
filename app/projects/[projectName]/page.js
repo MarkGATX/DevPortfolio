@@ -9,7 +9,8 @@ import ProjectGallery from '@/app/components/ProjectGallery/ProjectGallery'
 
 
 export async function generateMetadata({ params }) {
-    const capProjectName = params.projectName.charAt(0).toUpperCase() + params.projectName.slice(1)
+    // const capProjectName = params.projectName.charAt(0).toUpperCase() + params.projectName.slice(1)
+    const capProjectName = params.projectName.replace(/_/g, ' '); 
     return {
         title: `${capProjectName} Project`,
     }

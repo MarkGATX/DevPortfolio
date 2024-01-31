@@ -58,7 +58,7 @@ export const projectData = [
             "html5",            
             "vscode",         
         ],
-        "link": "luxecavallo"
+        "link": "Luxe_Cavallo"
     },
     {
         "title": "Migrate",
@@ -90,7 +90,7 @@ export const projectData = [
             "victoryCharts",
             
         ],
-        "link": "migrate"
+        "link": "Migrate"
     },
     {
         "title": "Wheezy Waiter",
@@ -115,7 +115,7 @@ export const projectData = [
             "nodeJS",
             "googleFonts"
         ],
-        "link": "wheezywaiter"
+        "link": "Wheezy_Waiter"
     },
 
     {
@@ -145,7 +145,7 @@ export const projectData = [
             "nodeJS",
            
         ],
-        "link": "garden2"
+        "link": "Garden2"
     },
     {
         "title": "Weather Dashboard",
@@ -167,7 +167,7 @@ export const projectData = [
             "vscode",
             "javascript",
         ],
-        "link": "weatherDash"
+        "link": "Weather_Dashboard"
     },
     {
         "title": "Scribl Notes",
@@ -195,7 +195,7 @@ export const projectData = [
             "Handlebars",
             "Bootstrap",
         ],
-        "link": "scriblNotes"
+        "link": "Scribl_Notes"
     },
     {
         "title": "The Word Guess Game",
@@ -217,7 +217,7 @@ export const projectData = [
             "javascript",
             "Bootstrap",
         ],
-        "link": "wordguessgame"
+        "link": "Word_Guess_Game"
     },
     {
         "title": "The Coding Quiz",
@@ -238,7 +238,7 @@ export const projectData = [
             "vscode",
             "javascript",
         ],
-        "link": "codingquiz"
+        "link": "Coding_Quiz"
     },
     {
         "title": "Playdate",
@@ -260,7 +260,7 @@ export const projectData = [
             "vscode",
             "javascript",
         ],
-        "link": "playdate"
+        "link": "Playdate"
     },
     {
         "title": "Voices in the Hallways",
@@ -279,7 +279,7 @@ export const projectData = [
             "adobePremiere",
             "adobeAfterEffects",
         ],
-        "link": "voicesinthehallway"
+        "link": "Voices_in_the_Hallway"
     },
     {
         "title": "Constellation",
@@ -300,7 +300,7 @@ export const projectData = [
             "adobePremiere",
             "adobeAfterEffects",
         ],
-        "link": "constellation"
+        "link": "Constellation"
     },
     {
         "title": "This Doesn't Suck (TDS)",
@@ -319,7 +319,7 @@ export const projectData = [
             "adobePhotoshop",
             "adobePremiere",
         ],
-        "link": "tds"
+        "link": "TDS"
     },
     {
         "title": "The Heroes of Awesome",
@@ -337,7 +337,7 @@ export const projectData = [
             "adobePremiere",
             "adobeAfterEffects",
         ],
-        "link": "heroesofawesome"
+        "link": "Heroes_of_Awesome"
     },
     {
         "title": "Weird Girls",
@@ -356,7 +356,7 @@ export const projectData = [
             "adobePremiere",
             "adobeAfterEffects",
         ],
-        "link": "weirdgirls"
+        "link": "Weird_Girls"
     },
     {
         "title": "CSS Snippets",
@@ -375,7 +375,7 @@ export const projectData = [
             "html5",
             "vscode",
         ],
-        "link": "csssnippets"
+        "link": "CSS_Snippets"
     },
     {
         "title": "CELL: The Web Series",

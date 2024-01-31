@@ -75,8 +75,8 @@
 
     & svg:hover {
 
-        fill: var(--primary);
-        stroke: var(--onPrimary);
+        fill: var(--primaryContainer);
+        stroke: var(--onPrimaryContainer);
         stroke-width: 2;
         stroke-linecap: round;
         stroke-miterlimit: 10;
@@ -104,4 +104,14 @@
     position: relative;
     top: -200px;
     z-index: 4;
+}
+
+.disabled {
+    opacity: .5;
+    scale: 0;
+}
+
+.on {
+    opacity: 1;
+    scale: 1;
 }

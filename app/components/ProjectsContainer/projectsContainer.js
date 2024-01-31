@@ -17,22 +17,30 @@ export default function ProjectsContainer() {
     const scrollUpButtonRef = useRef();
     const scrollDownButtonRef = useRef();
     const cardAnimationContainerRef = useRef();
-
+    const [showScrollButtons, setShowScrollButtons] = useState(false);
+    const [upButtonEnd, setUpButtonEnd] = useState();
+    const [downButtonEnd, setDownButtonEnd] = useState();
 
 
     useLayoutEffect(() => {
-              
+        const scroller = scrollerRef.current;
+        scroller.addEventListener('wheel', handleWheel); 
+
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
         document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 100) + "px");
-        scrollUpButtonRef.current.addEventListener("pointerup", handleScrollUp);
-        scrollDownButtonRef.current.addEventListener("pointerup", handleScrollDown)
+        // scrollUpButtonRef.current.addEventListener("pointerup", handleScrollUp);
+        // scrollDownButtonRef.current.addEventListener("pointerup", handleScrollDown)
+        setShowScrollButtons(true)
 
         return () => {
-            scrollUpButtonRef.current.removeEventListener("pointerup", handleScrollUp);
-            scrollDownButtonRef.current.removeEventListener("pointerup", handleScrollDown);
+            // scrollUpButtonRef.current.removeEventListener("pointerup", handleScrollUp);
+            // scrollDownButtonRef.current.removeEventListener("pointerup", handleScrollDown);
+            scroller.removeEventListener('wheel', handleWheel);
         }
-    }
+    }, []
     )
+
+    const {contextSafe} = useGSAP()
 
     useGSAP(() => {
         const animatedProjects = document.querySelectorAll('[data-type="projectCard"]')
@@ -49,33 +57,74 @@ export default function ProjectsContainer() {
             tl.to(project, {
                 keyframes: {
                     "0%": { scale: .7, autoAlpha: 0, },
-                    "10%": { scale: 1, autoAlpha: 1, },
-                    "90%": { scale: 1, autoAlpha: 1, }, // finetune with individual eases
+                    "10%": { scale: 1, autoAlpha: 1, ease: 'power3.inOut' },
+                    "90%": { scale: 1, autoAlpha: 1, ease: 'power3.inOut' }, // finetune with individual eases
                     "100%": { scale: .7, autoAlpha: 0, },
                 },
-                ease: 'power1.inOut'
+                // ease: 'power1.inOut'
             });
         })
 
-    }
+    }, []
     )
 
+    let scrollInterval;
 
-    const handleScrollDown = () => {
+    const handleWheel = contextSafe((e) => {
+        e.preventDefault();
+        const deltaY = e.deltaY * 2;
+        // scrollerRef.current.scrollLeft += e.deltaY;
+        gsap.to(scrollerRef.current, {scrollTop: `+=${deltaY}`})
+    
+    const scroll = scrollerRef.current
+ 
+        if (scroll.scrollTop===0) {
+            setUpButtonEnd(true)
+            setDownButtonEnd(false)
+        }
+        if (scroll.scrollTop + scroll.clientHeight  >= scroll.scrollHeight - 1) {
+            setDownButtonEnd(true)
+            setUpButtonEnd(false)
+        }
+        if (scroll.scrollTop!==0 && scroll.scrollTop + scroll.clientHeight  < scroll.scrollHeight - 1){
+            setUpButtonEnd(false);
+            setDownButtonEnd(false)
+        }
+});
+
+    const handleScrollDown = contextSafe(() => {
         const scroll = scrollerRef.current;
-        scroll.scrollTo({
-            top: scroll.scrollTop + 100, // Scroll down 100 pixels from the current position
-            behavior: 'smooth'
-        });
-    };
+        scrollInterval = setInterval(() => {
+            gsap.to(scroll, {scrollTop: '+=100'})
+        }, 20);
+    });
 
-    const handleScrollUp = () => {
+    const handleScrollUp = contextSafe(() => {
         const scroll = scrollerRef.current
-        scroll.scrollTo({
-            top: scroll.scrollTop - 100, // Scroll down 100 pixels from the current position
-            behavior: 'smooth'
-        });
-    };
+        scrollInterval = setInterval(() => {
+            gsap.to(scroll, {scrollTop: '-=100'})
+        }, 20);
+    });
+
+    const handlePointerUp = contextSafe(() => {
+        const scroll = scrollerRef.current
+ 
+        if (scroll.scrollTop===0) {
+            setUpButtonEnd(true)
+            setDownButtonEnd(false)
+        }
+        if (scroll.scrollTop + scroll.clientHeight  >= scroll.scrollHeight - 1) {
+            setDownButtonEnd(true)
+            setUpButtonEnd(false)
+        }
+        if (scroll.scrollTop!==0 && scroll.scrollTop + scroll.clientHeight  < scroll.scrollHeight - 1){
+            setUpButtonEnd(false);
+            setDownButtonEnd(false)
+        }
+       
+        clearInterval(scrollInterval);
+
+    })
 
     return (
         <>
@@ -100,14 +149,14 @@ export default function ProjectsContainer() {
                     <div className={styles.bottomFade}></div>
                 </div>
                 <div className={styles.scrollerButtons}>
-                    <svg ref={scrollUpButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg ref={scrollUpButtonRef} onPointerDown={handleScrollUp} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={upButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />
                         </g>
                         <polyline points="34.8,32 24,10.6 13.2,32 " />
                     </svg>
-                    <svg ref={scrollDownButtonRef} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg ref={scrollDownButtonRef} onPointerDown={handleScrollDown} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={downButtonEnd === true ? styles.disabled : styles.on}version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />

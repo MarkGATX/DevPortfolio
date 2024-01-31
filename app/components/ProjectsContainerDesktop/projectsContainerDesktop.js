@@ -28,7 +28,7 @@ export default function ProjectsContainerDesktop() {
 
         const scroller = scrollerRef.current;
         scroller.addEventListener('wheel', handleWheel);
-    
+
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
         document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 200) + "px");
         setShowScrollButtons(true)
@@ -36,15 +36,13 @@ export default function ProjectsContainerDesktop() {
         return () => {
             scroller.removeEventListener('wheel', handleWheel);
         };
-    }, [] 
+    }, []
     )
 
-    const {contextSafe} = useGSAP()
+    const { contextSafe } = useGSAP()
 
     useGSAP(() => {
         const animatedProjectsDesk = document.querySelectorAll('[data-type="projectCard"]')
-        console.log(animatedProjectsDesk)
-
         animatedProjectsDesk.forEach((project) => {
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -66,7 +64,7 @@ export default function ProjectsContainerDesktop() {
                 // ease: 'power1.out'
             });
         })
-        
+
 
     }, [])
 
@@ -78,40 +76,54 @@ export default function ProjectsContainerDesktop() {
         e.preventDefault();
         const deltaX = e.deltaY * 2
         // scrollerRef.current.scrollLeft += e.deltaY;
-        gsap.to(scrollerRef.current, {scrollLeft: `+=${deltaX}`})
+        gsap.to(scrollerRef.current, { scrollLeft: `+=${deltaX}` })
+        const scroll = scrollerRef.current
+
+        if (scroll.scrollLeft === 0) {
+            setLeftButtonEnd(true)
+            setRightButtonEnd(false)
+        }
+        if (scroll.scrollLeft + scroll.clientWidth >= scroll.scrollWidth - 1) {
+            setRightButtonEnd(true)
+            setLeftButtonEnd(false)
+        }
+        if (scroll.scrollLeft !== 0 && scroll.scrollLeft + scroll.clientWidth < scroll.scrollWidth - 1) {
+            setLeftButtonEnd(false);
+            setRightButtonEnd(false)
+        }
     }
     );
 
     const handleScrollLeft = contextSafe(() => {
         const scroll = scrollerRef.current;
         scrollInterval = setInterval(() => {
-            gsap.to(scroll, {scrollLeft: '+=100'})
+            gsap.to(scroll, { scrollLeft: '+=100' })
         }, 10);
     })
 
     const handleScrollRight = contextSafe(() => {
         const scroll = scrollerRef.current
         scrollInterval = setInterval(() => {
-            gsap.to(scroll, {scrollLeft: '-=100'})
+            gsap.to(scroll, { scrollLeft: '-=100' })
         }, 10);
     });
 
     const handlePointerUp = contextSafe(() => {
         const scroll = scrollerRef.current
- 
-        if (scroll.scrollLeft===0) {
+
+        if (scroll.scrollLeft === 0) {
             setLeftButtonEnd(true)
             setRightButtonEnd(false)
         }
-        if (scroll.scrollLeft + scroll.clientWidth  >= scroll.scrollWidth - 1) {
+        if (scroll.scrollLeft + scroll.clientWidth >= scroll.scrollWidth - 1) {
             setRightButtonEnd(true)
             setLeftButtonEnd(false)
         }
-        if (scroll.scrollLeft!==0 && scroll.scrollLeft + scroll.clientWidth  < scroll.scrollWidth - 1){
+        if (scroll.scrollLeft !== 0 && scroll.scrollLeft + scroll.clientWidth < scroll.scrollWidth - 1) {
             setLeftButtonEnd(false);
             setRightButtonEnd(false)
         }
-       
+
         clearInterval(scrollInterval);
     })
 
@@ -122,7 +134,7 @@ export default function ProjectsContainerDesktop() {
             </div>
 
             <div className={styles.projectsContainer}>
-            <div className={styles.leftFade}></div>
+                <div className={styles.leftFade}></div>
                 <div ref={scrollerRef} id='projectsScroller' className={styles.projectsScroller}>
                     <div className={styles.projectCardSpacer}></div>
                     <div ref={cardAnimationContainerRef} className={styles.projectsAnimateWrapper}>
@@ -134,7 +146,7 @@ export default function ProjectsContainerDesktop() {
                         )
                         }
                     </div>
-                    
+
                 </div>
                 <div className={styles.rightFade}></div>
                 {showScrollButtons ?
@@ -146,7 +158,7 @@ export default function ProjectsContainerDesktop() {
                             </g>
                             <polyline points="32.8,13.2 11.4,24 32.8,34.8 " />
                         </svg>
-                        <svg ref={scrollLeftButtonRef} onPointerDown={handleScrollLeft} onPointerUp={handlePointerUp}onPointerLeave={handlePointerUp} className={rightButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        <svg ref={scrollLeftButtonRef} onPointerDown={handleScrollLeft} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={rightButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                             viewBox="0 0 48 48" >
                             <g>
                                 <circle cx="24" cy="24" r="21.5" />

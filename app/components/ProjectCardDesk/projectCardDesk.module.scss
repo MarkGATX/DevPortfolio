@@ -3,6 +3,11 @@
 .projectCard {
     margin:0 2em 0 2em;
     height:60dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+    flex-wrap:wrap;
     &Background {
         width: 100%;
         height: 100%;
@@ -40,14 +45,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        align-self:flex-start;
         flex-wrap: wrap;
-        // margin-bottom: 3em;
         width: 100%;
-        border-radius: 10px;
-        top: -15px;
+        
         position: relative;
         z-index: 2;
-        padding: 1em .5em;
 
     }
     &Title {
@@ -58,6 +61,8 @@
         background-image: linear-gradient(170deg, var(--primaryContainer), var(--primaryContainerOffset));
         color: var(--onPrimaryContainer);
         line-height: .3rem;
+        position:relative;
+        z-index:2;
 
 
         & h2 {
