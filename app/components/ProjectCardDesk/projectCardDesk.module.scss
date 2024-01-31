@@ -2,7 +2,7 @@
 
 .projectCard {
     margin:0 2em 0 2em;
-    height:60dvh;
+    height:50dvh;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -12,7 +12,7 @@
         width: 100%;
         height: 100%;
         background-blend-mode: luminosity, multiply;
-        background-position: 50% 50%, 0 0, 50% 50%;
+        background-position: 0% 0%, 0 0, 0% 0%;
         background-repeat: no-repeat;
         background-size: cover, 100% 300%, cover;
         transition: all .5s;
@@ -34,10 +34,9 @@
             border: 4px solid var(--onSurfaceVariant);
 
             & .projectCardBackground {
-                background-position: center, 0% 100%, center;
+                background-position: 0% 0%, 0% 100%, 0% 0%;
                 box-shadow: 0 0 4px 2px var(--darkshadow);
                 transform: scale3d(1.05, 1.05, 1.05);
-                // animation: bounce .5s ease-in-out;
             }
         }
     }
@@ -194,19 +193,3 @@
     }
 }
 
-@keyframes bounce {
-    0% {
-        transform: scale3d(1, 1, 1);
-
-    }
-
-    60% {
-        transform: scale3d(1.08, 1.08, 1.08);
-
-    }
-
-    100% {
-        transform: scale3d(1.05, 1.05, 1.05);
-
-    }
-}

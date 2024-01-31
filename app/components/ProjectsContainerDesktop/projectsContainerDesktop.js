@@ -30,7 +30,7 @@ export default function ProjectsContainerDesktop() {
         scroller.addEventListener('wheel', handleWheel);
 
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
-        document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 200) + "px");
+        document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 250) + "px");
         setShowScrollButtons(true)
 
         return () => {

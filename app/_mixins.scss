@@ -1,3 +1,34 @@
 @mixin generalTransition() {
-    transition: all .3s;
-  }
+  transition: all .3s;
+}
+
+// @mixin fadeGradient($direction, $color) {
+//   background-image: linear-gradient($direction,
+//       oklch($color / 0) 0%,
+//       oklch($color / .013) 8.1%,
+//       oklch($color / .049) 15.5%,
+//       oklch($color / .104) 22.5%,
+//       oklch($color / .175) 29%,
+//       oklch($color / .259) 35.3%,
+//       oklch($color / .352) 41.2%,
+//       oklch($color / .45) 47.1%,
+//       oklch($color / .55) 52.9%,
+//       oklch($color / .648) 58.8%,
+//       oklch($color / .741) 64.7%,
+//       oklch($color / .825) 71%,
+//       oklch($color / .896)77.5%,
+//       oklch($color / .951) 84.5%,
+//       oklch($color / .987) 91.9%,
+//       oklch($color / 1) 100%)
+// }
+
+// @mixin fadeGradient($direction, $baseColor, $lightnessSteps, $steps) {
+//   $gradient-stops: oklch($baseColor / 0) 0%;
+  
+//   @for $i from 1 through $steps {
+//     $opacity: $i / $lightnessSteps;
+//     $gradient-stops: append($gradient-stops, oklch($baseColor / $opacity) (($i / $steps)*100%), comma);
+//   }
+
+//   background-image: linear-gradient($direction, $gradient-stops...);
+// }
