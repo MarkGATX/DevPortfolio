@@ -33,7 +33,7 @@
         transition:all .3s;
         &:hover {
             border: 4px solid var(--onSurfaceVariant);
-            box-shadow: 0 0 30px 1px var(--surfaceVariant);
+            box-shadow: 0 0 10px 1px var(--surfaceVariant);
 
             & .projectCardBackground {
                 background-position: 0% 0%, 0% 100%, 0% 0%;

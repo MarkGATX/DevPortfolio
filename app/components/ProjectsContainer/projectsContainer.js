@@ -20,6 +20,7 @@ export default function ProjectsContainer() {
     const [showScrollButtons, setShowScrollButtons] = useState(false);
     const [upButtonEnd, setUpButtonEnd] = useState(true);
     const [downButtonEnd, setDownButtonEnd] = useState(false);
+  
 
 
     useLayoutEffect(() => {
@@ -28,13 +29,11 @@ export default function ProjectsContainer() {
 
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
         document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 100) + "px");
-        // scrollUpButtonRef.current.addEventListener("pointerup", handleScrollUp);
-        // scrollDownButtonRef.current.addEventListener("pointerup", handleScrollDown)
+        
         setShowScrollButtons(true)
 
         return () => {
-            // scrollUpButtonRef.current.removeEventListener("pointerup", handleScrollUp);
-            // scrollDownButtonRef.current.removeEventListener("pointerup", handleScrollDown);
+           
             scroller.removeEventListener('wheel', handleWheel);
         }
     }, []
@@ -73,7 +72,7 @@ export default function ProjectsContainer() {
     const handleWheel = contextSafe((e) => {
         e.preventDefault();
         const deltaY = e.deltaY * 2.5;
-        gsap.to(scrollerRef.current, { scrollTop: `+=${deltaY}`, ease:'power1.out', duration:.9 })
+        gsap.to(scrollerRef.current, { scrollTop: `+=${deltaY}`, ease: 'power1.out', duration: .9 })
 
         const scroll = scrollerRef.current
 
@@ -107,7 +106,6 @@ export default function ProjectsContainer() {
 
     const handlePointerUp = contextSafe(() => {
         const scroll = scrollerRef.current
-        console.log(scroll.scrollTop)
         if (scroll.scrollTop === 0) {
             setUpButtonEnd(true)
             setDownButtonEnd(false)
@@ -128,7 +126,7 @@ export default function ProjectsContainer() {
     return (
         <>
             <div className={styles.projectsTitle} ref={projectTitleRef}>
-                <h1>My Projects...</h1>
+            <h1>My Projects...</h1>
             </div>
             <div className={styles.projectsAndScroller}>
                 <div className={styles.projectsContainer}>
@@ -142,33 +140,34 @@ export default function ProjectsContainer() {
                                 </Suspense>
                             )
                             }
+
                         </div>
                         <div className={styles.projectCardSpacer}></div>
                     </div>
                     <div className={styles.bottomFade}></div>
                 </div>
                 {showScrollButtons ?
-                <div className={styles.scrollerButtons}>
-                    <svg ref={scrollUpButtonRef} onPointerDown={handleScrollUp} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={upButtonEnd === true ? styles.disabled : styles.on} role="button"
-                        aria-label="Scroll up" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                        viewBox="0 0 48 48" >
-                        <g>
-                            <circle cx="24" cy="24" r="21.5" />
-                        </g>
-                        <polyline points="34.8,32 24,10.6 13.2,32 " />
-                    </svg>
-                    <svg ref={scrollDownButtonRef} onPointerDown={handleScrollDown} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={downButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" role="button"
-                        aria-label="Scroll down" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                        viewBox="0 0 48 48" >
-                        <g>
-                            <circle cx="24" cy="24" r="21.5" />
-                        </g>
-                        <polyline points="34.8,14.9 24,36.3 13.2,14.9 " />
-                    </svg>
+                    <div className={styles.scrollerButtons}>
+                        <svg ref={scrollUpButtonRef} onPointerDown={handleScrollUp} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={upButtonEnd === true ? styles.disabled : styles.on} role="button"
+                            aria-label="Scroll up" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            viewBox="0 0 48 48" >
+                            <g>
+                                <circle cx="24" cy="24" r="21.5" />
+                            </g>
+                            <polyline points="34.8,32 24,10.6 13.2,32 " />
+                        </svg>
+                        <svg ref={scrollDownButtonRef} onPointerDown={handleScrollDown} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={downButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" role="button"
+                            aria-label="Scroll down" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            viewBox="0 0 48 48" >
+                            <g>
+                                <circle cx="24" cy="24" r="21.5" />
+                            </g>
+                            <polyline points="34.8,14.9 24,36.3 13.2,14.9 " />
+                        </svg>
 
-                </div>
-                :
-                null}
+                    </div>
+                    :
+                    null}
             </div>
         </>
     )

@@ -6,6 +6,7 @@ import { useState, useLayoutEffect } from 'react';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState();
+  const [filter, setFilter] = useState('all');
 
   useLayoutEffect(() => {
     const handleResize = () => {
@@ -21,11 +22,20 @@ export default function Home() {
     };
   }, []);
 
+  const handleFilterChange = (event) => {
+    // const projects = document.getElementsByClassName('projectFeat');
+    // const onCompleteAll = () => {
+        setFilter(event.target.value);
+    // };
+};
+
   return (
     <main className='main'>
       <div className={styles.aboutMeContainer}>
         <p>Creative Front-end Developer creating great sites and drinking lots of coffee.</p>
       </div>
+      
+      
       {isMobile === undefined ?
         null
         :
