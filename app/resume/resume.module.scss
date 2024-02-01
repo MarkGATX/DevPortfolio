@@ -45,7 +45,7 @@
 .projectSection {
     margin: 2em 0;
 
-    
+
 
     &Title {
         background-image: linear-gradient(170deg, var(--surfaceVariant), var(--surfaceVariantOffset));
@@ -73,7 +73,7 @@
     &Container a {
         color: var(--tertiary);
         text-decoration: underline;
-        transition:all .3s;
+        transition: all .3s;
     }
 
     &Contacts {
@@ -96,43 +96,39 @@
     }
 
     &Image {
-        object-fit:contain;
-        opacity:.1;
+        object-fit: contain;
+        opacity: .1;
         object-position: top right;
         // mask-image:linear-gradient(to right, oklch(100% 0 0 / 0) , oklch(100% 0 128 / 1));
         mask-image:
-            linear-gradient(
-              to right,
-              hsla(0, 0%, 100%, 0) 0%,
-              hsla(0, 0%, 100%, 0.013) 8.1%,
-              hsla(0, 0%, 100%, 0.049) 15.5%,
-              hsla(0, 0%, 100%, 0.104) 22.5%,
-              hsla(0, 0%, 100%, 0.175) 29%,
-              hsla(0, 0%, 100%, 0.259) 35.3%,
-              hsla(0, 0%, 100%, 0.352) 41.2%,
-              hsla(0, 0%, 100%, 0.45) 47.1%,
-              hsla(0, 0%, 100%, 0.55) 52.9%,
-              hsla(0, 0%, 100%, 0.648) 58.8%,
-              hsla(0, 0%, 100%, 0.741) 64.7%,
-              hsla(0, 0%, 100%, 0.825) 71%,
-              hsla(0, 0%, 100%, 0.896) 77.5%,
-              hsla(0, 0%, 100%, 0.951) 84.5%,
-              hsla(0, 0%, 100%, 0.987) 91.9%,
-              hsl(0, 0%, 100%) 100%
-            );
-        
-            &Container {
-                width:25%;
-                height:auto;
-                position:relative;
-                top:0;
-                right:0;
-                box-shadow:inset 0 0 5px 15px var(--background);
-                display:none;
-            }
-    }
+            linear-gradient(to right,
+                hsla(0, 0%, 100%, 0) 0%,
+                hsla(0, 0%, 100%, 0.013) 8.1%,
+                hsla(0, 0%, 100%, 0.049) 15.5%,
+                hsla(0, 0%, 100%, 0.104) 22.5%,
+                hsla(0, 0%, 100%, 0.175) 29%,
+                hsla(0, 0%, 100%, 0.259) 35.3%,
+                hsla(0, 0%, 100%, 0.352) 41.2%,
+                hsla(0, 0%, 100%, 0.45) 47.1%,
+                hsla(0, 0%, 100%, 0.55) 52.9%,
+                hsla(0, 0%, 100%, 0.648) 58.8%,
+                hsla(0, 0%, 100%, 0.741) 64.7%,
+                hsla(0, 0%, 100%, 0.825) 71%,
+                hsla(0, 0%, 100%, 0.896) 77.5%,
+                hsla(0, 0%, 100%, 0.951) 84.5%,
+                hsla(0, 0%, 100%, 0.987) 91.9%,
+                hsl(0, 0%, 100%) 100%);
 
-   
+        &Container {
+            width: 25%;
+            height: auto;
+            position: relative;
+            top: 0;
+            right: 0;
+            box-shadow: inset 0 0 5px 15px var(--background);
+            display: none;
+        }
+    }
 
     &Name {
         margin: 2em 0;
@@ -143,7 +139,7 @@
     }
 
     &SectionDetailsContainer {
-        display:flex;
+        display: flex;
         justify-content: space-between;
     }
 
@@ -164,7 +160,7 @@
 .techIcons {
     display: flex;
     flex-wrap: wrap;
-  
+
 
     & img {
         margin: 1em;
@@ -189,35 +185,39 @@
 
 @media screen and (min-width:768px) {
     .resumeContacts {
-        flex-direction:row;
-        gap:2em;
+        flex-direction: row;
+        gap: 2em;
         justify-content: space-between;
-    
-    &Left {
-        width:45%;
+
+        &Left {
+            width: 45%;
+        }
+
+        &Right {
+            width: 45%;
+        }
     }
-    &Right {
-        width:45%;
+
+    .resume {
+        &Container {
+            width: 90%;
+        }
+
+        &ImageContainer {
+            display: block;
+        }
+
+        &Main {
+            display: flex;
+            justify-content: center;
+        }
     }
-}
-.resume {
-    &Container {
-        width:90%;
-    }
-    &ImageContainer {
-        display:block;
-    }
-    &Main {
-        display:flex;
-        justify-content: center;
-    }
-}
 }
 
 @media screen and (min-width:1600px) {
     .resume {
         &Container {
-            width:75%;
+            width: 75%;
         }
     }
 }
