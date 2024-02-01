@@ -8,7 +8,7 @@ export default function ProjectCard({ projectData }) {
 
     const { title, displayClass, desc, tech, link } = projectData
     return (
-        <Link href={`/projects/${link}`} className={styles.projectCardLink} ref={ref}>
+        <Link href={`/projects/${link}`} className={styles.projectCardLink}>
             <div data-type="projectCard" className={styles.projectCard}>
                 <section className={styles.projectCardContainer}>
                     <div className={styles.projectCardTitle}>

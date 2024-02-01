@@ -147,6 +147,7 @@ export default function ProjectsContainer() {
                     </div>
                     <div className={styles.bottomFade}></div>
                 </div>
+                {showScrollButtons ?
                 <div className={styles.scrollerButtons}>
                     <svg ref={scrollUpButtonRef} onPointerDown={handleScrollUp} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={upButtonEnd === true ? styles.disabled : styles.on} role="button"
                         aria-label="Scroll up" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -166,6 +167,8 @@ export default function ProjectsContainer() {
                     </svg>
 
                 </div>
+                :
+                null}
             </div>
         </>
     )
