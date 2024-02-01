@@ -7,7 +7,7 @@
     flex-direction:column;
     align-items:center;
     gap:0;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     &Background {
         width: 100%;
         height: 100%;
@@ -30,8 +30,10 @@
         border-radius:10px;
         margin:0;
         overflow:hidden;
+        transition:all .3s;
         &:hover {
             border: 4px solid var(--onSurfaceVariant);
+            box-shadow: 0 0 30px 1px var(--surfaceVariant);
 
             & .projectCardBackground {
                 background-position: 0% 0%, 0% 100%, 0% 0%;

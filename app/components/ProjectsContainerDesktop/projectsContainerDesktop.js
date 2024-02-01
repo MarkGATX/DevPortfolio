@@ -12,7 +12,7 @@ import { useGSAP } from '@gsap/react';
 
 
 export default function ProjectsContainerDesktop() {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger, useGSAP)
     const projectTitleRef = useRef();
     const projectRefs = useRef([]);
     const scrollerRef = useRef();
@@ -21,8 +21,8 @@ export default function ProjectsContainerDesktop() {
     const cardAnimationContainerRef = useRef();
     const scrollerButtonDivRef = useRef();
     const [showScrollButtons, setShowScrollButtons] = useState(false);
-    const [leftButtonEnd, setLeftButtonEnd] = useState();
-    const [rightButtonEnd, setRightButtonEnd] = useState();
+    const [leftButtonEnd, setLeftButtonEnd] = useState(true);
+    const [rightButtonEnd, setRightButtonEnd] = useState(false);
 
     useLayoutEffect(() => {
 
@@ -41,7 +41,7 @@ export default function ProjectsContainerDesktop() {
 
     const { contextSafe } = useGSAP()
 
-    useGSAP(() => {
+    useGSAP((context) => {
         const animatedProjectsDesk = document.querySelectorAll('[data-type="projectCard"]')
         animatedProjectsDesk.forEach((project) => {
             const tl = gsap.timeline({
@@ -65,18 +65,15 @@ export default function ProjectsContainerDesktop() {
             });
         })
 
-
+        console.log('context', context.data.length)
     }, [])
-
-
 
     let scrollInterval;
 
     const handleWheel = contextSafe((e) => {
         e.preventDefault();
-        const deltaX = e.deltaY * 2
-        // scrollerRef.current.scrollLeft += e.deltaY;
-        gsap.to(scrollerRef.current, { scrollLeft: `+=${deltaX}` })
+        const deltaX = e.deltaY * 2.5
+        gsap.to(scrollerRef.current, { scrollLeft: `+=${deltaX}`, ease:'power1.out', duration:.9 })
         const scroll = scrollerRef.current
 
         if (scroll.scrollLeft === 0) {

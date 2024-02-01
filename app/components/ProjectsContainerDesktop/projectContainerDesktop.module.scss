@@ -75,6 +75,7 @@
 .projectsContainer {
     position: relative;
     // height: calc(100dvh - var(--projectsContainerOffset));
+    height:51dvh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
