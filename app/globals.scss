@@ -156,13 +156,19 @@ html[data-theme='dark'] {
 html,
 body {
   max-width: 100dvw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   background-color: var(--background);
   color: var(--onBackground);
   font-family: var(--font-Inter);
   height: 100dvh;
-
+  
 }
+
+// body {
+//   min-height: calc(100dvh - var(--headerHeight));
+//   top: var(--headerHeight);
+//   position:absolute;
+// }
 
 a {
   color: inherit;

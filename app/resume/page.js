@@ -7,7 +7,6 @@ import Image from 'next/image'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useRef } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,7 +24,7 @@ export default function Resume() {
                 scrollTrigger: {
                     trigger: image,
                     toggleActions: 'play none none reverse',
-
+                    refreshPriority:'auto'
                 }
             });
 
@@ -48,18 +47,18 @@ export default function Resume() {
                 scrollTrigger: {
                     trigger: title,
                     toggleActions: 'play none none reverse',
-
+                    refreshPriority:'auto'
                 },
             });
 
             tl.from(title, {
-                // duration: .3,
+         
                 autoAlpha: 0,
                 ease: 'none',
                 scale: 1.2,
             })
                 .to(title, {
-                    // duration: .3,
+                 
                     autoAlpha: 1,
                     ease: 'none',
                     scale: 1,
@@ -71,6 +70,7 @@ export default function Resume() {
                 scrollTrigger: {
                     trigger: content,
                     toggleActions: 'play none none reverse',
+                    refreshPriority:'auto',
 
                 },
             });
@@ -92,7 +92,9 @@ export default function Resume() {
 
                 });
         })
+   
     });
+
 
 
     return (

@@ -1,7 +1,13 @@
 .contactMe {
+    &Container {
+        display:flex;
+        flex-direction:column;
+        align-items: flex-start;
+    }
 
     &Email {
         margin: 2em 0;
+        width:100%;
 
         & a {
             text-decoration: underline;
@@ -44,10 +50,14 @@
         margin: 1em 0 2em 0;
         min-height: 300px;
         background-image: linear-gradient(170deg, var(--secondaryContainer), var(--secondaryContainerOffset));
+        align-self: center;
     }
 
     &Link {
         margin: 1em 0;
+        display:flex;
+        flex-direction:column;
+        width:100%;
 
         &Images {
             display: flex;
@@ -57,10 +67,20 @@
             box-shadow: inset 0 0 20px 40px var(--background);
             padding: .5em;
             color: var(--onSurfaceVariant);
+            width:70%;
+            align-self: center;
 
             & img {
                 margin: 1em;
             }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .contactMe {
+        &FormContainer {
+            width: 70%;
         }
     }
 }
