@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import styles from './projectCard.module.scss'
-import { forwardRef } from 'react';
 import TechStack from '../techStack/TechStack';
 
 
