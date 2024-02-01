@@ -9,8 +9,8 @@ export default function NotFound() {
     return (
         <main>
             <div className={styles.projectTitle}>
-                <h1>Sorry, we can't find that project.</h1>
-                <p>Maybe you're looking for one of these...</p>
+                <h1>{`Sorry, we can't find that project.`}</h1>
+                <p>{`Maybe you're looking for one of these...`}</p>
             </div>
             <div className={styles.smallProjectContainer}>
                 {projectData.map((project) => {

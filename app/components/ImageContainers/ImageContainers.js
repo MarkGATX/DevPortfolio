@@ -32,9 +32,9 @@ export default function ImageContainers({ images, title }) {
 
     return (
         <>
-            {images.map((img) => (
+            {images.map((img, index) => (
                     <div className={styles.imageContainers}>
-                        <Image src={img} fill={true} style={{ objectFit: 'contain' }} alt={`${title} screenshots`} ></Image>
+                        <Image src={img} fill={true} key={index} style={{ objectFit: 'contain' }} alt={`${title} screenshots`} ></Image>
                     </div>
                 )
             )}

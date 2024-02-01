@@ -4,8 +4,7 @@ import { forwardRef } from 'react';
 import TechStack from '../techStack/TechStack';
 
 
-// export default function ProjectCard({ projectData }) {
-const ProjectCard = forwardRef(({ projectData }, ref) => {
+export default function ProjectCard({ projectData }) {
 
     const { title, displayClass, desc, tech, link } = projectData
     return (
@@ -29,6 +28,4 @@ const ProjectCard = forwardRef(({ projectData }, ref) => {
 
     )
 }
-)
 
-export default ProjectCard
