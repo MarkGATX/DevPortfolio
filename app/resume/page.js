@@ -7,25 +7,22 @@ import Image from 'next/image'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useRef } from 'react'
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export default function Resume() {
 
-
-    useGSAP(() => {
+    useGSAP((context) => {
         const animatedTitles = document.querySelectorAll('[data-module-class="sectionTitle"]');
         const animatedContent = document.querySelectorAll('[data-module-class="titleContent"]');
         const resumeImages = document.querySelectorAll('[data-module-class="resumeImages"]')
-        console.log(resumeImages)
 
         resumeImages.forEach((image) => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: image,
                     toggleActions: 'play none none reverse',
-
+                   
                 }
             });
 
@@ -48,7 +45,6 @@ export default function Resume() {
                 scrollTrigger: {
                     trigger: title,
                     toggleActions: 'play none none reverse',
-
                 },
             });
 
@@ -56,7 +52,7 @@ export default function Resume() {
                 // duration: .3,
                 autoAlpha: 0,
                 ease: 'none',
-                scale: 1.2,
+                scale: 1.3,
             })
                 .to(title, {
                     // duration: .3,
@@ -71,20 +67,19 @@ export default function Resume() {
                 scrollTrigger: {
                     trigger: content,
                     toggleActions: 'play none none reverse',
-
                 },
             });
 
             tl.from(content, {
-                duration: .6,
+                // duration: .6,
                 autoAlpha: 0,
                 ease: 'none',
-                scale: 1.1,
+                scale: 1,
                 rotateX: '-90deg'
 
             })
                 .to(content, {
-                    duration: .6,
+                    // duration: .6,
                     autoAlpha: 1,
                     ease: 'none',
                     scale: 1,
@@ -92,6 +87,7 @@ export default function Resume() {
 
                 });
         })
+
     });
 
 
@@ -125,7 +121,7 @@ export default function Resume() {
                         <h5 className={styles.techSectionTitle}>Technology: </h5>
                         <div className={styles.techIcons}>
                             {techStacks.tech.map((tech, index) => (
-                                <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
+                                <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={tech+index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
                             ))}
                         </div>
                     </div>
@@ -133,7 +129,7 @@ export default function Resume() {
                         <h5 className={styles.techSectionTitle}>Libraries: </h5>
                         <div className={styles.techIcons}>
                             {techStacks.libraries.map((tech, index) => (
-                                <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
+                                <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={tech+index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
                             ))}
 
                         </div>
@@ -142,7 +138,7 @@ export default function Resume() {
                         <h5 className={styles.techSectionTitle}>Tools:</h5>
                         <div className={styles.techIcons}>
                             {techStacks.tools.map((tech, index) => (
-                                <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
+                                <Image src={`/images/tech/${tech.id}.webp`} width={24} height={24} key={tech+index} className={styles.techImage} alt={`${tech.name} icon`} title={tech.name}></Image>
                             ))}
                         </div>
                     </div>
@@ -160,7 +156,7 @@ export default function Resume() {
                                 <p className={styles.projectSectionDesc}>A freelance development job leveraging the power of Next.js and React with Vercel hosting. I worked extensively with my clients to refine their vision for their e-commerce wishlist site in order to stay on schedule and within budget.</p>
                             </div>
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/softlife_home.webp" fill={true} alt="Softlife image" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/softlife_home.webp" fill={true} alt="Softlife image" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -176,7 +172,7 @@ export default function Resume() {
                                 <p className={styles.projectSectionDesc}>A fictional luxury boutique created to be highly responsive and media-rich, providing an immersive and engaging user experience. </p>
                             </div>
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/luxecavallo_home2.webp" fill={true} alt="Luxe Cavallo image" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/luxecavallo_home2.webp" fill={true} alt="Luxe Cavallo image" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -191,7 +187,7 @@ export default function Resume() {
                                 <p className={styles.projectSectionDesc}>A MERN application to help people looking to relocate to another country find a place that will feel like home utilizing complex APIs and data-visualization.</p>
                             </div>
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/migrate-splash.webp" fill={true} alt="Migrate image" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/migrate-splash.webp" fill={true} alt="Migrate image" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -208,7 +204,7 @@ export default function Resume() {
                                 </p>
                             </div>
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/wheezy_main.webp" fill={true} alt="Wheezy Waiter image" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/wheezy_main.webp" fill={true} alt="Wheezy Waiter image" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
 
@@ -227,7 +223,7 @@ export default function Resume() {
                             </div>
 
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/weather_dash_bg.webp" fill={true} alt="weather dash image" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/weather_dash_bg.webp" fill={true} alt="weather dash image" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -248,7 +244,7 @@ export default function Resume() {
                             </div>
 
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/tech_background.webp" fill={true} alt="tech image" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/tech_background.webp" fill={true} alt="tech image" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -264,7 +260,7 @@ export default function Resume() {
                             </div>
 
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/helloworld.webp" fill={true} alt="hello world cs logo" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/helloworld.webp" fill={true} alt="hello world cs logo" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -280,7 +276,7 @@ export default function Resume() {
                             </div>
 
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/lgs.webp" fill={true} alt="local government solutions logo" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/lgs.webp" fill={true} alt="local government solutions logo" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -298,7 +294,7 @@ export default function Resume() {
                             </div>
 
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/weirdlings.webp" fill={true} alt="The Weirdlings Swear Cat logo" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/weirdlings.webp" fill={true} alt="The Weirdlings Swear Cat logo" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -314,7 +310,7 @@ export default function Resume() {
                             </div>
 
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/hcss.webp" fill={true} alt="Hill Country Software and Support logo" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/hcss.webp" fill={true} alt="Hill Country Software and Support logo" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>
@@ -333,7 +329,7 @@ export default function Resume() {
                             </div>
 
                             <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
-                                <Image src="/images/Texas_Longhorns_logo.webp" fill={true} alt="Texas Longhorns logo" className={styles.resumeImage}  ></Image>
+                                <Image src="/images/Texas_Longhorns_logo.webp" fill={true} alt="Texas Longhorns logo" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
                             </div>
                         </div>
                     </article>

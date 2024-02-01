@@ -18,13 +18,13 @@ export default function ProjectsContainer() {
     const scrollDownButtonRef = useRef();
     const cardAnimationContainerRef = useRef();
     const [showScrollButtons, setShowScrollButtons] = useState(false);
-    const [upButtonEnd, setUpButtonEnd] = useState();
-    const [downButtonEnd, setDownButtonEnd] = useState();
+    const [upButtonEnd, setUpButtonEnd] = useState(true);
+    const [downButtonEnd, setDownButtonEnd] = useState(false);
 
 
     useLayoutEffect(() => {
         const scroller = scrollerRef.current;
-        scroller.addEventListener('wheel', handleWheel); 
+        scroller.addEventListener('wheel', handleWheel);
 
         const projectsContainerOffset = projectTitleRef.current.getBoundingClientRect();
         document.documentElement.style.setProperty("--projectsContainerOffset", (projectsContainerOffset.top + 100) + "px");
@@ -40,7 +40,7 @@ export default function ProjectsContainer() {
     }, []
     )
 
-    const {contextSafe} = useGSAP()
+    const { contextSafe } = useGSAP()
 
     useGSAP(() => {
         const animatedProjects = document.querySelectorAll('[data-type="projectCard"]')
@@ -72,55 +72,55 @@ export default function ProjectsContainer() {
 
     const handleWheel = contextSafe((e) => {
         e.preventDefault();
-        const deltaY = e.deltaY * 2;
-        gsap.to(scrollerRef.current, {scrollTop: `+=${deltaY}`})
-    
-    const scroll = scrollerRef.current
- 
-        if (scroll.scrollTop===0) {
+        const deltaY = e.deltaY * 2.5;
+        gsap.to(scrollerRef.current, { scrollTop: `+=${deltaY}`, ease:'power1.out', duration:.9 })
+
+        const scroll = scrollerRef.current
+
+        if (scroll.scrollTop === 0) {
             setUpButtonEnd(true)
             setDownButtonEnd(false)
         }
-        if (scroll.scrollTop + scroll.clientHeight  >= scroll.scrollHeight - 1) {
+        if (scroll.scrollTop + scroll.clientHeight >= scroll.scrollHeight - 1) {
             setDownButtonEnd(true)
             setUpButtonEnd(false)
         }
-        if (scroll.scrollTop!==0 && scroll.scrollTop + scroll.clientHeight  < scroll.scrollHeight - 1){
+        if (scroll.scrollTop !== 0 && scroll.scrollTop + scroll.clientHeight < scroll.scrollHeight - 1) {
             setUpButtonEnd(false);
             setDownButtonEnd(false)
         }
-});
+    });
 
     const handleScrollDown = contextSafe(() => {
         const scroll = scrollerRef.current;
         scrollInterval = setInterval(() => {
-            gsap.to(scroll, {scrollTop: '+=100'})
+            gsap.to(scroll, { scrollTop: '+=100' })
         }, 20);
     });
 
     const handleScrollUp = contextSafe(() => {
         const scroll = scrollerRef.current
         scrollInterval = setInterval(() => {
-            gsap.to(scroll, {scrollTop: '-=100'})
+            gsap.to(scroll, { scrollTop: '-=100' })
         }, 20);
     });
 
     const handlePointerUp = contextSafe(() => {
         const scroll = scrollerRef.current
- 
-        if (scroll.scrollTop===0) {
+        console.log(scroll.scrollTop)
+        if (scroll.scrollTop === 0) {
             setUpButtonEnd(true)
             setDownButtonEnd(false)
         }
-        if (scroll.scrollTop + scroll.clientHeight  >= scroll.scrollHeight - 1) {
+        if (scroll.scrollTop + scroll.clientHeight >= scroll.scrollHeight - 1) {
             setDownButtonEnd(true)
             setUpButtonEnd(false)
         }
-        if (scroll.scrollTop!==0 && scroll.scrollTop + scroll.clientHeight  < scroll.scrollHeight - 1){
+        if (scroll.scrollTop !== 0 && scroll.scrollTop + scroll.clientHeight < scroll.scrollHeight - 1) {
             setUpButtonEnd(false);
             setDownButtonEnd(false)
         }
-       
+
         clearInterval(scrollInterval);
 
     })
@@ -148,14 +148,16 @@ export default function ProjectsContainer() {
                     <div className={styles.bottomFade}></div>
                 </div>
                 <div className={styles.scrollerButtons}>
-                    <svg ref={scrollUpButtonRef} onPointerDown={handleScrollUp} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={upButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg ref={scrollUpButtonRef} onPointerDown={handleScrollUp} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={upButtonEnd === true ? styles.disabled : styles.on} role="button"
+                        aria-label="Scroll up" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />
                         </g>
                         <polyline points="34.8,32 24,10.6 13.2,32 " />
                     </svg>
-                    <svg ref={scrollDownButtonRef} onPointerDown={handleScrollDown} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={downButtonEnd === true ? styles.disabled : styles.on}version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <svg ref={scrollDownButtonRef} onPointerDown={handleScrollDown} onPointerUp={handlePointerUp} onPointerLeave={handlePointerUp} className={downButtonEnd === true ? styles.disabled : styles.on} version="1.1" id="Layer_1" role="button"
+                        aria-label="Scroll down" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         viewBox="0 0 48 48" >
                         <g>
                             <circle cx="24" cy="24" r="21.5" />
