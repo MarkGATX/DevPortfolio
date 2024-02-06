@@ -66,7 +66,7 @@ export default function ProjectsContainerDesktop() {
             });
         })
 
-        console.log('context', context.data.length)
+      
     }, [])
 
     let scrollInterval;
