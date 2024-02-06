@@ -2,6 +2,7 @@
 import { inter, outfit } from './ui/fonts'
 import './globals.scss'
 import Header from './components/Header/Header'
+import { ThemeProvider } from './components/ThemeContext/ThemeContext'
 
 export const metadata = {
   title: {
@@ -14,11 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
+    <ThemeProvider >
     <html lang="en" data-theme='light' className={`${inter.variable} ${outfit.variable}`}>
       <body>
         <Header />
         {children}
       </body>
     </html>
+    </ThemeProvider>
   )
 }

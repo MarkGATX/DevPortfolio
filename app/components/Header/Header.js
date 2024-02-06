@@ -5,6 +5,7 @@ import styles from './header.module.scss'
 import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import { ThemeProvider } from "../ThemeContext/ThemeContext";
 
 const getThemeFromPrefersColorScheme = () => {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
