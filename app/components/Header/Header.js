@@ -21,6 +21,7 @@ export default function Header() {
     const lightModeTextRef = useRef();
     const darkModeTextRef = useRef(); 
     const themeToggleRef = useRef();
+    const [isDarkMode, setIsDarkMode] = useState()
   
 
     useLayoutEffect(() => {
@@ -42,14 +43,14 @@ export default function Header() {
        
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (prefersDarkMode) { 
-            
+            setIsDarkMode('dark')
             const element = document.querySelector('html[data-theme]')
             element.dataset.theme = 'dark'
             toggleDiscRef.current.style.left = "66px";
             lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
             darkModeTextRef.current.style.color = 'transparent'
         } else {
-           
+           setIsDarkMode('light')
             const element = document.querySelector('html[data-theme]')
             element.dataset.theme = 'light'
             toggleDiscRef.current.style.left = "4px";
@@ -82,13 +83,13 @@ export default function Header() {
         const element = document.querySelector('html[data-theme]')
         const theme = element.dataset.theme
         if (theme === 'light') {
-           
+           setIsDarkMode('dark')
             toggleDiscRef.current.style.left = "66px";
           element.dataset.theme='dark'
           lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
           darkModeTextRef.current.style.color = 'transparent'
         } else {
-            
+            setIsDarkMode('light')
           element.dataset.theme ='light'
           toggleDiscRef.current.style.left = "4px";
           lightModeTextRef.current.style.color = 'transparent'

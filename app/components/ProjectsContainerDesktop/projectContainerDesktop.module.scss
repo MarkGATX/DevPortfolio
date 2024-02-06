@@ -4,7 +4,7 @@
     background-image: linear-gradient(-90deg, var(--backgroundGradient));
     // background-image:linear-gradient(-90deg, transparent, var(--background));
     height: 50dvh;
-    width: 250px;
+    width: 100px;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
 .rightFade {
     background-image: linear-gradient(90deg, var(--backgroundGradient));
     height: 50dvh;
-    width: 250px;
+    width: 100px;
     position: absolute;
     top: 0;
     right: 0;
@@ -38,6 +38,11 @@
 
 .projectsTitleDesk {
     margin: 2em 0 2em 0;
+    display:flex;
+    align-items: center;
+    & select {
+        margin:0 0 0 2em;
+    }
 }
 
 .projectsAndScroller {

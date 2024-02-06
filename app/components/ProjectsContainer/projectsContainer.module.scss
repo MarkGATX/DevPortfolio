@@ -20,6 +20,10 @@
 
 .projectsTitle {
     margin: 2em 0 0 0;
+    display:flex;
+    flex-direction:row;
+    gap:1em;
+    align-items: center;
 }
 
 .projectsAndScroller {

@@ -23,6 +23,7 @@ export default function ProjectsContainerDesktop() {
     const [showScrollButtons, setShowScrollButtons] = useState(false);
     const [leftButtonEnd, setLeftButtonEnd] = useState(true);
     const [rightButtonEnd, setRightButtonEnd] = useState(false);
+    const [filteredProjects, setFilteredProjects] = useState(projectData)
 
     useLayoutEffect(() => {
 
@@ -73,7 +74,7 @@ export default function ProjectsContainerDesktop() {
     const handleWheel = contextSafe((e) => {
         e.preventDefault();
         const deltaX = e.deltaY * 2.5
-        gsap.to(scrollerRef.current, { scrollLeft: `+=${deltaX}`, ease:'power1.out', duration:.9 })
+        gsap.to(scrollerRef.current, { scrollLeft: `+=${deltaX}`, ease: 'power1.out', duration: .9 })
         const scroll = scrollerRef.current
 
         if (scroll.scrollLeft === 0) {
@@ -124,10 +125,82 @@ export default function ProjectsContainerDesktop() {
         clearInterval(scrollInterval);
     })
 
+    const handleFilterChange = (event) => {
+        const filter = event.target.value;
+        switch (filter) {
+            case 'all':
+                setFilteredProjects(projectData)
+                break;
+            case "dev":
+                setFilteredProjects(projectData.filter(project => project.type === "dev"));
+                break;
+            case "vid":
+                setFilteredProjects(projectData.filter(project => project.type === "vid"));
+                break;
+            case "react":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("react")));
+                break;
+            case "next":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("nextJS")));
+                break;
+            case "graphQL":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("graphQL")));
+                break;
+            case "materialUI":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("materialUI")));
+                break;
+            case "sass":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("sass")));
+                break;
+            default:
+                setFilteredProjects(projectData)
+                break;
+        };
+    }
+
     return (
         <>
             <div className={styles.projectsTitleDesk} ref={projectTitleRef}>
                 <h1>My Projects</h1>
+                <div className="">
+                    <i className=""></i>
+
+                    <select className="align-self-center filterSelect" aria-label="Project type options" onChange={handleFilterChange}>
+                        <option disabled>
+                            Filter Projects
+                        </option>
+                        <optgroup label="All Projects">
+                            <option value="all">
+                                All Projects
+                            </option>
+                        </optgroup>
+                        <optgroup label="Software Dev">
+                            <option value="dev">
+                                All Software Dev
+                            </option>
+                            <option value="graphQL">
+                                GraphQL
+                            </option>
+                            <option value="materialUI">
+                                MaterialUI
+                            </option>
+                            <option value="next">
+                                Next.JS
+                            </option>
+                            <option value="react">
+                                React
+                            </option>
+                            <option value="sass">
+                                SASS
+                            </option>
+                        </optgroup>
+                        <optgroup label="Video">
+                            <option value="vid">
+                                All Video
+                            </option>
+                        </optgroup>
+                    </select>
+                </div>
             </div>
 
             <div className={styles.projectsContainer}>
@@ -136,7 +209,7 @@ export default function ProjectsContainerDesktop() {
                     <div className={styles.projectCardSpacer}></div>
                     <div ref={cardAnimationContainerRef} className={styles.projectsAnimateWrapper}>
                         <div className={styles.projectCardSpacer}></div>
-                        {projectData?.map((project, key) =>
+                        {filteredProjects?.map((project, key) =>
                             // <Suspense fallback={<ProjectCardSuspense />} key={project.displayClass}>
                             <ProjectCardDesk projectData={project} key={project.displayClass} />
                             // </Suspense>

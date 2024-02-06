@@ -20,6 +20,7 @@ export default function ProjectsContainer() {
     const [showScrollButtons, setShowScrollButtons] = useState(false);
     const [upButtonEnd, setUpButtonEnd] = useState(true);
     const [downButtonEnd, setDownButtonEnd] = useState(false);
+    const [filteredProjects, setFilteredProjects] = useState(projectData)
   
 
 
@@ -123,10 +124,80 @@ export default function ProjectsContainer() {
 
     })
 
+    const handleFilterChange = (event) => {
+        const filter = event.target.value;
+        switch (filter) {
+            case 'all':
+                setFilteredProjects(projectData)
+                break;
+            case "dev":
+                setFilteredProjects(projectData.filter(project => project.type === "dev"));
+                break;
+            case "vid":
+                setFilteredProjects(projectData.filter(project => project.type === "vid"));
+                break;
+            case "react":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("react")));
+                break;
+            case "next":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("nextJS")));
+                break;
+            case "graphQL":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("graphQL")));
+                break;
+            case "materialUI":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("materialUI")));
+                break;
+            case "sass":
+                setFilteredProjects(projectData.filter(project => project.tech.includes("sass")));
+                break;
+            default:
+                setFilteredProjects(projectData)
+                break;
+        };
+    }
+
     return (
         <>
             <div className={styles.projectsTitle} ref={projectTitleRef}>
             <h1>My Projects...</h1>
+            <div className="">
+                    <select className="" aria-label="Project type options" onChange={handleFilterChange}>
+                        <option disabled>
+                            Filter Projects
+                        </option>
+                        <optgroup label="All Projects">
+                            <option value="all">
+                                All Projects
+                            </option>
+                        </optgroup>
+                        <optgroup label="Software Dev">
+                            <option value="dev">
+                                All Software Dev
+                            </option>
+                            <option value="graphQL">
+                                GraphQL
+                            </option>
+                            <option value="materialUI">
+                                MaterialUI
+                            </option>
+                            <option value="next">
+                                Next.JS
+                            </option>
+                            <option value="react">
+                                React
+                            </option>
+                            <option value="sass">
+                                SASS
+                            </option>
+                        </optgroup>
+                        <optgroup label="Video">
+                            <option value="vid">
+                                All Video
+                            </option>
+                        </optgroup>
+                    </select>
+                </div>
             </div>
             <div className={styles.projectsAndScroller}>
                 <div className={styles.projectsContainer}>
@@ -134,7 +205,7 @@ export default function ProjectsContainer() {
                     <div ref={scrollerRef} id='projectsScroller' className={styles.projectsScroller}>
                         <div className={styles.projectCardSpacer}></div>
                         <div ref={cardAnimationContainerRef} className={styles.projectsAnimateWrapper}>
-                            {projectData?.map((project, key) =>
+                            {filteredProjects?.map((project, key) =>
                                 <Suspense fallback={<ProjectCardSuspense />} key={project.displayClass}>
                                     <ProjectCard projectData={project} key={project.displayClass} />
                                 </Suspense>

@@ -1,3 +1,4 @@
+
 import { inter, outfit } from './ui/fonts'
 import './globals.scss'
 import Header from './components/Header/Header'
