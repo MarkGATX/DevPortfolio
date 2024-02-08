@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import styles from './header.module.scss'
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useContext, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
-import { ThemeProvider } from "../ThemeContext/ThemeContext";
+import { ThemeContext } from "@/app/utils/darkModeContext";
 
 const getThemeFromPrefersColorScheme = () => {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     return prefersDarkMode ? 'dark' : 'light';
-  };
+};
 
 export default function Header() {
     const [isSmallScreen, setIsSmallScreen] = useState();
@@ -20,10 +20,11 @@ export default function Header() {
     const menuDrawerRef = useRef();
     const toggleDiscRef = useRef();
     const lightModeTextRef = useRef();
-    const darkModeTextRef = useRef(); 
+    const darkModeTextRef = useRef();
     const themeToggleRef = useRef();
-    const [isDarkMode, setIsDarkMode] = useState()
-  
+    const [isDarkMode, setIsDarkMode] = useState(false)
+    // const {isDarkMode, setIsDarkMode} = useContext(ThemeContext)
+
 
     useLayoutEffect(() => {
         let headerHeight = headerRef.current.offsetHeight;
@@ -41,30 +42,30 @@ export default function Header() {
         setIsSmallScreen(mediaQuery.matches);
 
         mediaQuery.addEventListener('change', handleMediaQueryChange);
-       
+        const element = document.querySelector('html[data-theme]')
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (prefersDarkMode) { 
-            setIsDarkMode('dark')
-            const element = document.querySelector('html[data-theme]')
+        if (prefersDarkMode) {
+            setIsDarkMode(true)
+           
             element.dataset.theme = 'dark'
             toggleDiscRef.current.style.left = "66px";
             lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
             darkModeTextRef.current.style.color = 'transparent'
         } else {
-           setIsDarkMode('light')
-            const element = document.querySelector('html[data-theme]')
+            setIsDarkMode(false)
+            // const element = document.querySelector('html[data-theme]')
             element.dataset.theme = 'light'
             toggleDiscRef.current.style.left = "4px";
             lightModeTextRef.current.style.color = 'transparent'
             darkModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
-        
+
         }
         // darkModeToggle();
 
         return () => {
-            mediaQuery.removeEventListener('change', handleMediaQueryChange)       
+            mediaQuery.removeEventListener('change', handleMediaQueryChange)
         }
-    },[])
+    }, [])
 
     const handleHamburgerClick = useCallback((event) => {
         if (!menuOpen) {
@@ -79,65 +80,71 @@ export default function Header() {
     })
 
 
-    const darkModeToggle = () =>  {
-        
+    const darkModeToggle = () => {
+
         const element = document.querySelector('html[data-theme]')
         const theme = element.dataset.theme
         if (theme === 'light') {
-           setIsDarkMode('dark')
+            setIsDarkMode(true)
             toggleDiscRef.current.style.left = "66px";
-          element.dataset.theme='dark'
-          lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
-          darkModeTextRef.current.style.color = 'transparent'
+            element.dataset.theme = 'dark'
+            lightModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
+            darkModeTextRef.current.style.color = 'transparent'
+        } else if (theme === 'dark') {
+            setIsDarkMode(false)
+            element.dataset.theme = 'light'
+            toggleDiscRef.current.style.left = "4px";
+            lightModeTextRef.current.style.color = 'transparent'
+            darkModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
         } else {
-            setIsDarkMode('light')
-          element.dataset.theme ='light'
-          toggleDiscRef.current.style.left = "4px";
-          lightModeTextRef.current.style.color = 'transparent'
-          darkModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
+            setIsDarkMode(false)
+            element.dataset.theme = 'light'
+            toggleDiscRef.current.style.left = "4px";
+            lightModeTextRef.current.style.color = 'transparent'
+            darkModeTextRef.current.style.color = 'var(--onSecondaryContainer)'
         }
-      }
+    }
 
     return (
         <>
             <header ref={headerRef}>
-                <a href='/'>
+                <Link href='/'>
                     <div className={styles.headerNames}>
                         <Image src='/images/mark_with_coffee.jpg' width={100} height={100} className={styles.headerAvatar} alt="Mark Gardner drinking too much coffee" priority='true'></Image>
                         <h2>Mark Gardner</h2>
                     </div>
-                </a>
+                </Link>
                 <div ref={themeToggleRef} className={styles.darkModeToggle} onClick={darkModeToggle}>
                     <sub ref={lightModeTextRef}>light</sub>
                     <sub ref={darkModeTextRef}>dark</sub>
                     <div ref={toggleDiscRef} className={styles.darkModeToggleDisc}></div>
                 </div>
                 {isSmallScreen === undefined ?
-                    null:
+                    null :
                     isSmallScreen ?
-                    <>
-                        <div className={styles.hamburgerMenuContainer}  onClick={(event) => event.stopPropagation()} >
+                        <>
+                            <div className={styles.hamburgerMenuContainer} onClick={(event) => event.stopPropagation()} >
 
-                            <Image src='/images/menu_icon.svg' onClick={handleHamburgerClick} ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
-                        </div>
-                        <nav className={styles.menuDrawer}ref={menuDrawerRef}>
+                                <Image src='/images/menu_icon.svg' onClick={handleHamburgerClick} ref={hamburgerRef} width={32} height={32} className={styles.hamburgerMenu} alt="Hamburger menu for mobile navigation"></Image>
+                            </div>
+                            <nav className={styles.menuDrawer} ref={menuDrawerRef}>
+                                <ul>
+                                    <Link href='/' onClick={handleHamburgerClick}><li>Portfolio</li></Link>
+                                    <Link href='/about_me' onClick={handleHamburgerClick}><li>About me...</li></Link>
+                                    <Link href="/resume" onClick={handleHamburgerClick}><li>Resume</li></Link>
+                                    <Link href="/contact_me" onClick={handleHamburgerClick}> <li>Contact</li></Link>
+                                </ul>
+                            </nav>
+                        </>
+                        :
+                        <nav>
                             <ul>
-                                <Link href='/' onClick={handleHamburgerClick}><li>Portfolio</li></Link>
-                                <Link href='/about_me' onClick={handleHamburgerClick}><li>About me...</li></Link>
-                                <Link href="/resume" onClick={handleHamburgerClick}><li>Resume</li></Link>
-                                <Link href="/contact_me" onClick={handleHamburgerClick}> <li>Contact</li></Link>
+                                <Link href='/'> <li>Portfolio</li></Link>
+                                <Link href='/about_me'>  <li>About me...</li></Link>
+                                <Link href="/resume">   <li>Resume</li></Link>
+                                <Link href="/contact_me">    <li>Contact</li></Link>
                             </ul>
                         </nav>
-                    </>
-                    :
-                    <nav>
-                        <ul>
-                        <Link href='/'> <li>Portfolio</li></Link>
-                        <Link href='/about_me'>  <li>About me...</li></Link>
-                        <Link href="/resume">   <li>Resume</li></Link>
-                        <Link href="/contact_me">    <li>Contact</li></Link>
-                        </ul>
-                    </nav>
                 }
             </header >
         </>

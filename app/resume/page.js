@@ -29,7 +29,7 @@ export default function Resume() {
             tl.from(image, {
 
                 autoAlpha: 0,
-                translateX: +300,
+                translateX: +50,
                 ease: 'power3.out'
             })
                 .to(image, {
@@ -53,7 +53,7 @@ export default function Resume() {
          
                 autoAlpha: 0,
                 ease: 'none',
-                scale: 1.3,
+                scale: 1.1,
             })
                 .to(title, {
                  
@@ -108,7 +108,7 @@ export default function Resume() {
                     <div className={styles.resumeContactsLeft}>
                         <p >Phone: +1 512-695-9490</p>
                         <p >LinkedIn: <a href="https://LinkedIn.com/in/Mark-Gardner-ATX" target="_blank" rel="noreferrer">LinkedIn.com/in/Mark-Gardner-ATX</a></p>
-                        <p >Portfolio: <a href="https://markgatx.github.io/React-Portfolio-v3/" target="_blank" rel="noreferrer">markgatx.github.io/React-Portfolio-v3/</a></p>
+                        <p >Portfolio: <a href="https://dev-portfolio-seven-virid.vercel.app/" target="_blank" rel="noreferrer">dev-portfolio-seven-virid.vercel.app/resume</a></p>
                     </div>
                     <div className={styles.resumeContactsRight}>
                         <p >Email: <a href="mailto:themarkgardner@gmail.com">themarkgardner@gmail.com</a></p>

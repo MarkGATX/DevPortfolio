@@ -96,7 +96,7 @@
     }
 
     &Image {
-        object-fit: contain;
+        object-fit: cover;
         opacity: .1;
         object-position: top right;
         // mask-image:linear-gradient(to right, oklch(100% 0 0 / 0) , oklch(100% 0 128 / 1));
