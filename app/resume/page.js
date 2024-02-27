@@ -108,7 +108,7 @@ export default function Resume() {
                     <div className={styles.resumeContactsLeft}>
                         <p >Phone: +1 512-695-9490</p>
                         <p >LinkedIn: <a href="https://LinkedIn.com/in/Mark-Gardner-ATX" target="_blank" rel="noreferrer">LinkedIn.com/in/Mark-Gardner-ATX</a></p>
-                        <p >Portfolio: <a href="https://dev-portfolio-seven-virid.vercel.app/" target="_blank" rel="noreferrer">dev-portfolio-seven-virid.vercel.app/resume</a></p>
+                        <p >Portfolio: <a href="https://mark-gardner.net/" target="_blank" rel="noreferrer">mark-gardner.net</a></p>
                     </div>
                     <div className={styles.resumeContactsRight}>
                         <p >Email: <a href="mailto:themarkgardner@gmail.com">themarkgardner@gmail.com</a></p>
