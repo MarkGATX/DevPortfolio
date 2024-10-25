@@ -150,6 +150,21 @@ export default function Resume() {
                 <section className={styles.resumeProjects}>
                     <h3 data-module-class="sectionTitle" className={styles.sectionTitle}>Projects Built</h3>
                     <article data-module-class="titleContent" className={styles.projectSection}>
+                        <h4 className={styles.projectSectionTitle}>Playdate - version 2</h4>
+                        <div className={styles.resumeSectionDetailsContainer} >
+                            <div>
+                                <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
+                                <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, Firebase, Supabase, PostgreSQL, SASS, CSS3, Google Fonts, Photoshop, GSAP </p>
+                                <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://playdate-v2.vercel.app/" target='_blank' rel='noreferrer'>https://playdate-v2.vercel.app/</a> </p>
+
+                                <p className={styles.projectSectionDesc}>A full social application to help busy parents manage playdates with friends. </p>
+                            </div>
+                            <div data-module-class="resumeImages" className={styles.resumeImageContainer} >
+                                <Image src="/images/playdate_map.webp" fill={true} alt="Playdate home page" sizes='(max-width:768px) 20dvw' className={styles.resumeImage}  ></Image>
+                            </div>
+                        </div>
+                    </article>
+                    <article data-module-class="titleContent" className={styles.projectSection}>
                         <h4 className={styles.projectSectionTitle}>The Softlife</h4>
                         <div className={styles.resumeSectionDetailsContainer} >
                             <div>
