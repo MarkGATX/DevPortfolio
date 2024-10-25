@@ -1,7 +1,7 @@
 export const projectData = [
     {
         "title": "Playdate",
-        "displayClass": "playdate",
+        "displayClass": "playdateV2",
         "type": "dev",
         "livePath": "https://playdate-v2.vercel.app/",
         "desc": "Helping busy parents manage playdates with their kids",
