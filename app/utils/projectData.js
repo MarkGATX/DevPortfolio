@@ -20,7 +20,7 @@ export const projectData = [
             "vercel",
             "sass",
             "javascript",
-            "postgreSQL",                     
+            "postgresql",                     
             "css3",
             "googleFonts",
             "html5",            
