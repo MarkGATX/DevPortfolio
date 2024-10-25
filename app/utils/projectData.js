@@ -1,5 +1,35 @@
 export const projectData = [
     {
+        "title": "Playdate",
+        "displayClass": "playdate",
+        "type": "dev",
+        "livePath": "https://playdate-v2.vercel.app/",
+        "desc": "Helping busy parents manage playdates with their kids",
+        "longDesc": "This project was originally an idea I had for a group project early on in my front end development classes. After some encouragement, I decided to revisit it and make it a full-fledged app. It's built on the latest version of Next JS. I'm also using Firebase and Supabase to handle authentication and the PostgreSQL database. This is also the first project I've made using Tailwind. There were times when Tailwind became a bit burdensome so I also included some modular SASS to handle edge cases in the UI and DOM manipulation. Users of the site can quickly find places to schedule playdates for their kids and their friends. It includes an in-app notification system as well as place reviews that exist alongside reviews from Google Places.",
+        "imgs": [
+            {src:'/images/playdate_map.webp',aspect_ratio:2500/1574, alt:'Playdate home page'},
+            {src:'/images/playdate_dashboard.webp',aspect_ratio:2500/1653, alt:'Playdate user dashboard'},
+            {src:'/images/playdate_place_review.webp',aspect_ratio:2500/1544, alt:'Playdate places'},
+            
+        ],
+        "tech": [
+            "react",
+            "nextJS",
+            "supabase",
+            "firebase",
+            "vercel",
+            "sass",
+            "javascript",
+            "postgreSQL",                     
+            "css3",
+            "googleFonts",
+            "html5",            
+            "vscode", 
+            "quill"        
+        ],
+        "link": "Playdate"
+    },
+    {
         "title": "The Softlife",
         "displayClass": "softlife",
         "type": "dev",

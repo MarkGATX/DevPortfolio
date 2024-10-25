@@ -7,7 +7,7 @@ export default function TechStack({ tech, imageSize}) {
         <>
             {tech?.map((techVal, index) => {
                 return (
-                    <Image src={`/images/tech/${techVal}.webp`} width={24} height={24} key={index} className={styles.techImage} alt={`${techVal} icon`} title={techVal}></Image>
+                    <Image src={`/images/tech/${techVal}.webp`} width={24} height={24} key={`${index}${techVal}`} className={styles.techImage} alt={`${techVal} icon`} title={techVal}></Image>
                 )
             }
             )}
