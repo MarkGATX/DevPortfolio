@@ -85,7 +85,7 @@ html[data-theme='light'] {
   --surface: oklch(99.23% 0.006725315390859499 325.62738137631163); //#fffbff;
   --surfaceOffset: oklch(92.23% 0.006725315390859499 325.62738137631163);
   --onSurface: oklch(22.41% 0.01 39.3); //#201a18;
-  --surfaceVariant: oklch(91.6% 0.027 43.65); //#f4ded5;
+  --surfaceVariant: oklch(91.6% 0.027 43.65 / .2); //#f4ded5;
   --surfaceVariantOffset: oklch(88.6% 0.027 43.65);
   --onSurfaceVariant: oklch(39.9% 0.023 48.13); //#52443d;
   --shadow: oklch(22.41% 0.01 39.3 / .3);
@@ -130,7 +130,7 @@ html[data-theme='dark'] {
   --surface: oklch(22.41% 0.01 39.3); //#201a18;
   --surfaceOffset: oklch(15.41% 0.01 39.3);
   --onSurface: oklch(91.57% 0.016 42.38); //#ede0db;
-  --surfaceVariant: oklch(39.9% 0.023 48.13 / 20%); //#52443d;
+  --surfaceVariant: oklch(39.9% 0.023 48.13 / .2); //#52443d;
   --surfaceVariantOffset: oklch(32.9% 0.023 48.13);
   --onSurfaceVariant: oklch(83.03% 0.027 41.09); //#d8c2ba;
   --backgroundGradient:oklch(22.41% 0.01 39.3 / 0) 0%,
