@@ -11,6 +11,7 @@ import ProjectCardDesk from '../ProjectCardDesk/ProjectCardDesk';
 import { useGSAP } from '@gsap/react';
 
 
+
 export default function ProjectsContainerDesktop() {
     gsap.registerPlugin(ScrollTrigger, useGSAP)
     const projectTitleRef = useRef();

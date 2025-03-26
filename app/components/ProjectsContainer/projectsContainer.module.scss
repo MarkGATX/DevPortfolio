@@ -43,22 +43,24 @@
 
 
     /* Hide scrollbar for IE, Edge and Firefox */
-    // -ms-overflow-style: none;
+    -ms-overflow-style: none;
     // /* IE and Edge */
-    // scrollbar-width: none;
+    scrollbar-width: none;
     /* Firefox */
 }
 
 /* hide scrollbar on chrome */
-// .projectsScroller::-webkit-scrollbar {
-//     display: none;
-// }
+.projectsScroller::-webkit-scrollbar {
+    display: none;
+}
 
 .projectsContainer {
     position: relative;
     height: calc(100dvh - var(--projectsContainerOffset));
     margin:0 2em 0 1em;
 }
+
+
 
 .scrollerButtons {
     display: flex;

@@ -99,7 +99,7 @@ export default function Resume() {
         <main className={styles.resumeMain}>
             <div className={styles.resumeContainer}>
                 <h1 className={styles.resumeTitle}>Resume</h1>
-                <Link href='/docs/Mark-Gardner-Front-End-Dev-resume-2024.pdf' target="_blank" rel="noreferrer"><button>Downloadable PDF here</button></Link>
+                <Link href='/docs/Mark-Gardner-Front-End-Dev-resume-2025.pdf' target="_blank" rel="noreferrer"><button>Downloadable PDF here</button></Link>
                 <section className={styles.resumeName}>
                     <h2>MARK GARDNER</h2>
                     <h3>Front-End and Full-Stack Developer</h3>
@@ -154,7 +154,7 @@ export default function Resume() {
                         <div className={styles.resumeSectionDetailsContainer} >
                             <div>
                                 <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
-                                <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, Firebase, Supabase, PostgreSQL, SASS, CSS3, Google Fonts, Photoshop, GSAP </p>
+                                <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, Tailwind, Firebase, Supabase, PostgreSQL, SASS, CSS3, Google Fonts, Photoshop, GSAP </p>
                                 <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://playdate-v2.vercel.app/" target='_blank' rel='noreferrer'>https://playdate-v2.vercel.app/</a> </p>
 
                                 <p className={styles.projectSectionDesc}>A full social application to help busy parents manage playdates with friends. </p>
@@ -169,7 +169,7 @@ export default function Resume() {
                         <div className={styles.resumeSectionDetailsContainer} >
                             <div>
                                 <p className={styles.projectSectionLinks}><span>Role:</span>  Sole-developer</p>
-                                <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, GraphQL, Apollo GraphQL, MongoDB, SASS, CSS3, Google Fonts, Photoshop, Node.js, React Spring </p>
+                                <p className={styles.projectSectionLinks}><span>Tools:</span>NextJS, React, JavaScript, GraphQL, Apollo GraphQL, MongoDB, SASS, CSS3, Google Fonts, Photoshop, React Spring </p>
                                 <p className={styles.projectSectionLinks}><span>Live site:</span> <a href="https://thesoftlife.xyz/" target='_blank' rel='noreferrer'>https://thesoftlife.xyz/</a> </p>
 
                                 <p className={styles.projectSectionDesc}>A freelance development job leveraging the power of Next.js and React with Vercel hosting. I worked extensively with my clients to refine their vision for their e-commerce wishlist site in order to stay on schedule and within budget.</p>
@@ -273,8 +273,7 @@ export default function Resume() {
                             <div>
                                 <p >2023 - present,  AUSTIN</p>
                                 <ul className={styles.experienceList}>
-                                    <li>Part-time Teaching Assistant for Computer Science classes at the Ann Richards School for Young Women Leaders</li>
-                                    <li>Teach students web development and guide troubleshooting in their code and errors in the CoSpaces coding environment.</li>
+                                    <li>Teach students computer science concepts and languages including JavaScript, HTML, CSS, Python, and block coding.</li>
                                 </ul>
                             </div>
 

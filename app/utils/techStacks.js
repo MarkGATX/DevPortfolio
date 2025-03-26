@@ -9,6 +9,7 @@ export const techStacks = {
     'libraries': [
         {id: 'react', name: 'React'},
         {id: 'nextjs', name: 'Next.JS'},
+        {id: 'tailwind', name: 'Tailwind'},
         {id: 'materialUI', name: 'MaterialUI'},
         {id: 'bootstrap', name: 'Bootstrap'},
         {id: 'GSAP', name: 'GSAP'},

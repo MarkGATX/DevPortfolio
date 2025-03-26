@@ -68,7 +68,7 @@ export const projectData = [
         "livePath": "https://luxecavallo.vercel.app/",
         "gitPath": "https://github.com/markgatx/luxecavallo",
         "desc": "MERN stack project for fictional luxury boutique",
-        "longDesc": "This project started with me wanting to develope an animated vertical navbar on a desktop application. From there it evolved into a Full-stack project that pushed my knowledge and understanding of app development using a MERN stack and graphL. The layouts between mobile and desktop versions are drastically different, which presented several unique challenges. I've learned a lot about the structure of code and making sure unique layouts stay responsive at various screen resolutions and not just screen width. I'm happy with the overall look and feel and overtime I'll flesh out more of the functionality.",
+        "longDesc": "Currently refactoring the entire project to leverage Next.js and Vercel. Please excuse the mess. \nThis project started with me wanting to develope an animated vertical navbar on a desktop application. From there it evolved into a Full-stack project that pushed my knowledge and understanding of app development using a MERN stack and graphL. The layouts between mobile and desktop versions are drastically different, which presented several unique challenges. I've learned a lot about the structure of code and making sure unique layouts stay responsive at various screen resolutions and not just screen width. I'm happy with the overall look and feel and overtime I'll flesh out more of the functionality.",
         "role": "Sole Full-stack developer",
         "imgs": [
             {src:'/images/luxecavallo_home.webp',aspect_ratio:2747/1982,alt:'Luxe Cavallo home page'},
