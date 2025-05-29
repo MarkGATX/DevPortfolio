@@ -44,7 +44,7 @@ export const projectData = [
             "firebase",
             "vercel",
             "sass",
-            "javascript",
+            "typescript",
             "postgresql",                     
             "css3",
             "googleFonts",
