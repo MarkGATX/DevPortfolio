@@ -1,5 +1,30 @@
 export const projectData = [
     {
+        "title": "Illuminated",
+        "displayClass": "illuminated",
+        "type": "dev",
+        "livePath": "https://illuminated-sigma.vercel.app/",
+        "desc": "Spotify player built with Agentic AI as a pair programmer",
+        "longDesc": "After being approached to author a course on using AI as a pair programmer, I decided to put my money where my mouth is and build a project using AI as a pair programmer. This project is the result of that effort. I used Agentic AI to help me build a Spotify player that allows users to search for songs, albums, and artists.  The app is built with Next.js and React. It uses the Spotify API to fetch data and display it in the app. ",
+        "imgs": [
+            {src:'/images/illuminated_demo.jpg',aspect_ratio:2500/1574, alt:'Illuminatee player'},
+            
+            
+        ],
+        "tech": [
+            "react",
+            "nextJS",
+            "vercel",
+            "javascript",                    
+            "css3",
+            "googleFonts",
+            "html5",            
+            "vscode", 
+       
+        ],
+        "link": "Illuminated"
+    },
+    {
         "title": "Playdate",
         "displayClass": "playdateV2",
         "type": "dev",

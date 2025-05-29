@@ -146,6 +146,10 @@
 
 }
 
+.illuminated {
+    background-image: url(../../../public/images/illuminated_demo.jpg), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/illuminated_demo.jpg);
+}
+
 .luxe {
     background-image: url(../../../public/images/luxecavallo_home.webp), linear-gradient(0deg, white 33%, grey 66%), url(../../../public/images/luxecavallo_home.webp);
 
